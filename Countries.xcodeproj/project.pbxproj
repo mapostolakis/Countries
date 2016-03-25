@@ -11,6 +11,8 @@
 		273AEB491CA5BE84007E2F2C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 273AEB481CA5BE84007E2F2C /* main.m */; };
 		273AEB4C1CA5BE84007E2F2C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 273AEB4B1CA5BE84007E2F2C /* AppDelegate.m */; };
 		273AEB541CA5BE84007E2F2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 273AEB531CA5BE84007E2F2C /* Assets.xcassets */; };
+		3323F8A68F66F4F3A692C564 /* MGAFetchCountryListAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323F4520B07D6B8A040D693 /* MGAFetchCountryListAPIService.m */; };
+		3323FFB8483E9F5E126BEEE5 /* MGAFetchCountryListAPIServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323FBE931CC6E879D03D4A6 /* MGAFetchCountryListAPIServiceTest.m */; };
 		7F5416D1910B91F0C385B36F /* libPods-CountriesTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D709A047C693562610112190 /* libPods-CountriesTests.a */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,10 @@
 		273AEB581CA5BE84007E2F2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		273AEB5D1CA5BE84007E2F2C /* CountriesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountriesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		273AEB631CA5BE84007E2F2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3323F233C2D38724DD2040F1 /* MGAFetchCountryListAPIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAFetchCountryListAPIService.h; sourceTree = "<group>"; };
+		3323F4520B07D6B8A040D693 /* MGAFetchCountryListAPIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGAFetchCountryListAPIService.m; sourceTree = "<group>"; };
+		3323FBE931CC6E879D03D4A6 /* MGAFetchCountryListAPIServiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGAFetchCountryListAPIServiceTest.m; sourceTree = "<group>"; };
+		3323FC6F06DDD521880C6821 /* MGAFetchCountryListService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAFetchCountryListService.h; sourceTree = "<group>"; };
 		3B2CF78F0DF637158AC4E924 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6694B01C76984FD797A99666 /* Pods-CountriesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountriesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CountriesTests/Pods-CountriesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		77B9FFB7F40AA2282C441AE9 /* Pods-CountriesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountriesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CountriesTests/Pods-CountriesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +105,8 @@
 				273AEB4B1CA5BE84007E2F2C /* AppDelegate.m */,
 				273AEB6C1CA5C001007E2F2C /* Assets */,
 				273AEB471CA5BE84007E2F2C /* Supporting Files */,
+				3323FDCBCBD49D31525831DE /* List Countries */,
+				3323F8A86C7406B0A5CC025B /* Implementation */,
 			);
 			path = Countries;
 			sourceTree = "<group>";
@@ -116,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				273AEB631CA5BE84007E2F2C /* Info.plist */,
+				3323F462DC1AF45B4643A5B4 /* Implementation */,
 			);
 			path = CountriesTests;
 			sourceTree = "<group>";
@@ -126,6 +135,47 @@
 				273AEB531CA5BE84007E2F2C /* Assets.xcassets */,
 			);
 			name = Assets;
+			sourceTree = "<group>";
+		};
+		3323F1E2C400BE0E3C0C25A6 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3323F4520B07D6B8A040D693 /* MGAFetchCountryListAPIService.m */,
+				3323F233C2D38724DD2040F1 /* MGAFetchCountryListAPIService.h */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		3323F462DC1AF45B4643A5B4 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				3323FD65EC842BB77FF1AEB4 /* Service */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		3323F8A86C7406B0A5CC025B /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				3323F1E2C400BE0E3C0C25A6 /* Service */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		3323FD65EC842BB77FF1AEB4 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3323FBE931CC6E879D03D4A6 /* MGAFetchCountryListAPIServiceTest.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		3323FDCBCBD49D31525831DE /* List Countries */ = {
+			isa = PBXGroup;
+			children = (
+				3323FC6F06DDD521880C6821 /* MGAFetchCountryListService.h */,
+			);
+			path = "List Countries";
 			sourceTree = "<group>";
 		};
 		ED83C2BC3C051686CE6D16E0 /* Frameworks */ = {
@@ -304,6 +354,7 @@
 			files = (
 				273AEB4C1CA5BE84007E2F2C /* AppDelegate.m in Sources */,
 				273AEB491CA5BE84007E2F2C /* main.m in Sources */,
+				3323F8A68F66F4F3A692C564 /* MGAFetchCountryListAPIService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3323FFB8483E9F5E126BEEE5 /* MGAFetchCountryListAPIServiceTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
