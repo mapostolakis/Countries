@@ -9,11 +9,7 @@
 /* Begin PBXBuildFile section */
 		273AEB491CA5BE84007E2F2C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 273AEB481CA5BE84007E2F2C /* main.m */; };
 		273AEB4C1CA5BE84007E2F2C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 273AEB4B1CA5BE84007E2F2C /* AppDelegate.m */; };
-		273AEB4F1CA5BE84007E2F2C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 273AEB4E1CA5BE84007E2F2C /* ViewController.m */; };
-		273AEB521CA5BE84007E2F2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 273AEB501CA5BE84007E2F2C /* Main.storyboard */; };
 		273AEB541CA5BE84007E2F2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 273AEB531CA5BE84007E2F2C /* Assets.xcassets */; };
-		273AEB571CA5BE84007E2F2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 273AEB551CA5BE84007E2F2C /* LaunchScreen.storyboard */; };
-		273AEB621CA5BE84007E2F2C /* CountriesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 273AEB611CA5BE84007E2F2C /* CountriesTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,14 +27,9 @@
 		273AEB481CA5BE84007E2F2C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		273AEB4A1CA5BE84007E2F2C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		273AEB4B1CA5BE84007E2F2C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		273AEB4D1CA5BE84007E2F2C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		273AEB4E1CA5BE84007E2F2C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		273AEB511CA5BE84007E2F2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		273AEB531CA5BE84007E2F2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		273AEB561CA5BE84007E2F2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		273AEB581CA5BE84007E2F2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		273AEB5D1CA5BE84007E2F2C /* CountriesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountriesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		273AEB611CA5BE84007E2F2C /* CountriesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountriesTests.m; sourceTree = "<group>"; };
 		273AEB631CA5BE84007E2F2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,12 +74,7 @@
 			children = (
 				273AEB4A1CA5BE84007E2F2C /* AppDelegate.h */,
 				273AEB4B1CA5BE84007E2F2C /* AppDelegate.m */,
-				273AEB4D1CA5BE84007E2F2C /* ViewController.h */,
-				273AEB4E1CA5BE84007E2F2C /* ViewController.m */,
-				273AEB501CA5BE84007E2F2C /* Main.storyboard */,
-				273AEB531CA5BE84007E2F2C /* Assets.xcassets */,
-				273AEB551CA5BE84007E2F2C /* LaunchScreen.storyboard */,
-				273AEB581CA5BE84007E2F2C /* Info.plist */,
+				273AEB6C1CA5C001007E2F2C /* Assets */,
 				273AEB471CA5BE84007E2F2C /* Supporting Files */,
 			);
 			path = Countries;
@@ -97,6 +83,7 @@
 		273AEB471CA5BE84007E2F2C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				273AEB581CA5BE84007E2F2C /* Info.plist */,
 				273AEB481CA5BE84007E2F2C /* main.m */,
 			);
 			name = "Supporting Files";
@@ -105,10 +92,17 @@
 		273AEB601CA5BE84007E2F2C /* CountriesTests */ = {
 			isa = PBXGroup;
 			children = (
-				273AEB611CA5BE84007E2F2C /* CountriesTests.m */,
 				273AEB631CA5BE84007E2F2C /* Info.plist */,
 			);
 			path = CountriesTests;
+			sourceTree = "<group>";
+		};
+		273AEB6C1CA5C001007E2F2C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				273AEB531CA5BE84007E2F2C /* Assets.xcassets */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,9 +185,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				273AEB571CA5BE84007E2F2C /* LaunchScreen.storyboard in Resources */,
 				273AEB541CA5BE84007E2F2C /* Assets.xcassets in Resources */,
-				273AEB521CA5BE84007E2F2C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +203,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				273AEB4F1CA5BE84007E2F2C /* ViewController.m in Sources */,
 				273AEB4C1CA5BE84007E2F2C /* AppDelegate.m in Sources */,
 				273AEB491CA5BE84007E2F2C /* main.m in Sources */,
 			);
@@ -221,7 +212,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				273AEB621CA5BE84007E2F2C /* CountriesTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,25 +224,6 @@
 			targetProxy = 273AEB5E1CA5BE84007E2F2C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		273AEB501CA5BE84007E2F2C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				273AEB511CA5BE84007E2F2C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		273AEB551CA5BE84007E2F2C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				273AEB561CA5BE84007E2F2C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		273AEB641CA5BE84007E2F2C /* Debug */ = {
@@ -339,7 +310,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Countries/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.mapostolakis.Countries;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -350,7 +323,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Countries/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.mapostolakis.Countries;
 				PRODUCT_NAME = "$(TARGET_NAME)";
