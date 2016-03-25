@@ -10,6 +10,8 @@
       <sourceFolder url="file://$MODULE_DIR$/Countries/AppDelegate.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/main.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/App/Converter/MGAConverter.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/App/Mapper/MGAResourceMapper.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/AppDelegate.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CountriesTests/Implementation/Service/MGAFetchCountryListAPIServiceTest.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CountriesTests/Info.plist" isTestSource="false" />

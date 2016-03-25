@@ -3,6 +3,8 @@
 //
 
 #import "MGAFetchCountryListAPIService.h"
+#import "MGAResourceMapper.h"
+#import "MGAConverter.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
 #import <XCTest/XCTest.h>
@@ -17,6 +19,8 @@
 {
     NSURL *url;
     NSURLSession *session;
+    id <MGAResourceMapper> mapper;
+    id <MGAConverter> converter;
     MGAFetchCountryListAPIService *sut;
 }
 @end
@@ -29,8 +33,10 @@
 
     url = [NSURL URLWithString:@"http://a.url"];
     session = mock([NSURLSession class]);
+    mapper = mockProtocol(@protocol(MGAResourceMapper));
+    converter = mockProtocol(@protocol(MGAConverter));
 
-    sut = [[MGAFetchCountryListAPIService alloc] initWithSession:session url:url];
+    sut = [[MGAFetchCountryListAPIService alloc] initWithSession:session url:url resourceMapper:mapper converter:converter];
 }
 
 - (void)tearDown
@@ -94,20 +100,7 @@
     assertThat(expectedError, is(equalTo(error)));
 }
 
-- (void)test_fetchCountries_completes
-{
-    __block BOOL completed = NO;
-    [[sut fetchCountries] subscribeCompleted:^{
-       completed = YES;
-    }];
-
-    NSData *data = [NSData data];
-    [self stubCompletionBlock](data, nil, nil);
-
-    assertThatBool(completed, isTrue());
-}
-
-- (void)test_fetchCountries_sendsNextReceivedData
+- (void)test_fetchCountries_sendsNextMappedData_afterConverting
 {
     __block id expectedResult = nil;
     [[sut fetchCountries] subscribeNext:^(id x) {
@@ -115,9 +108,13 @@
     }];
 
     NSData *data = [NSData data];
+    id convertedData = [NSObject new];
+    id mappedResources = [NSObject new];
+    [given([converter convert:data]) willReturn:[RACSignal return:convertedData]];
+    [given([mapper mapResource:convertedData]) willReturn:mappedResources];
     [self stubCompletionBlock](data, nil, nil);
 
-    assertThat(expectedResult, is(equalTo(data)));
+    assertThat(expectedResult, is(equalTo(mappedResources)));
 }
 
 @end
