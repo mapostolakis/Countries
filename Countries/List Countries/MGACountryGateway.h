@@ -6,7 +6,7 @@
 
 @protocol MGACountry;
 
-@protocol MGAGateway <NSObject>
+@protocol MGACountryGateway <NSObject>
 
 - (id <MGACountry>)countryWithAlpha3Code:(NSString *)code;
 

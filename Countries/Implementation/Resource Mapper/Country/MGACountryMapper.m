@@ -4,18 +4,18 @@
 
 #import "MGACountryMapper.h"
 #import "MGACountry.h"
-#import "MGAGateway.h"
+#import "MGACountryGateway.h"
 
 @interface MGACountryMapper ()
 
-@property (nonatomic, readonly) id <MGAGateway> gateway;
+@property (nonatomic, readonly) id <MGACountryGateway> gateway;
 @property (nonatomic, readonly) id <MGAResourceMapper> listMapper;
 
 @end
 
 @implementation MGACountryMapper
 
-- (instancetype)initWithGateway:(id <MGAGateway>)gateway listMapper:(id <MGAResourceMapper>)mapper
+- (instancetype)initWithGateway:(id <MGACountryGateway>)gateway listMapper:(id <MGAResourceMapper>)mapper
 {
     self = [super init];
     if (self) {

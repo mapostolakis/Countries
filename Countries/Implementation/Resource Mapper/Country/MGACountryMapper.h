@@ -4,10 +4,10 @@
 
 #import "MGAResourceMapper.h"
 
-@protocol MGAGateway;
+@protocol MGACountryGateway;
 
 @interface MGACountryMapper : NSObject <MGAResourceMapper>
 
-- (instancetype)initWithGateway:(id <MGAGateway>)gateway listMapper:(id <MGAResourceMapper>)mapper;
+- (instancetype)initWithGateway:(id <MGACountryGateway>)gateway listMapper:(id <MGAResourceMapper>)mapper;
 
 @end

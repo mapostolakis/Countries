@@ -4,7 +4,7 @@
 
 #import "MGACountryMapper.h"
 #import "MGACountry.h"
-#import "MGAGateway.h"
+#import "MGACountryGateway.h"
 
 #import <XCTest/XCTest.h>
 
@@ -16,7 +16,7 @@
 
 @interface MGACountryMapperTest : XCTestCase
 {
-    id <MGAGateway> gateway;
+    id <MGACountryGateway> gateway;
     id <MGAResourceMapper> listMapper;
     MGACountryMapper *sut;
 }
@@ -28,7 +28,7 @@
 {
     [super setUp];
 
-    gateway = mockProtocol(@protocol(MGAGateway));
+    gateway = mockProtocol(@protocol(MGACountryGateway));
     listMapper = mockProtocol(@protocol(MGAResourceMapper));
 
     sut = [[MGACountryMapper alloc] initWithGateway:gateway listMapper:listMapper];
