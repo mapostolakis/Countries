@@ -3,6 +3,14 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/Podfile" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/Assets.xcassets" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/AppDelegate.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/List Countries/TableView Adapter/MGACountryListTableViewAdapter.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/List Countries/TableView Adapter/MGACountryListTableViewAdapter.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/List Countries/MGACountry.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/List Countries/MGACountryGateway.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/List Countries/MGAFetchCountryListService.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/List Countries/MGACountrySelectionDelegate.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Resource Mapper/Country/MGACountryMapper.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Resource Mapper/Country/MGACountryMapper.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Resource Mapper/List/MGAListResourceMapper.h" isTestSource="false" />
@@ -11,21 +19,18 @@
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/UI/TableView/MGATableViewController.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Service/MGAFetchCountryListAPIService.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Service/MGAFetchCountryListAPIService.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/List Countries/MGACountry.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/List Countries/MGAFetchCountryListService.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/List Countries/MGACountryGateway.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/AppDelegate.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/main.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Info.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/Assets.xcassets" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/App/Data Source/MGADataSource.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/App/Mapper/MGAResourceMapper.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/App/Converter/MGAConverter.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/AppDelegate.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CountriesTests/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CountriesTests/Implementation/Resource Mapper/MGACountryMapperTest.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CountriesTests/Implementation/Resource Mapper/MGAListResourceMapperTest.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CountriesTests/Implementation/UI/TableView/MGATableViewControllerTest.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CountriesTests/Implementation/Service/MGAFetchCountryListAPIServiceTest.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/CountriesTests/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CountriesTests/List Countries/TableView Adapter/MGACountryListTableViewAdapterTest.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/NSUserDefaults+RACSupport.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/NSFileHandle+RACSupport.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/UIBarButtonItem+RACCommandSupport.h" isTestSource="false" />

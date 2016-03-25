@@ -11,7 +11,9 @@
 		273AEB491CA5BE84007E2F2C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 273AEB481CA5BE84007E2F2C /* main.m */; };
 		273AEB4C1CA5BE84007E2F2C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 273AEB4B1CA5BE84007E2F2C /* AppDelegate.m */; };
 		273AEB541CA5BE84007E2F2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 273AEB531CA5BE84007E2F2C /* Assets.xcassets */; };
+		3323F0DD9AC3500E6A070A3C /* MGACountryListTableViewAdapterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323F74AD53F27596BBFB042 /* MGACountryListTableViewAdapterTest.m */; };
 		3323F8A68F66F4F3A692C564 /* MGAFetchCountryListAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323F4520B07D6B8A040D693 /* MGAFetchCountryListAPIService.m */; };
+		3323F90DEBFCD2B3F658AE3B /* MGACountryListTableViewAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323F6FE0F4298C856EB7A0A /* MGACountryListTableViewAdapter.m */; };
 		3323FA052E806C5AA13DE729 /* MGAListResourceMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323F6AD007D169BC23D7319 /* MGAListResourceMapper.m */; };
 		3323FA3165B8E1E217E4C10A /* MGAListResourceMapperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323FB62CC2DD9F5B61290E8 /* MGAListResourceMapperTest.m */; };
 		3323FC9241C8476E6609BCDC /* MGATableViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323F52CED702937A508F088 /* MGATableViewControllerTest.m */; };
@@ -43,13 +45,17 @@
 		273AEB631CA5BE84007E2F2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3323F1DC0C56B9861C4FDABE /* MGATableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGATableViewController.m; sourceTree = "<group>"; };
 		3323F233C2D38724DD2040F1 /* MGAFetchCountryListAPIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAFetchCountryListAPIService.h; sourceTree = "<group>"; };
+		3323F2FD603AB45F9F623E56 /* MGACountryListTableViewAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGACountryListTableViewAdapter.h; sourceTree = "<group>"; };
 		3323F3CD2A2B29A0DE7BD134 /* MGAResourceMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAResourceMapper.h; sourceTree = "<group>"; };
 		3323F4520B07D6B8A040D693 /* MGAFetchCountryListAPIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGAFetchCountryListAPIService.m; sourceTree = "<group>"; };
 		3323F52CED702937A508F088 /* MGATableViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGATableViewControllerTest.m; sourceTree = "<group>"; };
 		3323F5F325BFD07FB1681648 /* MGACountryGateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGACountryGateway.h; sourceTree = "<group>"; };
 		3323F6AD007D169BC23D7319 /* MGAListResourceMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGAListResourceMapper.m; sourceTree = "<group>"; };
+		3323F6FE0F4298C856EB7A0A /* MGACountryListTableViewAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGACountryListTableViewAdapter.m; sourceTree = "<group>"; };
+		3323F74AD53F27596BBFB042 /* MGACountryListTableViewAdapterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGACountryListTableViewAdapterTest.m; sourceTree = "<group>"; };
 		3323F752901A38C6BA5422CD /* MGACountry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGACountry.h; sourceTree = "<group>"; };
 		3323F76E0614F50ECA71130D /* MGACountryMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGACountryMapper.h; sourceTree = "<group>"; };
+		3323F7ADFF9AE9003823006C /* MGACountrySelectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGACountrySelectionDelegate.h; sourceTree = "<group>"; };
 		3323F92A7AFDCDBCFC2CB633 /* MGACountryMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGACountryMapper.m; sourceTree = "<group>"; };
 		3323F9D40A5E620D17AD103F /* MGATableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGATableViewController.h; sourceTree = "<group>"; };
 		3323FB62CC2DD9F5B61290E8 /* MGAListResourceMapperTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGAListResourceMapperTest.m; sourceTree = "<group>"; };
@@ -57,6 +63,7 @@
 		3323FC2200B1EAFADAA72D87 /* MGAConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAConverter.h; sourceTree = "<group>"; };
 		3323FC6F06DDD521880C6821 /* MGAFetchCountryListService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAFetchCountryListService.h; sourceTree = "<group>"; };
 		3323FD05A413691240D41B9C /* MGACountryMapperTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGACountryMapperTest.m; sourceTree = "<group>"; };
+		3323FD2B1D40E9A908458246 /* MGADataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGADataSource.h; sourceTree = "<group>"; };
 		3323FF239B822C23D4DA75B8 /* MGAListResourceMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAListResourceMapper.h; sourceTree = "<group>"; };
 		3B2CF78F0DF637158AC4E924 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6694B01C76984FD797A99666 /* Pods-CountriesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountriesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CountriesTests/Pods-CountriesTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +152,7 @@
 			children = (
 				273AEB631CA5BE84007E2F2C /* Info.plist */,
 				3323F462DC1AF45B4643A5B4 /* Implementation */,
+				3323F9BD358FD693177160F2 /* List Countries */,
 			);
 			path = CountriesTests;
 			sourceTree = "<group>";
@@ -171,6 +179,7 @@
 			children = (
 				3323FCE2B6AF649CF619BF2C /* Mapper */,
 				3323F71D215933F2191A596D /* Converter */,
+				3323FB58F1BF96F91F4901E9 /* Data Source */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -221,6 +230,14 @@
 			path = Implementation;
 			sourceTree = "<group>";
 		};
+		3323F4AFBB4F6EC203D60916 /* TableView Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				3323F74AD53F27596BBFB042 /* MGACountryListTableViewAdapterTest.m */,
+			);
+			path = "TableView Adapter";
+			sourceTree = "<group>";
+		};
 		3323F71D215933F2191A596D /* Converter */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +256,14 @@
 			path = Implementation;
 			sourceTree = "<group>";
 		};
+		3323F9BD358FD693177160F2 /* List Countries */ = {
+			isa = PBXGroup;
+			children = (
+				3323F4AFBB4F6EC203D60916 /* TableView Adapter */,
+			);
+			path = "List Countries";
+			sourceTree = "<group>";
+		};
 		3323FAD958F8CF4F0C56156D /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +279,14 @@
 				3323FB62CC2DD9F5B61290E8 /* MGAListResourceMapperTest.m */,
 			);
 			path = "Resource Mapper";
+			sourceTree = "<group>";
+		};
+		3323FB58F1BF96F91F4901E9 /* Data Source */ = {
+			isa = PBXGroup;
+			children = (
+				3323FD2B1D40E9A908458246 /* MGADataSource.h */,
+			);
+			path = "Data Source";
 			sourceTree = "<group>";
 		};
 		3323FC6E0E11CDF234FA376F /* TableView */ = {
@@ -286,6 +319,8 @@
 				3323FC6F06DDD521880C6821 /* MGAFetchCountryListService.h */,
 				3323F752901A38C6BA5422CD /* MGACountry.h */,
 				3323F5F325BFD07FB1681648 /* MGACountryGateway.h */,
+				3323F7ADFF9AE9003823006C /* MGACountrySelectionDelegate.h */,
+				3323FFE65181190AD92DCEEE /* TableView Adapter */,
 			);
 			path = "List Countries";
 			sourceTree = "<group>";
@@ -296,6 +331,15 @@
 				3323F0397FEEB381BB185DED /* TableView */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		3323FFE65181190AD92DCEEE /* TableView Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				3323F6FE0F4298C856EB7A0A /* MGACountryListTableViewAdapter.m */,
+				3323F2FD603AB45F9F623E56 /* MGACountryListTableViewAdapter.h */,
+			);
+			path = "TableView Adapter";
 			sourceTree = "<group>";
 		};
 		ED83C2BC3C051686CE6D16E0 /* Frameworks */ = {
@@ -478,6 +522,7 @@
 				3323FDC3E3A87F1C4BB73360 /* MGACountryMapper.m in Sources */,
 				3323FA052E806C5AA13DE729 /* MGAListResourceMapper.m in Sources */,
 				3323FED795C1B1E0DD87B26B /* MGATableViewController.m in Sources */,
+				3323F90DEBFCD2B3F658AE3B /* MGACountryListTableViewAdapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +534,7 @@
 				3323FCDADA44A867B90280F0 /* MGACountryMapperTest.m in Sources */,
 				3323FA3165B8E1E217E4C10A /* MGAListResourceMapperTest.m in Sources */,
 				3323FC9241C8476E6609BCDC /* MGATableViewControllerTest.m in Sources */,
+				3323F0DD9AC3500E6A070A3C /* MGACountryListTableViewAdapterTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
