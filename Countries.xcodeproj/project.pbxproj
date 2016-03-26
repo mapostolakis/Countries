@@ -14,6 +14,7 @@
 		3323F0DD9AC3500E6A070A3C /* MGACountryListTableViewAdapterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323F74AD53F27596BBFB042 /* MGACountryListTableViewAdapterTest.m */; };
 		3323F2BBC3312015424E1F8F /* MGASingleSectionEventDataSourceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323F704C2A39153A2331BA4 /* MGASingleSectionEventDataSourceTest.m */; };
 		3323F51265BB1F43140C7688 /* MGAInMemoryStoreGatewayTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323FB910694F2D3645A9BB0 /* MGAInMemoryStoreGatewayTest.m */; };
+		3323F5867652E245D9DF2B02 /* MGACommandExecutionTableViewReloadBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323FF2375C5D1EE9643AF86 /* MGACommandExecutionTableViewReloadBinder.m */; };
 		3323F5A338754E053028FCA9 /* MGAInMemoryStoreGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323F693515C0AA6579BA40F /* MGAInMemoryStoreGateway.m */; };
 		3323F8A68F66F4F3A692C564 /* MGAFetchCountryListAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323F4520B07D6B8A040D693 /* MGAFetchCountryListAPIService.m */; };
 		3323F90DEBFCD2B3F658AE3B /* MGACountryListTableViewAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323F6FE0F4298C856EB7A0A /* MGACountryListTableViewAdapter.m */; };
@@ -29,6 +30,7 @@
 		3323FCDADA44A867B90280F0 /* MGACountryMapperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323FD05A413691240D41B9C /* MGACountryMapperTest.m */; };
 		3323FD82E41423A1CCBB2884 /* MGASingleSectionEventDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323F371FAA6BDB607D92B03 /* MGASingleSectionEventDataSource.m */; };
 		3323FDC3E3A87F1C4BB73360 /* MGACountryMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323F92A7AFDCDBCFC2CB633 /* MGACountryMapper.m */; };
+		3323FEAAB6476ED704EA23DC /* MGACommandExecutionTableViewReloadBinderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323F3A21ACADA1FBF918CB6 /* MGACommandExecutionTableViewReloadBinderTest.m */; };
 		3323FED795C1B1E0DD87B26B /* MGATableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323F1DC0C56B9861C4FDABE /* MGATableViewController.m */; };
 		3323FFB8483E9F5E126BEEE5 /* MGAFetchCountryListAPIServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323FBE931CC6E879D03D4A6 /* MGAFetchCountryListAPIServiceTest.m */; };
 		7F5416D1910B91F0C385B36F /* libPods-CountriesTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D709A047C693562610112190 /* libPods-CountriesTests.a */; };
@@ -60,6 +62,7 @@
 		3323F2964B349BB612862EA1 /* MGADataToJSONConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGADataToJSONConverter.h; sourceTree = "<group>"; };
 		3323F2FD603AB45F9F623E56 /* MGACountryListTableViewAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGACountryListTableViewAdapter.h; sourceTree = "<group>"; };
 		3323F371FAA6BDB607D92B03 /* MGASingleSectionEventDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGASingleSectionEventDataSource.m; sourceTree = "<group>"; };
+		3323F3A21ACADA1FBF918CB6 /* MGACommandExecutionTableViewReloadBinderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGACommandExecutionTableViewReloadBinderTest.m; sourceTree = "<group>"; };
 		3323F3CD2A2B29A0DE7BD134 /* MGAResourceMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAResourceMapper.h; sourceTree = "<group>"; };
 		3323F425D2F4F6BC474E7EF4 /* MGAStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAStore.h; sourceTree = "<group>"; };
 		3323F4520B07D6B8A040D693 /* MGAFetchCountryListAPIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGAFetchCountryListAPIService.m; sourceTree = "<group>"; };
@@ -77,6 +80,7 @@
 		3323F86B90BA0AC0E52714A1 /* MGAInMemoryStoreGateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAInMemoryStoreGateway.h; sourceTree = "<group>"; };
 		3323F87EADBC8AF7946C320E /* MGADataToJSONConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGADataToJSONConverter.m; sourceTree = "<group>"; };
 		3323F902F3755962B0AEBE75 /* MGAInMemoryStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGAInMemoryStore.m; sourceTree = "<group>"; };
+		3323F927416C699D250C6AF9 /* MGACommandExecutionTableViewReloadBinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGACommandExecutionTableViewReloadBinder.h; sourceTree = "<group>"; };
 		3323F92A7AFDCDBCFC2CB633 /* MGACountryMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGACountryMapper.m; sourceTree = "<group>"; };
 		3323F9D40A5E620D17AD103F /* MGATableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGATableViewController.h; sourceTree = "<group>"; };
 		3323FB1510D874113A1D9A10 /* MGADataSourceEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGADataSourceEvents.h; sourceTree = "<group>"; };
@@ -90,7 +94,9 @@
 		3323FC6F06DDD521880C6821 /* MGAFetchCountryListService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAFetchCountryListService.h; sourceTree = "<group>"; };
 		3323FD05A413691240D41B9C /* MGACountryMapperTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGACountryMapperTest.m; sourceTree = "<group>"; };
 		3323FD2B1D40E9A908458246 /* MGADataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGADataSource.h; sourceTree = "<group>"; };
+		3323FD43B9A39DCB642D58CC /* MGABinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGABinder.h; sourceTree = "<group>"; };
 		3323FE9F920A20F50422E90D /* MGAInMemoryStoreTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGAInMemoryStoreTest.m; sourceTree = "<group>"; };
+		3323FF2375C5D1EE9643AF86 /* MGACommandExecutionTableViewReloadBinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGACommandExecutionTableViewReloadBinder.m; sourceTree = "<group>"; };
 		3323FF239B822C23D4DA75B8 /* MGAListResourceMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAListResourceMapper.h; sourceTree = "<group>"; };
 		3B2CF78F0DF637158AC4E924 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6694B01C76984FD797A99666 /* Pods-CountriesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountriesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CountriesTests/Pods-CountriesTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -205,6 +211,7 @@
 			children = (
 				3323F1DC0C56B9861C4FDABE /* MGATableViewController.m */,
 				3323F9D40A5E620D17AD103F /* MGATableViewController.h */,
+				3323FD8314CBDF3AEA9D5D68 /* Binder */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -216,6 +223,7 @@
 				3323F71D215933F2191A596D /* Converter */,
 				3323FB58F1BF96F91F4901E9 /* Data Source */,
 				3323FF90A35481CD1F12E76F /* Store */,
+				3323FFB08D5FD7B41F8EFC25 /* Binder */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -322,6 +330,14 @@
 			path = "TableView Adapter";
 			sourceTree = "<group>";
 		};
+		3323F4E6ACD6E45BB17AD32F /* Binder */ = {
+			isa = PBXGroup;
+			children = (
+				3323F3A21ACADA1FBF918CB6 /* MGACommandExecutionTableViewReloadBinderTest.m */,
+			);
+			path = Binder;
+			sourceTree = "<group>";
+		};
 		3323F6491F73A68FF1853609 /* Store */ = {
 			isa = PBXGroup;
 			children = (
@@ -409,6 +425,7 @@
 			isa = PBXGroup;
 			children = (
 				3323F52CED702937A508F088 /* MGATableViewControllerTest.m */,
+				3323F4E6ACD6E45BB17AD32F /* Binder */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -427,6 +444,15 @@
 				3323FBE931CC6E879D03D4A6 /* MGAFetchCountryListAPIServiceTest.m */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		3323FD8314CBDF3AEA9D5D68 /* Binder */ = {
+			isa = PBXGroup;
+			children = (
+				3323F927416C699D250C6AF9 /* MGACommandExecutionTableViewReloadBinder.h */,
+				3323FF2375C5D1EE9643AF86 /* MGACommandExecutionTableViewReloadBinder.m */,
+			);
+			path = Binder;
 			sourceTree = "<group>";
 		};
 		3323FDCBCBD49D31525831DE /* List Countries */ = {
@@ -463,6 +489,14 @@
 				3323F425D2F4F6BC474E7EF4 /* MGAStore.h */,
 			);
 			path = Store;
+			sourceTree = "<group>";
+		};
+		3323FFB08D5FD7B41F8EFC25 /* Binder */ = {
+			isa = PBXGroup;
+			children = (
+				3323FD43B9A39DCB642D58CC /* MGABinder.h */,
+			);
+			path = Binder;
 			sourceTree = "<group>";
 		};
 		3323FFE65181190AD92DCEEE /* TableView Adapter */ = {
@@ -660,6 +694,7 @@
 				3323F5A338754E053028FCA9 /* MGAInMemoryStoreGateway.m in Sources */,
 				3323FAE94C00CE29C69072B0 /* MGAFlattenCountry.m in Sources */,
 				3323FD82E41423A1CCBB2884 /* MGASingleSectionEventDataSource.m in Sources */,
+				3323F5867652E245D9DF2B02 /* MGACommandExecutionTableViewReloadBinder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,6 +712,7 @@
 				3323F96BFBB399E06C330E9F /* MGAFlattenCountryTest.m in Sources */,
 				3323F51265BB1F43140C7688 /* MGAInMemoryStoreGatewayTest.m in Sources */,
 				3323F2BBC3312015424E1F8F /* MGASingleSectionEventDataSourceTest.m in Sources */,
+				3323FEAAB6476ED704EA23DC /* MGACommandExecutionTableViewReloadBinderTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

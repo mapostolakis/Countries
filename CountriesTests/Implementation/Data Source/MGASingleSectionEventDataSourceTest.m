@@ -7,9 +7,6 @@
 
 #import <XCTest/XCTest.h>
 
-#define MOCKITO_SHORTHAND
-#import <OCMockito/OCMockito.h>
-
 #define HC_SHORTHAND
 #import <OCHamcrest/OCHamcrest.h>
 
@@ -27,7 +24,7 @@
     [super setUp];
 
     event = [RACSubject subject];
-    sut = [[MGASingleSectionEventDataSource alloc] initWithEvent:event];
+    sut = [[MGASingleSectionEventDataSource alloc] initWithSignal:event];
 }
 
 - (void)tearDown
@@ -42,11 +39,6 @@
 - (void)test_conformsToMGADataSource
 {
     assertThat(sut, conformsTo(@protocol(MGADataSource)));
-}
-
-- (void)test_conformsToMGADataSourceEvents
-{
-    assertThat(sut, conformsTo(@protocol(MGADataSourceEvents)));
 }
 
 - (void)test_start_firesSignal
@@ -65,8 +57,6 @@
 
 - (void)test_numberOfSections_returns1
 {
-    [sut start];
-
     assertThatInteger([sut numberOfSections], is(equalToInteger(1)));
 }
 

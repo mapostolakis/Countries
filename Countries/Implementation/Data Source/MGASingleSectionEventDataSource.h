@@ -3,11 +3,12 @@
 //
 
 #import "MGADataSource.h"
-#import "MGADataSourceEvents.h"
 
-@interface MGASingleSectionEventDataSource : NSObject <MGADataSource, MGADataSourceEvents>
+@class RACSignal;
 
-- (instancetype)initWithEvent:(RACSignal *)signal;
+@interface MGASingleSectionEventDataSource : NSObject <MGADataSource>
+
+- (instancetype)initWithSignal:(RACSignal *)signal;
 
 - (void)start;
 
