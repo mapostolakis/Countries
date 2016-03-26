@@ -647,7 +647,13 @@
       <option name="project" value="LOCAL" />
       <updated>1459022841274</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Add command execution tableview reload binder&#10;&#10;* Remove unused events from event data source">
+      <created>1459028130229</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1459028130229</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -735,7 +741,8 @@
     <MESSAGE value="Add in memory store and gateway" />
     <MESSAGE value="Add single section data source" />
     <MESSAGE value="Add events to single section data source" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add events to single section data source" />
+    <MESSAGE value="Add command execution tableview reload binder&#10;&#10;* Remove unused events from event data source" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add command execution tableview reload binder&#10;&#10;* Remove unused events from event data source" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -31,6 +31,13 @@
     sut = [[MGATableViewController alloc] initWithDataSource:dataSource delegate:delegate style:UITableViewStyleGrouped];
 }
 
+- (void)tearDown
+{
+    sut = nil;
+
+    [super tearDown];
+}
+
 - (void)test_dataSource_isSetAsTableViewDataSource
 {
     assertThat(sut.tableView.dataSource, is(equalTo(dataSource)));
