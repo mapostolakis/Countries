@@ -28,56 +28,56 @@
 - (id <MGACountry>)mapResource:(NSDictionary *)resource
 {
     id <MGACountry> country;
-    if ([self resource:resource hasKeyAndValue:@"alpha3Code"]) {
+    if ([self resource:resource hasValueForKey:@"alpha3Code"]) {
         country = [self.gateway countryWithAlpha3Code:resource[@"alpha3Code"]];
     }
-    if ([self resource:resource hasKeyAndValue:@"alpha2Code"]) {
+    if ([self resource:resource hasValueForKey:@"alpha2Code"]) {
         country.alpha2Code = resource[@"alpha2Code"];
     }
-    if ([self resource:resource hasKeyAndValue:@"name"]) {
+    if ([self resource:resource hasValueForKey:@"name"]) {
         country.name = resource[@"name"];
     }
-    if ([self resource:resource hasKeyAndValue:@"nativeName"]) {
+    if ([self resource:resource hasValueForKey:@"nativeName"]) {
         country.nativeName = resource[@"nativeName"];
     }
-    if ([self resource:resource hasKeyAndValue:@"capital"]) {
+    if ([self resource:resource hasValueForKey:@"capital"]) {
         country.capital = resource[@"capital"];
     }
-    if ([self resource:resource hasKeyAndValue:@"altSpellings"]) {
+    if ([self resource:resource hasValueForKey:@"altSpellings"]) {
         country.alternativeSpellings = resource[@"altSpellings"];
     }
-    if ([self resource:resource hasKeyAndValue:@"region"]) {
+    if ([self resource:resource hasValueForKey:@"region"]) {
         country.region = resource[@"region"];
     }
-    if ([self resource:resource hasKeyAndValue:@"subregion"]) {
+    if ([self resource:resource hasValueForKey:@"subregion"]) {
         country.subregion = resource[@"subregion"];
     }
-    if ([self resource:resource hasKeyAndValue:@"population"]) {
+    if ([self resource:resource hasValueForKey:@"population"]) {
         country.population = resource[@"population"];
     }
-    if ([self resource:resource hasKeyAndValue:@"latlng"]) {
+    if ([self resource:resource hasValueForKey:@"latlng"]) {
         NSArray <NSNumber *> *coordinates = resource[@"latlng"];
         double latitude = coordinates.firstObject.doubleValue;
         double longitude = coordinates.lastObject.doubleValue;
         country.coordinates = CLLocationCoordinate2DMake(latitude, longitude);
     }
-    if ([self resource:resource hasKeyAndValue:@"area"]) {
+    if ([self resource:resource hasValueForKey:@"area"]) {
         country.area = resource[@"area"];
     }
-    if ([self resource:resource hasKeyAndValue:@"timezones"]) {
+    if ([self resource:resource hasValueForKey:@"timezones"]) {
         country.timeZones = resource[@"timezones"];
     }
-    if ([self resource:resource hasKeyAndValue:@"borders"]) {
+    if ([self resource:resource hasValueForKey:@"borders"]) {
         NSArray *borderCountries = resource[@"borders"];
         country.borderCountries = [self.listMapper mapResource:borderCountries];
     }
-    if ([self resource:resource hasKeyAndValue:@"currencies"]) {
+    if ([self resource:resource hasValueForKey:@"currencies"]) {
         country.currencies = resource[@"currencies"];
     }
     return country;
 }
 
-- (BOOL)resource:(NSDictionary *)resource hasKeyAndValue:(NSString *)key
+- (BOOL)resource:(NSDictionary *)resource hasValueForKey:(NSString *)key
 {
     return resource != (id)[NSNull null] && resource[key] != [NSNull null];
 }
