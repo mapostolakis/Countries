@@ -11,8 +11,8 @@
       <sourceFolder url="file://$MODULE_DIR$/Countries/List Countries/MGACountry.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/List Countries/MGAFetchCountryListService.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/List Countries/MGACountrySelectionDelegate.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Data Source/MGASingleSectionDataSource.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Data Source/MGASingleSectionDataSource.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Data Source/MGASingleSectionEventDataSource.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Data Source/MGASingleSectionEventDataSource.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Gateway/MGAInMemoryStoreGateway.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Gateway/MGAInMemoryStoreGateway.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Resource Mapper/Country/MGACountryMapper.h" isTestSource="false" />
@@ -32,6 +32,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Countries/main.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/App/Data Source/MGADataSource.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/App/Data Source/MGADataSourceEvents.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/App/Mapper/MGAResourceMapper.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/App/Store/MGAStore.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/App/Converter/MGAConverter.h" isTestSource="false" />
@@ -40,7 +41,7 @@
       <sourceFolder url="file://$MODULE_DIR$/CountriesTests/Implementation/Gateway/MGAInMemoryStoreGatewayTest.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CountriesTests/Implementation/Resource Mapper/MGACountryMapperTest.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CountriesTests/Implementation/Resource Mapper/MGAListResourceMapperTest.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/CountriesTests/Implementation/Data Source/MGASingleSectionDataSourceTest.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CountriesTests/Implementation/Data Source/MGASingleSectionEventDataSourceTest.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CountriesTests/Implementation/Model/MGAFlattenCountryTest.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CountriesTests/Implementation/Store/MGAInMemoryStoreTest.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CountriesTests/Implementation/Service/MGAFetchCountryListAPIServiceTest.m" isTestSource="false" />

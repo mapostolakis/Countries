@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f6e2f58-2f02-4ada-a6f7-a91b80167f5c" name="Default" comment="Add caching after mapping resources">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Countries/Implementation/Data Source/MGASingleSectionDataSource.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Countries/Implementation/Data Source/MGASingleSectionDataSource.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CountriesTests/Implementation/Data Source/MGASingleSectionDataSourceTest.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Countries/App/Data Source/MGADataSourceEvents.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Countries/Implementation/Data Source/MGASingleSectionEventDataSource.m" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Countries/Implementation/Data Source/MGASingleSectionDataSource.m" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Countries/Implementation/Data Source/MGASingleSectionDataSource.h" afterPath="$PROJECT_DIR$/Countries/Implementation/Data Source/MGASingleSectionEventDataSource.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/CountriesTests/Implementation/Data Source/MGASingleSectionDataSourceTest.m" afterPath="$PROJECT_DIR$/CountriesTests/Implementation/Data Source/MGASingleSectionEventDataSourceTest.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Countries.iml" afterPath="$PROJECT_DIR$/.idea/Countries.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Countries.xcodeproj/project.pbxproj" />
@@ -29,24 +31,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MGASingleSectionDataSource.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Countries/Implementation/Data Source/MGASingleSectionDataSource.m">
+      <file leaf-file-name="MGASingleSectionEventDataSourceTest.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CountriesTests/Implementation/Data Source/MGASingleSectionEventDataSourceTest.m">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+              <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
               <folding>
-                <element signature="e#68#106#0" expanded="true" />
+                <element signature="e#69#112#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MGASingleSectionDataSource.h" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Countries/Implementation/Data Source/MGASingleSectionDataSource.h">
+      <file leaf-file-name="MGASingleSectionEventDataSource.m" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Countries/Implementation/Data Source/MGASingleSectionEventDataSource.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1527495">
-              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-              <folding />
+            <state vertical-scroll-proportion="0.42769858">
+              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <folding>
+                <element signature="e#68#111#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -96,13 +100,17 @@
         <option value="$PROJECT_DIR$/Countries/Implementation/Model/MGAFlattenCountry.m" />
         <option value="$PROJECT_DIR$/Countries/Implementation/Gateway/MGAInMemoryStoreGateway.m" />
         <option value="$PROJECT_DIR$/Countries/Implementation/Gateway/MGAInMemoryStoreGateway.h" />
-        <option value="$PROJECT_DIR$/Countries/AppDelegate.m" />
         <option value="$PROJECT_DIR$/Countries/Implementation/Resource Mapper/Country/MGACountryMapper.m" />
         <option value="$PROJECT_DIR$/CountriesTests/Implementation/Model/MGAFlattenCountryTest.m" />
         <option value="$PROJECT_DIR$/CountriesTests/Implementation/Gateway/MGAInMemoryStoreGatewayTest.m" />
+        <option value="$PROJECT_DIR$/Countries/App/Data Source/MGADataSourceEvents.h" />
         <option value="$PROJECT_DIR$/Countries/Implementation/Data Source/MGASingleSectionDataSource.h" />
-        <option value="$PROJECT_DIR$/CountriesTests/Implementation/Data Source/MGASingleSectionDataSourceTest.m" />
         <option value="$PROJECT_DIR$/Countries/Implementation/Data Source/MGASingleSectionDataSource.m" />
+        <option value="$PROJECT_DIR$/CountriesTests/Implementation/Data Source/MGASingleSectionDataSourceTest.m" />
+        <option value="$PROJECT_DIR$/Countries/Implementation/Data Source/MGASingleSectionEventDataSource.h" />
+        <option value="$PROJECT_DIR$/Countries/Implementation/Data Source/MGASingleSectionEventDataSource.m" />
+        <option value="$PROJECT_DIR$/CountriesTests/Implementation/Data Source/MGASingleSectionEventDataSourceTest.m" />
+        <option value="$PROJECT_DIR$/Countries/AppDelegate.m" />
       </list>
     </option>
   </component>
@@ -242,6 +250,24 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Supporting Files" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Countries" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Countries" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Implementation" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
@@ -286,6 +312,28 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Countries" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Countries" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="App" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Data Source" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Cidr.FilesView" />
@@ -295,7 +343,7 @@
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="Countries" />
     <property name="FullScreen" value="true" />
   </component>
-  <component name="RunManager" selected="XCTest/Kiwi.Tests">
+  <component name="RunManager" selected="Application.Countries">
     <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Countries" TARGET_NAME="Countries" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Countries" RUN_TARGET_NAME="Countries" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
       <envs />
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
@@ -461,38 +509,44 @@
       <option name="project" value="LOCAL" />
       <updated>1459015023756</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add single section data source">
+      <created>1459016753256</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1459016753256</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Tests - 2016.03.26 at 17h 17m 48s.xml">
+    <history-entry file="-[MGASingleSectionEventDataSourceTest_test_start_firesSignal] - 2016.03.26 at 19h 08m 04s.xml">
+      <configuration name="-[MGASingleSectionEventDataSourceTest test_start_firesSignal]" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="-[MGASingleSectionEventDataSourceTest_test_start_firesSignal] - 2016.03.26 at 19h 08m 17s.xml">
+      <configuration name="-[MGASingleSectionEventDataSourceTest test_start_firesSignal]" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="-[MGASingleSectionEventDataSourceTest_test_start_firesSignal] - 2016.03.26 at 19h 08m 52s.xml">
+      <configuration name="-[MGASingleSectionEventDataSourceTest test_start_firesSignal]" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="-[MGASingleSectionEventDataSourceTest_test_start_firesSignal] - 2016.03.26 at 19h 09m 14s.xml">
+      <configuration name="-[MGASingleSectionEventDataSourceTest test_start_firesSignal]" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="-[MGASingleSectionEventDataSourceTest_test_start_firesSignal] - 2016.03.26 at 19h 09m 25s.xml">
+      <configuration name="-[MGASingleSectionEventDataSourceTest test_start_firesSignal]" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="-[MGASingleSectionEventDataSourceTest_test_start_firesSignal] - 2016.03.26 at 19h 09m 56s.xml">
+      <configuration name="-[MGASingleSectionEventDataSourceTest test_start_firesSignal]" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="-[MGASingleSectionEventDataSourceTest_test_start_firesSignal] - 2016.03.26 at 19h 10m 35s.xml">
+      <configuration name="-[MGASingleSectionEventDataSourceTest test_start_firesSignal]" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="Tests - 2016.03.26 at 19h 11m 20s.xml">
       <configuration name="Tests" configurationId="OCUnitRunConfiguration" />
     </history-entry>
-    <history-entry file="Tests - 2016.03.26 at 17h 51m 45s.xml">
+    <history-entry file="Tests - 2016.03.26 at 19h 12m 01s.xml">
       <configuration name="Tests" configurationId="OCUnitRunConfiguration" />
     </history-entry>
-    <history-entry file="Tests - 2016.03.26 at 17h 54m 58s.xml">
-      <configuration name="Tests" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="Tests - 2016.03.26 at 18h 17m 42s.xml">
-      <configuration name="Tests" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="Tests - 2016.03.26 at 18h 18m 53s.xml">
-      <configuration name="Tests" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="Tests - 2016.03.26 at 18h 19m 01s.xml">
-      <configuration name="Tests" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="Tests - 2016.03.26 at 18h 22m 18s.xml">
-      <configuration name="Tests" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="Tests - 2016.03.26 at 18h 22m 30s.xml">
-      <configuration name="Tests" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="Tests - 2016.03.26 at 18h 24m 37s.xml">
-      <configuration name="Tests" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="Tests - 2016.03.26 at 18h 25m 14s.xml">
+    <history-entry file="Tests - 2016.03.26 at 19h 12m 30s.xml">
       <configuration name="Tests" configurationId="OCUnitRunConfiguration" />
     </history-entry>
   </component>
@@ -508,7 +562,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25643563" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3270751" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24855188" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20537125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Reviews" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="News Feed" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -547,11 +601,19 @@
     <MESSAGE value="Add data to json converter" />
     <MESSAGE value="Add caching after mapping resources" />
     <MESSAGE value="Add in memory store and gateway" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add in memory store and gateway" />
+    <MESSAGE value="Add single section data source" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add single section data source" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Countries/AppDelegate.m</url>
+          <line>41</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -560,6 +622,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#67#113#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -574,6 +639,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#67#113#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -588,13 +656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Countries/main.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -869,43 +930,64 @@
         <state vertical-scroll-proportion="0.89626557">
           <caret line="61" column="1" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
           <folding>
-            <element signature="e#69#104#0" expanded="true" />
+            <element signature="e#69#104#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Countries/App/Data Source/MGADataSourceEvents.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18329939">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Countries/main.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18329939">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Countries/AppDelegate.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5809129">
-          <caret line="28" column="149" selection-start-line="28" selection-start-column="149" selection-end-line="28" selection-end-column="149" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CountriesTests/Implementation/Data Source/MGASingleSectionDataSourceTest.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.76374745">
-          <caret line="50" column="29" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.64154786">
+          <caret line="42" column="7" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
           <folding>
-            <element signature="e#69#107#0" expanded="true" />
+            <element signature="e#67#113#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Countries/Implementation/Data Source/MGASingleSectionDataSource.m">
+    <entry file="file://$PROJECT_DIR$/Countries/Implementation/Data Source/MGASingleSectionEventDataSource.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.106924646">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <folding>
+            <element signature="e#68#93#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CountriesTests/Implementation/Data Source/MGASingleSectionEventDataSourceTest.m">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
           <folding>
-            <element signature="e#68#106#0" expanded="true" />
+            <element signature="e#69#112#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Countries/Implementation/Data Source/MGASingleSectionDataSource.h">
+    <entry file="file://$PROJECT_DIR$/Countries/Implementation/Data Source/MGASingleSectionEventDataSource.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1527495">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-          <folding />
+        <state vertical-scroll-proportion="0.42769858">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <element signature="e#68#111#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
