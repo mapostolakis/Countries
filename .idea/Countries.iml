@@ -24,6 +24,8 @@
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Store/MGAInMemoryStore.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Store/MGAInMemoryStore.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Service/MGAFetchCountryListAPIService.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Service/Command/MGAFetchCountryListServiceCommandBuilder.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Service/Command/MGAFetchCountryListServiceCommandBuilder.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Service/MGAFetchCountryListAPIService.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Converter/MGADataToJSONConverter.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Converter/MGADataToJSONConverter.m" isTestSource="false" />
@@ -48,6 +50,7 @@
       <sourceFolder url="file://$MODULE_DIR$/CountriesTests/Implementation/Model/MGAFlattenCountryTest.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CountriesTests/Implementation/Store/MGAInMemoryStoreTest.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CountriesTests/Implementation/Service/MGAFetchCountryListAPIServiceTest.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CountriesTests/Implementation/Service/Command/MGAFetchCountryListServiceCommandBuilderTest.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CountriesTests/Implementation/Converter/MGADataToJSONConverterTest.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CountriesTests/Implementation/UI/TableView/MGATableViewControllerTest.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CountriesTests/Implementation/UI/TableView/Binder/MGACommandExecutionTableViewReloadBinderTest.m" isTestSource="false" />
