@@ -7,10 +7,11 @@
       <sourceFolder url="file://$MODULE_DIR$/Countries/AppDelegate.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/List Countries/TableView Adapter/MGACountryListTableViewAdapter.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/List Countries/TableView Adapter/MGACountryListTableViewAdapter.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/List Countries/MGACountrySelectionDelegate.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/List Countries/MGACountryGateway.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/List Countries/MGACountry.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/List Countries/MGAFetchCountryListService.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/List Countries/MGACountrySelectionDelegate.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/List Countries/MGACountryListDataSourceProvider.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Data Source/MGASingleSectionEventDataSource.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Data Source/MGASingleSectionEventDataSource.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Gateway/MGAInMemoryStoreGateway.m" isTestSource="false" />
@@ -34,9 +35,12 @@
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/UI/TableView/Binder/MGACommandExecutionTableViewReloadBinder.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/UI/TableView/Binder/MGACommandExecutionTableViewReloadBinder.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/main.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/Dependencies/Data Source Provider/MGAStandardDataSourceProvider.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/Dependencies/Data Source Provider/MGAStandardDataSourceProvider.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Info.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/App/Data Source/MGADataSource.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/App/Data Source/MGADataSourceEvents.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/App/Data Source/MGADataSource.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/App/Data Source/MGADataSourceProvider.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/App/Mapper/MGAResourceMapper.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/App/Store/MGAStore.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/App/Binder/MGABinder.h" isTestSource="false" />
