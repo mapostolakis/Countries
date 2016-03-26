@@ -1,8 +1,4 @@
 //
-//  main.m
-//  Countries
-//
-//  Created by Michail G Apostolakis on 25/03/2016.
 //  Copyright © 2016 Mike Apostolakis. All rights reserved.
 //
 
@@ -11,6 +7,8 @@
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+        BOOL isTesting = NSClassFromString(@"XCTestCase") != Nil;
+        NSString *appDelegateClass = isTesting ? nil : NSStringFromClass([AppDelegate class]);
+        return UIApplicationMain(argc, argv, nil, appDelegateClass);
     }
 }
