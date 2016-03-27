@@ -38,8 +38,8 @@
     id <MGAFetchCountryListService> service = [self.serviceProvider createFetchCountryListService];
     RACCommand *command = [[[MGAFetchCountryListServiceCommandBuilder alloc] initWithService:service] build];
     id <MGADataSource> dataSource = [self.dataSourceProvider createCountryListDataSourceForEvent:[[command executionSignals] switchToLatest]];
-    MGACountryListTableViewDataSourceDelegate *adapter = [self createDataSourceDelegateForDataSource:dataSource delegate:delegate];
-    MGATableViewController *viewController = [self createViewControllerWithAdapter:adapter command:command];
+    MGACountryListTableViewDataSourceDelegate *dataSourceDelegate = [self createDataSourceDelegateForDataSource:dataSource delegate:delegate];
+    MGATableViewController *viewController = [self createViewControllerWithDataSourceDelegate:dataSourceDelegate command:command];
     [[[MGACommandExecutionTableViewReloadBinder alloc] initWithCommand:command tableView:viewController.tableView] bind];
     [command execute:nil];
     return viewController;
@@ -53,15 +53,16 @@
                                                                  flagURLProvider:[MGAGeonamesFlagURLProvider new]];
 }
 
-- (MGATableViewController *)createViewControllerWithAdapter:(MGACountryListTableViewDataSourceDelegate *)adapter command:(RACCommand *)command
+- (MGATableViewController *)createViewControllerWithDataSourceDelegate:(MGACountryListTableViewDataSourceDelegate *)dataSourceDelegate
+                                                               command:(RACCommand *)command
 {
-    MGATableViewController *viewController = [[MGATableViewController alloc] initWithDataSource:adapter
-                                                                                       delegate:adapter
+    MGATableViewController *viewController = [[MGATableViewController alloc] initWithDataSource:dataSourceDelegate
+                                                                                       delegate:dataSourceDelegate
                                                                                           style:UITableViewStylePlain];
     viewController.title = @"Countries";
     [viewController.navigationItem addRefreshItemWithCommand:command];
     [viewController view];
-    [adapter registerCellsForTableView:viewController.tableView];
+    [dataSourceDelegate registerCellsForTableView:viewController.tableView];
     return viewController;
 }
 

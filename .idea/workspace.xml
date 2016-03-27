@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2f6e2f58-2f02-4ada-a6f7-a91b80167f5c" name="Default" comment="Rename MGACountryListTableViewAdapter to MGACountryListTableViewDataSourceDelegate">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Countries/App/Binder/MGABinder.h" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Countries/List Countries/TableView Adapter/MGACountryListTableViewAdapter.h" afterPath="$PROJECT_DIR$/Countries/List Countries/Data Source Delegate/MGACountryListTableViewDataSourceDelegate.h" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Countries/List Countries/TableView Adapter/MGACountryListTableViewAdapter.m" afterPath="$PROJECT_DIR$/Countries/List Countries/Data Source Delegate/MGACountryListTableViewDataSourceDelegate.m" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/CountriesTests/List Countries/TableView Adapter/MGACountryListTableViewAdapterTest.m" afterPath="$PROJECT_DIR$/CountriesTests/List Countries/Data Source Delegate/MGACountryListTableViewDataSourceDelegateTest.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Countries.iml" afterPath="$PROJECT_DIR$/.idea/Countries.iml" />
+    <list default="true" id="2f6e2f58-2f02-4ada-a6f7-a91b80167f5c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Countries.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries/Implementation/UI/TableView/Binder/MGACommandExecutionTableViewReloadBinder.h" afterPath="$PROJECT_DIR$/Countries/Implementation/UI/TableView/Binder/MGACommandExecutionTableViewReloadBinder.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries/Implementation/Use Case Factory/List Countries/MGAStandardListCountriesFactory.m" afterPath="$PROJECT_DIR$/Countries/Implementation/Use Case Factory/List Countries/MGAStandardListCountriesFactory.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CountriesTests/Implementation/UI/TableView/Binder/MGACommandExecutionTableViewReloadBinderTest.m" afterPath="$PROJECT_DIR$/CountriesTests/Implementation/UI/TableView/Binder/MGACommandExecutionTableViewReloadBinderTest.m" />
     </list>
     <ignored path="Countries.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MGAStandardListCountriesFactory.m" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MGAStandardListCountriesFactory.m" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Countries/Implementation/Use Case Factory/List Countries/MGAStandardListCountriesFactory.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.5643154">
+              <caret line="53" column="1" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
               <folding>
                 <element signature="e#68#111#0" expanded="true" />
               </folding>
@@ -44,14 +36,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MGACommandExecutionTableViewReloadBinderTest.m" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MGASingleSectionEventDataSource.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Countries/Implementation/Data Source/MGASingleSectionEventDataSource.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MGASingleSectionEventDataSource.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Countries/Implementation/Data Source/MGASingleSectionEventDataSource.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MGACommandExecutionTableViewReloadBinderTest.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CountriesTests/Implementation/UI/TableView/Binder/MGACommandExecutionTableViewReloadBinderTest.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33195022">
+            <state vertical-scroll-proportion="0.0">
               <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
               <folding>
                 <element signature="e#69#121#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MGAStandardListCountriesFactory.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Countries/Implementation/Use Case Factory/List Countries/MGAStandardListCountriesFactory.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -112,9 +134,9 @@
         <option value="$PROJECT_DIR$/Countries/List Countries/TableView Adapter/MGACountryListTableViewDataSourceDelegate.m" />
         <option value="$PROJECT_DIR$/CountriesTests/List Countries/TableView Adapter/MGACountryListTableViewAdapterTest.m" />
         <option value="$PROJECT_DIR$/CountriesTests/List Countries/TableView Adapter/MGACountryListTableViewDataSourceDelegateTest.m" />
-        <option value="$PROJECT_DIR$/Countries/Implementation/Use Case Factory/List Countries/MGAStandardListCountriesFactory.m" />
         <option value="$PROJECT_DIR$/Countries/Implementation/UI/TableView/Binder/MGACommandExecutionTableViewReloadBinder.h" />
         <option value="$PROJECT_DIR$/CountriesTests/Implementation/UI/TableView/Binder/MGACommandExecutionTableViewReloadBinderTest.m" />
+        <option value="$PROJECT_DIR$/Countries/Implementation/Use Case Factory/List Countries/MGAStandardListCountriesFactory.m" />
       </list>
     </option>
   </component>
@@ -441,30 +463,8 @@
               <option name="myItemId" value="Implementation" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Countries" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Countries" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implementation" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UI" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TableView" />
+              <option name="myItemId" value="URL Provider" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -489,12 +489,22 @@
               <option name="myItemId" value="UI" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TableView" />
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Countries" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Countries" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Binder" />
+              <option name="myItemId" value="Implementation" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -516,7 +526,7 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="UI" />
+              <option name="myItemId" value="Data Source" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -569,7 +579,7 @@
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="Countries" />
     <property name="FullScreen" value="true" />
   </component>
-  <component name="RunManager" selected="XCTest/Kiwi.Tests">
+  <component name="RunManager" selected="Application.Countries">
     <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Countries" TARGET_NAME="Countries" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Countries" RUN_TARGET_NAME="Countries" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
       <envs />
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
@@ -789,7 +799,13 @@
       <option name="project" value="LOCAL" />
       <updated>1459119835678</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Rename MGACountryListTableViewAdapter to MGACountryListTableViewDataSourceDelegate&#10;&#10;* Remove unreferenced MGABinder protocol">
+      <created>1459120497898</created>
+      <option name="number" value="00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1459120497899</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -884,7 +900,9 @@
     <MESSAGE value="Add standard service provider&#10;&#10;* Added partial country mapper&#10;* Renamed resource:hasValueForKey: in country mapper" />
     <MESSAGE value="Add refresh button" />
     <MESSAGE value="Add country and flag cells&#10;&#10;* Fetch and display flags along with country names" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add country and flag cells&#10;&#10;* Fetch and display flags along with country names" />
+    <MESSAGE value="Remove unreferenced MGABinder protocol" />
+    <MESSAGE value="Rename MGACountryListTableViewAdapter to MGACountryListTableViewDataSourceDelegate&#10;&#10;* Remove unreferenced MGABinder protocol" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rename MGACountryListTableViewAdapter to MGACountryListTableViewDataSourceDelegate&#10;&#10;* Remove unreferenced MGABinder protocol" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -912,23 +930,6 @@
         <state vertical-scroll-proportion="0.31141868">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Countries/Implementation/Data Source/MGASingleSectionEventDataSource.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14522822">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Countries/Implementation/Data Source/MGASingleSectionEventDataSource.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5020747">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="e#68#111#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -985,6 +986,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12448133">
           <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -999,6 +1001,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.24896266">
           <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding>
+            <element signature="e#68#109#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1006,6 +1011,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12448133">
           <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1098,14 +1104,6 @@
           <folding>
             <element signature="e#68#93#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Countries/Implementation/Use Case Factory/List Countries/MGAStandardListCountriesFactory.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24896266">
-          <caret line="12" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1278,22 +1276,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Countries/Implementation/Use Case Factory/List Countries/MGAStandardListCountriesFactory.m">
+    <entry file="file://$PROJECT_DIR$/CountriesTests/Implementation/UI/TableView/Binder/MGACommandExecutionTableViewReloadBinderTest.m">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
           <folding>
-            <element signature="e#68#111#0" expanded="true" />
+            <element signature="e#69#121#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CountriesTests/Implementation/UI/TableView/Binder/MGACommandExecutionTableViewReloadBinderTest.m">
+    <entry file="file://$PROJECT_DIR$/Countries/Implementation/Use Case Factory/List Countries/MGAStandardListCountriesFactory.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33195022">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Countries/Implementation/Data Source/MGASingleSectionEventDataSource.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Countries/Implementation/Data Source/MGASingleSectionEventDataSource.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Countries/Implementation/Use Case Factory/List Countries/MGAStandardListCountriesFactory.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5643154">
+          <caret line="53" column="1" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
           <folding>
-            <element signature="e#69#121#0" expanded="true" />
+            <element signature="e#68#111#0" expanded="true" />
           </folding>
         </state>
       </provider>
