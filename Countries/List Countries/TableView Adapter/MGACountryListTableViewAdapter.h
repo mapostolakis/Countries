@@ -2,12 +2,14 @@
 // Copyright (c) 2016 Mike Apostolakis. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "MGATableViewCellRegister.h"
 
-@protocol MGADataSource, MGACountrySelectionDelegate;
+@protocol MGADataSource, MGACountrySelectionDelegate, MGAFlagURLProvider;
 
-@interface MGACountryListTableViewAdapter : NSObject <UITableViewDataSource, UITableViewDelegate>
+@interface MGACountryListTableViewAdapter : NSObject <UITableViewDataSource, UITableViewDelegate, MGATableViewCellRegister>
 
-- (instancetype)initWithDataSource:(id <MGADataSource>)dataSource delegate:(id <MGACountrySelectionDelegate>)delegate;
+- (instancetype)initWithDataSource:(id <MGADataSource>)dataSource
+                          delegate:(id <MGACountrySelectionDelegate>)delegate
+                   flagURLProvider:(id <MGAFlagURLProvider>)provider;
 
 @end

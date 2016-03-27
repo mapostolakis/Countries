@@ -6,6 +6,8 @@
 #import "MGADataSource.h"
 #import "MGACountrySelectionDelegate.h"
 #import "MGACountry.h"
+#import "MGACountryAndFlagCell.h"
+#import "MGAFlagURLProvider.h"
 
 #import <XCTest/XCTest.h>
 
@@ -21,6 +23,7 @@
     NSIndexPath *indexPath;
     id <MGADataSource> dataSource;
     id <MGACountrySelectionDelegate> delegate;
+    id <MGAFlagURLProvider> flagURLProvider;
     MGACountryListTableViewAdapter *sut;
 }
 
@@ -36,7 +39,8 @@
     indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     dataSource = mockProtocol(@protocol(MGADataSource));
     delegate = mockProtocol(@protocol(MGACountrySelectionDelegate));
-    sut = [[MGACountryListTableViewAdapter alloc] initWithDataSource:dataSource delegate:delegate];
+    flagURLProvider = mockProtocol(@protocol(MGAFlagURLProvider));
+    sut = [[MGACountryListTableViewAdapter alloc] initWithDataSource:dataSource delegate:delegate flagURLProvider:flagURLProvider];
 }
 
 - (void)tearDown
@@ -58,6 +62,18 @@
     assertThat(sut, conformsTo(@protocol(UITableViewDelegate)));
 }
 
+- (void)test_conformsToMGATableViewCellRegister
+{
+    assertThat(sut, conformsTo(@protocol(MGATableViewCellRegister)));
+}
+
+- (void)test_registerCellsForTableView_registersMGACountryAndFlagCell
+{
+    [sut registerCellsForTableView:tableView];
+
+    [MKTVerify(tableView) registerClass:[MGACountryAndFlagCell class] forCellReuseIdentifier:@"MGACountryAndFlagCell"];
+}
+
 - (void)test_numberOfSectionsInTableView_returnNumberOfSections
 {
     [given([dataSource numberOfSections]) willReturnInteger:2];
@@ -74,17 +90,22 @@
 
 - (void)test_tableViewCellForRowAtIndexPath_returnsCountryCell
 {
-    UITableViewCell *countryCell = mock([UITableViewCell class]);
+    NSURL *url = mock([NSURL class]);
+    MGACountryAndFlagCell *countryCell = mock([MGACountryAndFlagCell class]);
     [given(countryCell.textLabel) willReturn:mock([UILabel class])];
     id <MGACountry> country = mockProtocol(@protocol(MGACountry));
     [given(country.name) willReturn:@"a country name"];
+    [given(country.alpha2Code) willReturn:@"code"];
+    [given([flagURLProvider URLForCountryCode:@"code"]) willReturn:url];
+
     [given([dataSource objectAtIndexPath:indexPath]) willReturn:country];
-    [given([tableView dequeueReusableCellWithIdentifier:@"MGACountryCell"]) willReturn:countryCell];
+    [given([tableView dequeueReusableCellWithIdentifier:@"MGACountryAndFlagCell"]) willReturn:countryCell];
 
     UITableViewCell *cell = [sut tableView:tableView cellForRowAtIndexPath:indexPath];
 
     assertThat(cell, is(equalTo(countryCell)));
-    [MKTVerify(cell.textLabel) setText:@"a country name"];
+    [MKTVerify(cell) setName:@"a country name"];
+    [MKTVerify(cell) setFlagURL:url];
 }
 
 - (void)test_tableViewHeightForRowAtIndexPath_returns44

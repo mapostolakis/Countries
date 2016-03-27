@@ -11,6 +11,7 @@
 #import "MGAServiceProvider.h"
 #import "MGACountryListTableViewAdapter.h"
 #import "MGAFetchCountryListServiceCommandBuilder.h"
+#import "MGAGeonamesFlagURLProvider.h"
 
 @interface MGAStandardListCountriesFactory ()
 
@@ -37,11 +38,19 @@
     id <MGAFetchCountryListService> service = [self.serviceProvider createFetchCountryListService];
     RACCommand *command = [[[MGAFetchCountryListServiceCommandBuilder alloc] initWithService:service] build];
     id <MGADataSource> dataSource = [self.dataSourceProvider createCountryListDataSourceForEvent:[[command executionSignals] switchToLatest]];
-    MGACountryListTableViewAdapter *adapter = [[MGACountryListTableViewAdapter alloc] initWithDataSource:dataSource delegate:delegate];
+    MGACountryListTableViewAdapter *adapter = [self createAdapterForDataSource:dataSource delegate:delegate];
     MGATableViewController *viewController = [self createViewControllerWithAdapter:adapter command:command];
     [[[MGACommandExecutionTableViewReloadBinder alloc] initWithCommand:command tableView:viewController.tableView] bind];
     [command execute:nil];
     return viewController;
+}
+
+- (MGACountryListTableViewAdapter *)createAdapterForDataSource:(id <MGADataSource>)dataSource
+                                                      delegate:(id <MGACountrySelectionDelegate>)delegate
+{
+    return [[MGACountryListTableViewAdapter alloc] initWithDataSource:dataSource
+                                                             delegate:delegate
+                                                      flagURLProvider:[MGAGeonamesFlagURLProvider new]];
 }
 
 - (MGATableViewController *)createViewControllerWithAdapter:(MGACountryListTableViewAdapter *)adapter command:(RACCommand *)command
@@ -52,6 +61,7 @@
     viewController.title = @"Countries";
     [viewController.navigationItem addRefreshItemWithCommand:command];
     [viewController view];
+    [adapter registerCellsForTableView:viewController.tableView];
     return viewController;
 }
 

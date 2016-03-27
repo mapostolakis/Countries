@@ -6,24 +6,37 @@
 #import "MGACountrySelectionDelegate.h"
 #import "MGADataSource.h"
 #import "MGACountry.h"
+#import "MGAFlagURLProvider.h"
+#import "MGACountryAndFlagCell.h"
 
 @interface MGACountryListTableViewAdapter ()
 
 @property (nonatomic, readonly) id <MGADataSource> dataSource;
 @property (nonatomic, readonly) id <MGACountrySelectionDelegate> delegate;
+@property (nonatomic, readonly) id <MGAFlagURLProvider> flagURLProvider;
 
 @end
 
 @implementation MGACountryListTableViewAdapter
 
-- (instancetype)initWithDataSource:(id <MGADataSource>)dataSource delegate:(id <MGACountrySelectionDelegate>)delegate
+static NSString *reuseIdentifier = @"MGACountryAndFlagCell";
+
+- (instancetype)initWithDataSource:(id <MGADataSource>)dataSource
+                          delegate:(id <MGACountrySelectionDelegate>)delegate
+                   flagURLProvider:(id <MGAFlagURLProvider>)provider
 {
     self = [super init];
     if (self) {
         _dataSource = dataSource;
         _delegate = delegate;
+        _flagURLProvider = provider;
     }
     return self;
+}
+
+- (void)registerCellsForTableView:(UITableView *)tableView
+{
+    [tableView registerClass:[MGACountryAndFlagCell class] forCellReuseIdentifier:reuseIdentifier];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -38,13 +51,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *reuseIdentifier = @"MGACountryCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
-    }
+    MGACountryAndFlagCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
     id <MGACountry> country = [self.dataSource objectAtIndexPath:indexPath];
-    cell.textLabel.text = country.name;
+    [cell setName:country.name];
+    [cell setFlagURL:[self.flagURLProvider URLForCountryCode:country.alpha2Code]];
     return cell;
 }
 
