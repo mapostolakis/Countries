@@ -6,7 +6,7 @@
 
 @protocol MGADataSource, MGACountrySelectionDelegate, MGAFlagURLProvider;
 
-@interface MGACountryListTableViewAdapter : NSObject <UITableViewDataSource, UITableViewDelegate, MGATableViewCellRegister>
+@interface MGACountryListTableViewDataSourceDelegate : NSObject <UITableViewDataSource, UITableViewDelegate, MGATableViewCellRegister>
 
 - (instancetype)initWithDataSource:(id <MGADataSource>)dataSource
                           delegate:(id <MGACountrySelectionDelegate>)delegate

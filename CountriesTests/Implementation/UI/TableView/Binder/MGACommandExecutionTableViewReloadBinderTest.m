@@ -10,9 +10,6 @@
 #define MOCKITO_SHORTHAND
 #import <OCMockito/OCMockito.h>
 
-#define HC_SHORTHAND
-#import <OCHamcrest/OCHamcrest.h>
-
 @interface MGACommandExecutionTableViewReloadBinderTest : XCTestCase
 {
     RACCommand *command;
@@ -39,11 +36,6 @@
     sut = nil;
 
     [super tearDown];
-}
-
-- (void)test_conformsToMGABinder
-{
-    assertThat(sut, conformsTo(@protocol(MGABinder)));
 }
 
 - (void)test_bind_reloadsTableView_whenCommandIsExecuted

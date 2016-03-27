@@ -2,7 +2,7 @@
 //  Copyright (c) 2016 Mike Apostolakis. All rights reserved.
 //
 
-#import "MGACountryListTableViewAdapter.h"
+#import "MGACountryListTableViewDataSourceDelegate.h"
 #import "MGADataSource.h"
 #import "MGACountrySelectionDelegate.h"
 #import "MGACountry.h"
@@ -17,19 +17,19 @@
 #define HC_SHORTHAND
 #import <OCHamcrest/OCHamcrest.h>
 
-@interface MGACountryListTableViewAdapterTest : XCTestCase
+@interface MGACountryListTableViewDataSourceDelegateTest : XCTestCase
 {
     UITableView *tableView;
     NSIndexPath *indexPath;
     id <MGADataSource> dataSource;
     id <MGACountrySelectionDelegate> delegate;
     id <MGAFlagURLProvider> flagURLProvider;
-    MGACountryListTableViewAdapter *sut;
+    MGACountryListTableViewDataSourceDelegate *sut;
 }
 
 @end
 
-@implementation MGACountryListTableViewAdapterTest
+@implementation MGACountryListTableViewDataSourceDelegateTest
 
 - (void)setUp
 {
@@ -40,7 +40,7 @@
     dataSource = mockProtocol(@protocol(MGADataSource));
     delegate = mockProtocol(@protocol(MGACountrySelectionDelegate));
     flagURLProvider = mockProtocol(@protocol(MGAFlagURLProvider));
-    sut = [[MGACountryListTableViewAdapter alloc] initWithDataSource:dataSource delegate:delegate flagURLProvider:flagURLProvider];
+    sut = [[MGACountryListTableViewDataSourceDelegate alloc] initWithDataSource:dataSource delegate:delegate flagURLProvider:flagURLProvider];
 }
 
 - (void)tearDown

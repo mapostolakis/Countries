@@ -2,14 +2,14 @@
 // Copyright (c) 2016 Mike Apostolakis. All rights reserved.
 //
 
-#import "MGACountryListTableViewAdapter.h"
+#import "MGACountryListTableViewDataSourceDelegate.h"
 #import "MGACountrySelectionDelegate.h"
 #import "MGADataSource.h"
 #import "MGACountry.h"
 #import "MGAFlagURLProvider.h"
 #import "MGACountryAndFlagCell.h"
 
-@interface MGACountryListTableViewAdapter ()
+@interface MGACountryListTableViewDataSourceDelegate ()
 
 @property (nonatomic, readonly) id <MGADataSource> dataSource;
 @property (nonatomic, readonly) id <MGACountrySelectionDelegate> delegate;
@@ -17,7 +17,7 @@
 
 @end
 
-@implementation MGACountryListTableViewAdapter
+@implementation MGACountryListTableViewDataSourceDelegate
 
 static NSString *reuseIdentifier = @"MGACountryAndFlagCell";
 
