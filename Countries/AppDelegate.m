@@ -3,30 +3,30 @@
 //
 
 #import "AppDelegate.h"
-#import "MGADependencies.h"
+#import "MGAContext.h"
 
 @interface AppDelegate ()
 
-@property (nonatomic, strong) MGADependencies *dependencies;
+@property (nonatomic, strong) MGAContext *appContext;
 
 @end
 
 @implementation AppDelegate
 
-- (MGADependencies *)dependencies
+- (MGAContext *)appContext
 {
-    if (_dependencies == nil) {
-        _dependencies = [MGADependencies new];
-        [_dependencies start];
+    if (_appContext == nil) {
+        _appContext = [MGAContext new];
+        [_appContext start];
     }
-    return _dependencies;
+    return _appContext;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     CGRect frame = [UIScreen mainScreen].bounds;
     self.window = [[UIWindow alloc] initWithFrame:frame];
-    self.window.rootViewController = [self.dependencies rootViewController];
+    self.window.rootViewController = [self.appContext rootViewController];
     [self.window makeKeyAndVisible];
     return YES;
 }

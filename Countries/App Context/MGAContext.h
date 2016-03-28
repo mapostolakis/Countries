@@ -4,7 +4,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MGADependencies : NSObject
+@interface MGAContext : NSObject
 
 - (void)start;
 - (UIViewController *)rootViewController;

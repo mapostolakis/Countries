@@ -2,7 +2,7 @@
 // Copyright (c) 2016 Mike Apostolakis. All rights reserved.
 //
 
-#import "MGADependencies.h"
+#import "MGAContext.h"
 #import "MGADataSourceProvider.h"
 #import "MGAServiceProvider.h"
 #import "MGAListCountriesFlow.h"
@@ -12,7 +12,7 @@
 #import "MGAStandardListCountriesFactory.h"
 #import "MGANavigationControllerRootPresenter.h"
 
-@interface MGADependencies ()
+@interface MGAContext ()
 
 @property (nonatomic, strong) UINavigationController *navigationController;
 @property (nonatomic, strong) id <MGADataSourceProvider> dataSourceProvider;
@@ -21,7 +21,7 @@
 
 @end
 
-@implementation MGADependencies
+@implementation MGAContext
 
 - (void)start
 {

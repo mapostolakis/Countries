@@ -55,12 +55,12 @@
       <sourceFolder url="file://$MODULE_DIR$/Countries/List Countries/MGAFetchCountryListServiceProvider.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/List Countries/MGACountryListDataSourceProvider.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/AppDelegate.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/Dependencies/Service Provider/MGAStandardServiceProvider.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/Dependencies/Service Provider/MGAStandardServiceProvider.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/Dependencies/MGADependencies.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/Dependencies/MGADependencies.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/Dependencies/Data Source Provider/MGAStandardDataSourceProvider.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/Dependencies/Data Source Provider/MGAStandardDataSourceProvider.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/App Context/Service Provider/MGAStandardServiceProvider.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/App Context/Service Provider/MGAStandardServiceProvider.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/App Context/MGAContext.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/App Context/MGAContext.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/App Context/Data Source Provider/MGAStandardDataSourceProvider.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/App Context/Data Source Provider/MGAStandardDataSourceProvider.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/main.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/App/Data Source/MGADataSourceProvider.h" isTestSource="false" />
