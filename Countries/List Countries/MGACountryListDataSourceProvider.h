@@ -9,6 +9,6 @@
 
 @protocol MGACountryListDataSourceProvider <NSObject>
 
-- (id <MGADataSource>)createCountryListDataSourceForEvent:(RACSignal *)signal;
+- (id <MGADataSource>)createCountryListDataSource;
 
 @end

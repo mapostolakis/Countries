@@ -12,6 +12,8 @@
 #import "MGACountryListTableViewDataSourceDelegate.h"
 #import "MGAFetchCountryListServiceCommandBuilder.h"
 #import "MGAGeonamesFlagURLProvider.h"
+#import "MGACommandExecutionSingleSectionDataSourceBinder.h"
+#import "MGASingleSectionDataSource.h"
 
 @interface MGAStandardListCountriesFactory ()
 
@@ -37,7 +39,8 @@
 {
     id <MGAFetchCountryListService> service = [self.serviceProvider createFetchCountryListService];
     RACCommand *command = [[[MGAFetchCountryListServiceCommandBuilder alloc] initWithService:service] build];
-    id <MGADataSource> dataSource = [self.dataSourceProvider createCountryListDataSourceForEvent:[[command executionSignals] switchToLatest]];
+    MGASingleSectionDataSource *dataSource = [self.dataSourceProvider createCountryListDataSource];
+    [[[MGACommandExecutionSingleSectionDataSourceBinder alloc] initWithCommand:command dataSource:dataSource] bind];
     MGACountryListTableViewDataSourceDelegate *dataSourceDelegate = [self createDataSourceDelegateForDataSource:dataSource delegate:delegate];
     MGATableViewController *viewController = [self createViewControllerWithDataSourceDelegate:dataSourceDelegate command:command];
     [[[MGACommandExecutionTableViewReloadBinder alloc] initWithCommand:command tableView:viewController.tableView] bind];

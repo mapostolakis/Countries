@@ -3,15 +3,13 @@
 //
 
 #import "MGAStandardDataSourceProvider.h"
-#import "MGASingleSectionEventDataSource.h"
+#import "MGASingleSectionDataSource.h"
 
 @implementation MGAStandardDataSourceProvider
 
-- (id <MGADataSource>)createCountryListDataSourceForEvent:(RACSignal *)signal
+- (id <MGADataSource>)createCountryListDataSource
 {
-    MGASingleSectionEventDataSource *dataSource = [[MGASingleSectionEventDataSource alloc] initWithSignal:signal];
-    [dataSource start];
-    return dataSource;
+    return [[MGASingleSectionDataSource alloc] init];
 }
 
 @end
