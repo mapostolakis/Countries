@@ -6,6 +6,7 @@
 
 @interface MGADependencies : NSObject
 
+- (void)start;
 - (UIViewController *)rootViewController;
 
 @end

@@ -17,6 +17,7 @@
 {
     if (_dependencies == nil) {
         _dependencies = [MGADependencies new];
+        [_dependencies start];
     }
     return _dependencies;
 }

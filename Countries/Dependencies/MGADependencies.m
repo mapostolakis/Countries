@@ -5,25 +5,45 @@
 #import "MGADependencies.h"
 #import "MGADataSourceProvider.h"
 #import "MGAServiceProvider.h"
-#import "MGARootUIFlow.h"
+#import "MGAListCountriesFlow.h"
 #import "MGAStandardDataSourceProvider.h"
 #import "MGAStandardServiceProvider.h"
 #import "MGAInMemoryStore.h"
+#import "MGAStandardListCountriesFactory.h"
+#import "MGANavigationControllerRootPresenter.h"
 
 @interface MGADependencies ()
 
+@property (nonatomic, strong) UINavigationController *navigationController;
 @property (nonatomic, strong) id <MGADataSourceProvider> dataSourceProvider;
 @property (nonatomic, strong) id <MGAServiceProvider> serviceProvider;
 @property (nonatomic, strong) id <MGAStore> store;
-@property (nonatomic, strong) MGARootUIFlow *uiFlow;
 
 @end
 
 @implementation MGADependencies
 
+- (void)start
+{
+    MGANavigationControllerRootPresenter *rootPresenter = [[MGANavigationControllerRootPresenter alloc] initWithNavigationController:self.navigationController];
+    id <MGAViewControllerPresenter> pushPresenter = nil;
+    MGAListCountriesFlow *flow = [[MGAListCountriesFlow alloc] initWithListCountriesFactory:[self createListCountriesFactory]
+                                                                      countryDetailsFactory:[self createCountryDetailsFactory]
+                                                                              listPresenter:rootPresenter detailsPresenter:pushPresenter];
+    [flow start];
+}
+
 - (UIViewController *)rootViewController
 {
-    return self.uiFlow.rootViewController;
+    return self.navigationController;
+}
+
+- (UINavigationController *)navigationController
+{
+    if (_navigationController == nil) {
+        _navigationController = [[UINavigationController alloc] init];
+    }
+    return _navigationController;
 }
 
 - (id <MGADataSourceProvider>)dataSourceProvider
@@ -50,13 +70,15 @@
     return _store;
 }
 
-- (MGARootUIFlow *)uiFlow
+- (id <MGAListCountriesFactory>)createListCountriesFactory
 {
-    if (_uiFlow == nil) {
-        _uiFlow = [[MGARootUIFlow alloc] initWithDataSourceProvider:self.dataSourceProvider
-                                                    serviceProvider:self.serviceProvider];
-    }
-    return _uiFlow;
+    return [[MGAStandardListCountriesFactory alloc] initWithDataSourceProvider:self.dataSourceProvider
+                                                               serviceProvider:self.serviceProvider];
+}
+
+-(id <MGAShowCountryDetailsFactory>)createCountryDetailsFactory
+{
+    return nil;
 }
 
 @end
