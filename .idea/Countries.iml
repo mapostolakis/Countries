@@ -25,10 +25,10 @@
       <sourceFolder url="file://$MODULE_DIR$/Countries/App Context/MGAContext.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/App Context/Data Source Provider/MGAStandardDataSourceProvider.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/App Context/Data Source Provider/MGAStandardDataSourceProvider.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Data Source/MGASingleObjectDataSource.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Data Source/MGASingleSectionDataSource.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Data Source/MGASingleObjectDataSource.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Data Source/MGASingleSectionDataSource.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Data Source/Single Object/MGASingleObjectDataSource.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Data Source/Single Object/MGASingleObjectDataSource.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Data Source/Single Section/MGASingleSectionDataSource.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Data Source/Single Section/MGASingleSectionDataSource.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Gateway/MGAInMemoryStoreGateway.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Gateway/MGAInMemoryStoreGateway.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Resource Mapper/Country/MGACountryMapper.m" isTestSource="false" />
