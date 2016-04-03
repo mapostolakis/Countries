@@ -2,9 +2,9 @@
 // Copyright (c) 2016 Mike Apostolakis. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "MGATableViewCellRegister.h"
 
-@interface MGATableViewDataSourceDelegateCluster : NSObject <UITableViewDataSource, UITableViewDelegate>
+@interface MGATableViewDataSourceDelegateCluster : NSObject <UITableViewDataSource, UITableViewDelegate, MGATableViewCellRegister>
 
 - (instancetype)initWithDataSourceDelegates:(NSArray <id <UITableViewDataSource, UITableViewDelegate>> *)items;
 

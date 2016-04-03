@@ -21,6 +21,15 @@
     return self;
 }
 
+- (void)registerCellsForTableView:(UITableView *)tableView
+{
+    for (id <UITableViewDataSource, UITableViewDelegate> dataSourceDelegate in self.dataSourceDelegates) {
+        if ([dataSourceDelegate respondsToSelector:@selector(registerCellsForTableView:)]) {
+            [(id <MGATableViewCellRegister>)dataSourceDelegate registerCellsForTableView:tableView];
+        }
+    }
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return self.dataSourceDelegates.count;
@@ -55,7 +64,10 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     id <UITableViewDataSource, UITableViewDelegate> dataSourceDelegate = self.dataSourceDelegates[section];
-    return [dataSourceDelegate tableView:tableView heightForHeaderInSection:section];
+    if ([dataSourceDelegate respondsToSelector:@selector(tableView:heightForHeaderInSection:)]) {
+        return [dataSourceDelegate tableView:tableView heightForHeaderInSection:section];
+    }
+    return 0.f;
 }
 
 @end

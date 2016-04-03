@@ -25,12 +25,6 @@
     [super setUp];
 
     tableView = mock([UITableView class]);
-
-}
-
-- (void)tearDown
-{
-    [super tearDown];
 }
 
 #pragma mark - Tests
@@ -43,6 +37,25 @@
 - (void)test_conformsToUITableViewDelegate
 {
     assertThat([MGATableViewDataSourceDelegateCluster new], conformsTo(@protocol(UITableViewDelegate)));
+}
+
+- (void)test_conformsToMGATableViewCellRegister
+{
+    assertThat([MGATableViewDataSourceDelegateCluster new], conformsTo(@protocol(MGATableViewCellRegister)));
+}
+
+- (void)test_registerCellsForTableView_registersAllCells_whenDataSourceDelegateConformsToMGATableViewCellRegister
+{
+    id <MGATableViewCellRegister> dataSource0 = mockProtocol(@protocol(MGATableViewCellRegister));
+    id <MGATableViewCellRegister> dataSource1 = mockProtocol(@protocol(MGATableViewCellRegister));
+
+    NSArray *items = @[dataSource0, dataSource1];
+    MGATableViewDataSourceDelegateCluster *sut = [[MGATableViewDataSourceDelegateCluster alloc] initWithDataSourceDelegates:items];
+
+    [sut registerCellsForTableView:tableView];
+
+    [MKTVerifyCount(dataSource0, times(1)) registerCellsForTableView:tableView];
+    [MKTVerifyCount(dataSource1, times(1)) registerCellsForTableView:tableView];
 }
 
 - (void)test_numberOfSections_returnsTotalNumberOfDataSourceDelegates
@@ -114,13 +127,12 @@
     [given([dataSource0 tableView:tableView titleForHeaderInSection:0]) willReturn:@"a title"];
 
     id <UITableViewDataSource> dataSource1 = mockProtocol(@protocol(UITableViewDataSource));
-    [given([dataSource1 tableView:tableView titleForHeaderInSection:1]) willReturn:@"another title"];
 
     NSArray *items = @[dataSource0, dataSource1];
     MGATableViewDataSourceDelegateCluster *sut = [[MGATableViewDataSourceDelegateCluster alloc] initWithDataSourceDelegates:items];
 
     assertThat([sut tableView:tableView titleForHeaderInSection:0], is(equalTo(@"a title")));
-    assertThat([sut tableView:tableView titleForHeaderInSection:1], is(equalTo(@"another title")));
+    assertThat([sut tableView:tableView titleForHeaderInSection:1], is(nilValue()));
 }
 
 - (void)test_tableViewHeightForHeaderInSection_returnsSectionHeightForDataSourceDelegate
@@ -129,13 +141,12 @@
     [given([delegate0 tableView:tableView heightForHeaderInSection:0]) willReturnFloat:40.f];
 
     id <UITableViewDelegate> delegate1 = mockProtocol(@protocol(UITableViewDelegate));
-    [given([delegate1 tableView:tableView heightForHeaderInSection:1]) willReturnFloat:50.f];
 
     NSArray *items = @[delegate0, delegate1];
     MGATableViewDataSourceDelegateCluster *sut = [[MGATableViewDataSourceDelegateCluster alloc] initWithDataSourceDelegates:items];
 
     assertThatFloat([sut tableView:tableView heightForHeaderInSection:0], is(equalToFloat(40.f)));
-    assertThatFloat([sut tableView:tableView heightForHeaderInSection:1], is(equalToFloat(50.f)));
+    assertThatFloat([sut tableView:tableView heightForHeaderInSection:1], is(equalToFloat(0.f)));
 }
 
 @end

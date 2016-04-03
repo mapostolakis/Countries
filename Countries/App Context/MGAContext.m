@@ -13,6 +13,7 @@
 #import "MGANavigationControllerRootPresenter.h"
 #import "MGAStandardShowCountryDetailsFactory.h"
 #import "MGANavigationControllerPushPresenter.h"
+#import "MGAGeonamesFlagURLProvider.h"
 
 @interface MGAContext ()
 
@@ -80,7 +81,8 @@
 
 -(id <MGAShowCountryDetailsFactory>)createCountryDetailsFactory
 {
-    return [[MGAStandardShowCountryDetailsFactory alloc] init];
+    id <MGAFlagURLProvider> provider = [MGAGeonamesFlagURLProvider new];
+    return [[MGAStandardShowCountryDetailsFactory alloc] initWithFlagURLProvider:provider];
 }
 
 @end
