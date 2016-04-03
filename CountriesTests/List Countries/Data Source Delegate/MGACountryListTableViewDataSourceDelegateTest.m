@@ -50,7 +50,7 @@
     [super tearDown];
 }
 
-#pragma mark - Helpers
+#pragma mark - Tests
 
 - (void)test_conformsToUITableViewDataSource
 {
