@@ -16,7 +16,7 @@
 @interface MGAStandardShowCountryDetailsFactory ()
 
 @property (nonatomic, strong) NSNumberFormatter *numberFormatter;
-@property (nonatomic, strong) id <MGAFlagURLProvider> flagURLProvider;
+@property (nonatomic, readonly) id <MGAFlagURLProvider> flagURLProvider;
 
 @end
 
