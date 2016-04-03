@@ -4,8 +4,10 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol MGACountry;
+
 @protocol MGAShowCountryDetailsFactory <NSObject>
 
-- (UIViewController *)createCountryDetailsViewForCountryWithAlpha3Code:(NSString *)code;
+- (UIViewController *)createCountryDetailsViewForCountry:(id <MGACountry>)country;
 
 @end

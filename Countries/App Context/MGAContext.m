@@ -11,6 +11,8 @@
 #import "MGAInMemoryStore.h"
 #import "MGAStandardListCountriesFactory.h"
 #import "MGANavigationControllerRootPresenter.h"
+#import "MGAStandardShowCountryDetailsFactory.h"
+#import "MGANavigationControllerPushPresenter.h"
 
 @interface MGAContext ()
 
@@ -26,7 +28,7 @@
 - (void)start
 {
     MGANavigationControllerRootPresenter *rootPresenter = [[MGANavigationControllerRootPresenter alloc] initWithNavigationController:self.navigationController];
-    id <MGAViewControllerPresenter> pushPresenter = nil;
+    MGANavigationControllerPushPresenter *pushPresenter = [[MGANavigationControllerPushPresenter alloc] initWithNavigationController:self.navigationController];
     MGAListCountriesFlow *flow = [[MGAListCountriesFlow alloc] initWithListCountriesFactory:[self createListCountriesFactory]
                                                                       countryDetailsFactory:[self createCountryDetailsFactory]
                                                                               listPresenter:rootPresenter detailsPresenter:pushPresenter];
@@ -78,7 +80,7 @@
 
 -(id <MGAShowCountryDetailsFactory>)createCountryDetailsFactory
 {
-    return nil;
+    return [[MGAStandardShowCountryDetailsFactory alloc] init];
 }
 
 @end
