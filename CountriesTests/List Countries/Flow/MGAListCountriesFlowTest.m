@@ -60,9 +60,8 @@
 - (void)test_didSelectCountry_presentsCountryDetailsView
 {
     id <MGACountry> country = mockProtocol(@protocol(MGACountry));
-    [given(country.alpha3Code) willReturn:@"code"];
     UIViewController *viewController = [UIViewController new];
-    [given([countryDetailsFactory createCountryDetailsViewForCountryWithAlpha3Code:@"code"]) willReturn:viewController];
+    [given([countryDetailsFactory createCountryDetailsViewForCountry:country]) willReturn:viewController];
 
     [sut didSelectCountry:country];
     

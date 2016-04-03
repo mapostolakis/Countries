@@ -4,14 +4,8 @@
     <list default="true" id="2f6e2f58-2f02-4ada-a6f7-a91b80167f5c" name="Default" comment="Rename MGADependencies to MGAContext">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Countries/Implementation/Use Case Factory/Show Country Details/MGAStandardShowCountryDetailsFactory.h" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Countries/Implementation/Use Case Factory/Show Country Details/MGAStandardShowCountryDetailsFactory.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/MGACountryDetailsDataSourceDelegate.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/MGACountryDetailsDataSourceDelegate.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CountriesTests/Show Country Details/Data Source Delegate/MGACountryDetailsDataSourceDelegateTest.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Countries.iml" afterPath="$PROJECT_DIR$/.idea/Countries.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Countries.xcodeproj/project.pbxproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries/List Countries/Flow/MGAListCountriesFlow.m" afterPath="$PROJECT_DIR$/Countries/List Countries/Flow/MGAListCountriesFlow.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CountriesTests/List Countries/Data Source Delegate/MGACountryListTableViewDataSourceDelegateTest.m" afterPath="$PROJECT_DIR$/CountriesTests/List Countries/Data Source Delegate/MGACountryListTableViewDataSourceDelegateTest.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CountriesTests/List Countries/Flow/MGAListCountriesFlowTest.m" afterPath="$PROJECT_DIR$/CountriesTests/List Countries/Flow/MGAListCountriesFlowTest.m" />
     </list>
     <ignored path="Countries.iws" />
@@ -61,9 +55,9 @@
         <entry file="file://$PROJECT_DIR$/CountriesTests/Show Country Details/Data Source Delegate/MGACountryDetailsDataSourceDelegateTest.m">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="454">
-              <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+              <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
               <folding>
-                <element signature="e#98#145#0" expanded="true" />
+                <element signature="e#69#116#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -870,7 +864,14 @@
       <option name="project" value="LOCAL" />
       <updated>1459715180226</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Add country details data source delegate">
+      <created>1459717286025</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1459717286025</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -945,7 +946,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="Add country mapper" />
     <MESSAGE value="Add list mapper" />
     <MESSAGE value="Restructure folders" />
     <MESSAGE value="Add table view controller" />
@@ -970,7 +970,8 @@
     <MESSAGE value="Rename MGADependencies to MGAContext" />
     <MESSAGE value="Add table view data source delegate cluster&#10;&#10;* Added push presenter" />
     <MESSAGE value="Add single value country details" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add single value country details" />
+    <MESSAGE value="Add country details data source delegate" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add country details data source delegate" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1373,9 +1374,9 @@
     <entry file="file://$PROJECT_DIR$/CountriesTests/Show Country Details/Data Source Delegate/MGACountryDetailsDataSourceDelegateTest.m">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="454">
-          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
           <folding>
-            <element signature="e#98#145#0" expanded="true" />
+            <element signature="e#69#116#0" expanded="true" />
           </folding>
         </state>
       </provider>

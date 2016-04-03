@@ -42,8 +42,7 @@
 
 - (void)didSelectCountry:(id <MGACountry>)country
 {
-    NSString *code = country.alpha3Code;
-    UIViewController *viewController = [self.countryDetailsFactory createCountryDetailsViewForCountryWithAlpha3Code:code];
+    UIViewController *viewController = [self.countryDetailsFactory createCountryDetailsViewForCountry:country];
     [self.detailsPresenter present:viewController];
 }
 
