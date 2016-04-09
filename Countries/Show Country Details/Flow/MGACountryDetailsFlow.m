@@ -10,19 +10,24 @@
 
 @property (nonatomic, readonly) id <MGACountryDetailsFactory> factory;
 @property (nonatomic, readonly) id <MGAViewControllerPresenter> presenter;
+@property (nonatomic, readonly) id <MGAViewControllerPresenter> selectionPresenter;
 @property (nonatomic, readonly) id <MGACountry> country;
 
 @end
 
 @implementation MGACountryDetailsFlow
 
-- (instancetype)initWithCountry:(id <MGACountry>)country factory:(id <MGACountryDetailsFactory>)factory presenter:(id <MGAViewControllerPresenter>)presenter
+- (instancetype)initWithCountry:(id <MGACountry>)country
+                        factory:(id <MGACountryDetailsFactory>)factory
+                      presenter:(id <MGAViewControllerPresenter>)presenter
+             selectionPresenter:(id <MGAViewControllerPresenter>)selectionPresenter
 {
     self = [super init];
     if (self) {
         _country = country;
         _factory = factory;
         _presenter = presenter;
+        _selectionPresenter = selectionPresenter;
     }
     return self;
 }
@@ -38,7 +43,7 @@
 {
     UIViewController *viewController = [self.factory createCountryDetailsViewForCountry:country delegate:self];
 
-    [self.presenter present:viewController];
+    [self.selectionPresenter present:viewController];
 }
 
 - (void)dealloc

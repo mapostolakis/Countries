@@ -53,11 +53,12 @@
     [MKTVerify(presenter) present:viewController];
 }
 
-- (void)test_didSelectCountry_presentsCountryDetailsView
+- (void)test_didSelectCountry_startsCountryDetailsFlow
 {
     id <MGACountry> country = mockProtocol(@protocol(MGACountry));
 
     MGACountryDetailsFlow *flow = mock([MGACountryDetailsFlow class]);
+    
     [given([flowFactory createFlowForCountry:country]) willReturn:flow];
 
     [sut didSelectCountry:country];

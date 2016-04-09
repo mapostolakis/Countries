@@ -4,7 +4,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol MGACountry;
+@protocol MGACountry, MGAViewControllerPresenter;
 @class MGACountryDetailsFlow;
 
 @protocol MGACountryDetailsFlowFactory <NSObject>

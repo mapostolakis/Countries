@@ -14,6 +14,7 @@
 #import "MGAStandardListCountriesFactory.h"
 #import "MGADataSourceProvider.h"
 #import "MGAServiceProvider.h"
+#import "MGANavigationControllerLastItemReplacingPresenter.h"
 
 @interface MGAFlowFactory ()
 
@@ -43,8 +44,10 @@
 
 - (MGAListCountriesFlow *)createCountryListFlow
 {
-    id <MGAViewControllerPresenter> rootPresenter = [[MGANavigationControllerRootPresenter alloc] initWithNavigationController:self.navigationController];
-    id <MGAListCountriesFactory> factory = [[MGAStandardListCountriesFactory alloc] initWithDataSourceProvider:self.dataSourceProvider serviceProvider:self.serviceProvider];
+    id <MGAViewControllerPresenter> rootPresenter =
+    [[MGANavigationControllerRootPresenter alloc] initWithNavigationController:self.navigationController];
+    id <MGAListCountriesFactory> factory =
+    [[MGAStandardListCountriesFactory alloc] initWithDataSourceProvider:self.dataSourceProvider serviceProvider:self.serviceProvider];
     return [[MGAListCountriesFlow alloc] initWithFactory:factory presenter:rootPresenter flowFactory:self];
 }
 
@@ -52,9 +55,13 @@
 {
     id <MGAFlagURLProvider> provider = [MGAGeonamesFlagURLProvider new];
     id <MGACountryGateway> gateway = [[MGAInMemoryStoreGateway alloc] initWithStore:self.store];
-    id <MGACountryDetailsFactory> factory = [[MGAStandardCountryDetailsFactory alloc] initWithFlagURLProvider:provider gateway:gateway];
-    id <MGAViewControllerPresenter> presenter = [[MGANavigationControllerPushPresenter alloc] initWithNavigationController:self.navigationController];
-    return [[MGACountryDetailsFlow alloc] initWithCountry:country factory:factory presenter:presenter];
+    id <MGACountryDetailsFactory> factory =
+    [[MGAStandardCountryDetailsFactory alloc] initWithFlagURLProvider:provider gateway:gateway];
+    MGANavigationControllerPushPresenter *presenter =
+    [[MGANavigationControllerPushPresenter alloc] initWithNavigationController:self.navigationController];
+    MGANavigationControllerLastItemReplacingPresenter *selectionPresenter =
+    [[MGANavigationControllerLastItemReplacingPresenter alloc] initWithNavigationController:self.navigationController];
+    return [[MGACountryDetailsFlow alloc] initWithCountry:country factory:factory presenter:presenter selectionPresenter:selectionPresenter];
 }
 
 @end

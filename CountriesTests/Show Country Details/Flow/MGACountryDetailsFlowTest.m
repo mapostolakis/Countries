@@ -19,6 +19,7 @@
 {
     id <MGACountry> country;
     id <MGAViewControllerPresenter> presenter;
+    id <MGAViewControllerPresenter> selectionPresenter;
     id <MGACountryDetailsFactory> factory;
     MGACountryDetailsFlow *sut;
 }
@@ -32,8 +33,12 @@
 
     factory = mockProtocol(@protocol(MGACountryDetailsFactory));
     presenter = mockProtocol(@protocol(MGAViewControllerPresenter));
+    selectionPresenter = mockProtocol(@protocol(MGAViewControllerPresenter));
     country = mockProtocol(@protocol(MGACountry));
-    sut  = [[MGACountryDetailsFlow alloc] initWithCountry:country factory:factory presenter:presenter];
+    sut  = [[MGACountryDetailsFlow alloc] initWithCountry:country
+                                                  factory:factory
+                                                presenter:presenter
+                                       selectionPresenter:selectionPresenter];
 }
 
 - (void)tearDown
@@ -68,7 +73,7 @@
 
     [sut didSelectCountry:detailCountry];
 
-    [MKTVerify(presenter) present:viewController];
+    [MKTVerify(selectionPresenter) present:viewController];
 }
 
 @end

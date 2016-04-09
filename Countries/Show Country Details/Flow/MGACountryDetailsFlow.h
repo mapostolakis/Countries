@@ -8,7 +8,10 @@
 
 @interface MGACountryDetailsFlow : NSObject <MGACountrySelectionDelegate>
 
-- (instancetype)initWithCountry:(id <MGACountry>)country factory:(id <MGACountryDetailsFactory>)factory presenter:(id <MGAViewControllerPresenter>)presenter;
+- (instancetype)initWithCountry:(id <MGACountry>)country
+                        factory:(id <MGACountryDetailsFactory>)factory
+                      presenter:(id <MGAViewControllerPresenter>)presenter
+             selectionPresenter:(id <MGAViewControllerPresenter>)selectionPresenter;
 
 - (void)start;
 
