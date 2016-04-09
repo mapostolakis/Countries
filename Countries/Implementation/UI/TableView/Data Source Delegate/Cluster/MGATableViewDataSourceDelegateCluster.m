@@ -30,6 +30,8 @@
     }
 }
 
+#pragma mark - <UITableViewDataSource>
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return self.dataSourceDelegates.count;
@@ -47,6 +49,8 @@
     NSIndexPath *localIndexPath = [NSIndexPath indexPathForRow:indexPath.row inSection:indexPath.section];
     return [dataSourceDelegate tableView:tableView cellForRowAtIndexPath:localIndexPath];
 }
+
+#pragma mark - <UITableViewDelegate>
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -68,6 +72,12 @@
         return [dataSourceDelegate tableView:tableView heightForHeaderInSection:section];
     }
     return 0.f;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    id <UITableViewDataSource, UITableViewDelegate> dataSourceDelegate = self.dataSourceDelegates[indexPath.section];
+    [dataSourceDelegate tableView:tableView didSelectRowAtIndexPath:indexPath];
 }
 
 @end

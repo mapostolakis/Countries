@@ -58,6 +58,8 @@
     [MKTVerifyCount(dataSource1, times(1)) registerCellsForTableView:tableView];
 }
 
+#pragma mark - <UITableViewDataSource>
+
 - (void)test_numberOfSections_returnsTotalNumberOfDataSourceDelegates
 {
     NSArray *items = @[mockProtocol(@protocol(UITableViewDataSource)), mockProtocol(@protocol(UITableViewDataSource))];
@@ -103,6 +105,8 @@
     assertThat([sut tableView:tableView cellForRowAtIndexPath:indexPath1], is(equalTo(cell1)));
 }
 
+#pragma mark - <UITableViewDelegate>
+
 - (void)test_tableViewHeightForRowAtIndexPath_returnsHeightForRowForDataSourceDelegate
 {
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
@@ -147,6 +151,38 @@
 
     assertThatFloat([sut tableView:tableView heightForHeaderInSection:0], is(equalToFloat(40.f)));
     assertThatFloat([sut tableView:tableView heightForHeaderInSection:1], is(equalToFloat(0.f)));
+}
+
+- (void)test_tableViewDidSelectRowAtIndexPath_delegatesSelection
+{
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+
+    id <UITableViewDelegate> delegate0 = mockProtocol(@protocol(UITableViewDelegate));
+    id <UITableViewDelegate> delegate1 = mockProtocol(@protocol(UITableViewDelegate));
+
+    NSArray *items = @[delegate0, delegate1];
+    MGATableViewDataSourceDelegateCluster *sut = [[MGATableViewDataSourceDelegateCluster alloc] initWithDataSourceDelegates:items];
+
+    [sut tableView:tableView didSelectRowAtIndexPath:indexPath];
+
+    [MKTVerify(delegate0) tableView:tableView didSelectRowAtIndexPath:indexPath];
+    [MKTVerifyCount(delegate1, never()) tableView:tableView didSelectRowAtIndexPath:indexPath];
+}
+
+- (void)test_tableViewDidSelectRowAtIndexPath_delegatesSelection_1
+{
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:1];
+
+    id <UITableViewDelegate> delegate0 = mockProtocol(@protocol(UITableViewDelegate));
+    id <UITableViewDelegate> delegate1 = mockProtocol(@protocol(UITableViewDelegate));
+
+    NSArray *items = @[delegate0, delegate1];
+    MGATableViewDataSourceDelegateCluster *sut = [[MGATableViewDataSourceDelegateCluster alloc] initWithDataSourceDelegates:items];
+
+    [sut tableView:tableView didSelectRowAtIndexPath:indexPath];
+
+    [MKTVerifyCount(delegate0, never()) tableView:tableView didSelectRowAtIndexPath:indexPath];
+    [MKTVerify(delegate1) tableView:tableView didSelectRowAtIndexPath:indexPath];
 }
 
 @end
