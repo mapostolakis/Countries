@@ -77,7 +77,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     id <UITableViewDataSource, UITableViewDelegate> dataSourceDelegate = self.dataSourceDelegates[indexPath.section];
-    [dataSourceDelegate tableView:tableView didSelectRowAtIndexPath:indexPath];
+    if ([dataSourceDelegate respondsToSelector:@selector(tableView:didSelectRowAtIndexPath:)]) {
+        [dataSourceDelegate tableView:tableView didSelectRowAtIndexPath:indexPath];
+    }
 }
 
 @end
