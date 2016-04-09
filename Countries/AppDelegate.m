@@ -5,12 +5,6 @@
 #import "AppDelegate.h"
 #import "MGAContext.h"
 
-@interface AppDelegate ()
-
-@property (nonatomic, strong) MGAContext *appContext;
-
-@end
-
 @implementation AppDelegate
 
 - (MGAContext *)appContext
