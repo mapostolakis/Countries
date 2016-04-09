@@ -14,6 +14,7 @@
 #import "MGAStandardShowCountryDetailsFactory.h"
 #import "MGANavigationControllerPushPresenter.h"
 #import "MGAGeonamesFlagURLProvider.h"
+#import "MGAInMemoryStoreGateway.h"
 
 @interface MGAContext ()
 
@@ -21,7 +22,7 @@
 @property (nonatomic, strong) id <MGADataSourceProvider> dataSourceProvider;
 @property (nonatomic, strong) id <MGAServiceProvider> serviceProvider;
 @property (nonatomic, strong) id <MGAStore> store;
-
+@property (nonatomic, strong) id <MGACountryGateway> inMemoryCountryGateway;
 @end
 
 @implementation MGAContext
@@ -79,10 +80,19 @@
                                                                serviceProvider:self.serviceProvider];
 }
 
--(id <MGAShowCountryDetailsFactory>)createCountryDetailsFactory
+- (id <MGACountryGateway>)inMemoryCountryGateway
+{
+    if (_inMemoryCountryGateway == nil) {
+        _inMemoryCountryGateway = [[MGAInMemoryStoreGateway alloc] initWithStore:self.store];
+    }
+    return _inMemoryCountryGateway;
+}
+
+- (id <MGAShowCountryDetailsFactory>)createCountryDetailsFactory
 {
     id <MGAFlagURLProvider> provider = [MGAGeonamesFlagURLProvider new];
-    return [[MGAStandardShowCountryDetailsFactory alloc] initWithFlagURLProvider:provider];
+    id <MGACountryGateway> gateway = [[MGAInMemoryStoreGateway alloc] initWithStore:self.store];
+    return [[MGAStandardShowCountryDetailsFactory alloc] initWithFlagURLProvider:provider gateway:gateway];
 }
 
 @end

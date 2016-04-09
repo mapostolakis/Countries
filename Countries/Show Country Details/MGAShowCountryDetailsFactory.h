@@ -4,10 +4,10 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol MGACountry;
+@protocol MGACountry, MGACountrySelectionDelegate;
 
 @protocol MGAShowCountryDetailsFactory <NSObject>
 
-- (UIViewController *)createCountryDetailsViewForCountry:(id <MGACountry>)country;
+- (UIViewController *)createCountryDetailsViewForCountry:(id <MGACountry>)country delegate:(id <MGACountrySelectionDelegate>)delegate;
 
 @end

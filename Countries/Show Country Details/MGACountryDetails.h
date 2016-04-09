@@ -6,7 +6,7 @@
 
 @protocol MGACountryDetails <NSObject>
 
-@property (nonatomic, readonly) NSString *name;
-@property (nonatomic, readonly) id value;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) id value;
 
 @end

@@ -2,6 +2,7 @@
 // Copyright (c) 2016 Mike Apostolakis. All rights reserved.
 //
 
+#import <ReactiveCocoa/ReactiveCocoa.h>
 #import "MGAStandardShowCountryDetailsFactory.h"
 #import "MGATableViewController.h"
 #import "MGATableViewDataSourceDelegateCluster.h"
@@ -9,31 +10,36 @@
 #import "MGAFlagURLProvider.h"
 #import "MGACountry.h"
 #import "MGASingleSectionDataSource.h"
-#import "MGASingleValueCountryDetails.h"
+#import "MGACountryGateway.h"
 #import "MGAURLImageDataSourceDelegate.h"
 #import "MGASingleObjectDataSource.h"
+#import "MGAPartialToFullCountryListMapper.h"
+#import "MGAMutableCountryDetails.h"
+#import "MGACountryListTableViewDataSourceDelegate.h"
 
 @interface MGAStandardShowCountryDetailsFactory ()
 
 @property (nonatomic, strong) NSNumberFormatter *numberFormatter;
 @property (nonatomic, readonly) id <MGAFlagURLProvider> flagURLProvider;
+@property (nonatomic, readonly) id <MGACountryGateway> gateway;
 
 @end
 
 @implementation MGAStandardShowCountryDetailsFactory
 
-- (instancetype)initWithFlagURLProvider:(id <MGAFlagURLProvider>)flagURLProvider
+- (instancetype)initWithFlagURLProvider:(id <MGAFlagURLProvider>)flagURLProvider gateway:(id <MGACountryGateway>)gateway
 {
     self = [super init];
     if (self) {
         _flagURLProvider = flagURLProvider;
+        _gateway = gateway;
     }
     return self;
 }
 
-- (UIViewController *)createCountryDetailsViewForCountry:(id <MGACountry>)country
+- (UIViewController *)createCountryDetailsViewForCountry:(id <MGACountry>)country delegate:(id <MGACountrySelectionDelegate>)delegate
 {
-    NSArray *items = [self dataSourceDelegatesForCountry:country];
+    NSArray *items = [self dataSourceDelegatesForCountry:country delegate:delegate];
     MGATableViewDataSourceDelegateCluster *cluster = [[MGATableViewDataSourceDelegateCluster alloc] initWithDataSourceDelegates:items];
     MGATableViewController *viewController = [[MGATableViewController alloc] initWithDataSource:cluster delegate:cluster style:UITableViewStylePlain];
     [viewController view];
@@ -51,18 +57,19 @@
     return _numberFormatter;
 }
 
-- (NSArray *)dataSourceDelegatesForCountry:(id <MGACountry>)country
+- (NSArray *)dataSourceDelegatesForCountry:(id <MGACountry>)country delegate:(id <MGACountrySelectionDelegate>)delegate
 {
     NSString *population = [self.numberFormatter stringFromNumber:country.population];
     NSString *area = [NSString stringWithFormat:@"%@ Km\u00b2", [self.numberFormatter stringFromNumber:country.area]];
     return @[
             [self createFlagHeaderForCountryCode:country.alpha2Code],
-            [self createDataSourceDelegateForValue:country.nativeName title:@"Native Name"],
-            [self createDataSourceDelegateForValue:country.capital title:@"Capital"],
-            [self createDataSourceDelegateForValue:country.region title:@"Region"],
-            [self createDataSourceDelegateForValue:country.subregion title:@"Subregion"],
-            [self createDataSourceDelegateForValue:population title:@"Population"],
-            [self createDataSourceDelegateForValue:area title:@"Area"]
+            [self createDataSourceDelegateWithTitle:@"Native Name" countryDetailsValue:country.nativeName],
+            [self createDataSourceDelegateWithTitle:@"Capital" countryDetailsValue:country.capital],
+            [self createDataSourceDelegateWithTitle:@"Region" countryDetailsValue:country.region],
+            [self createDataSourceDelegateWithTitle:@"Subregion" countryDetailsValue:country.subregion],
+            [self createDataSourceDelegateWithTitle:@"Population" countryDetailsValue:population],
+            [self createDataSourceDelegateWithTitle:@"Area" countryDetailsValue:area],
+            [self createDataSourceDelegateWithTitle:@"Borders" partialCountries:country.borderCountries delegate:delegate]
     ];
 }
 
@@ -74,12 +81,26 @@
     return [[MGAURLImageDataSourceDelegate alloc] initWithDataSource:dataSource];
 }
 
-- (id <UITableViewDataSource, UITableViewDelegate>)createDataSourceDelegateForValue:(id)value title:(NSString *)title
+- (id <UITableViewDataSource, UITableViewDelegate>)createDataSourceDelegateWithTitle:(NSString *)title countryDetailsValue:(NSString *)value
 {
-    MGASingleValueCountryDetails *countryDetails = [[MGASingleValueCountryDetails alloc] initWithName:title value:value];
+    MGAMutableCountryDetails *countryDetails = [[MGAMutableCountryDetails alloc] init];
+    countryDetails.value = value;
     MGASingleSectionDataSource *dataSource = [[MGASingleSectionDataSource alloc] init];
     dataSource.items = @[countryDetails];
     return [[MGACountryDetailsDataSourceDelegate alloc] initWithSectionTitle:title dataSource:dataSource delegate:nil];
+}
+
+- (id <UITableViewDataSource, UITableViewDelegate>)createDataSourceDelegateWithTitle:(NSString *)title
+                                                                    partialCountries:(NSArray *)partials
+                                                                            delegate:(id <MGACountrySelectionDelegate>)delegate
+{
+    MGAPartialToFullCountryListMapper *mapper = [[MGAPartialToFullCountryListMapper alloc] initWithGateway:self.gateway];
+    MGASingleSectionDataSource *dataSource = [[MGASingleSectionDataSource alloc] init];
+    dataSource.items = [mapper mapResource:partials];
+    MGACountryListTableViewDataSourceDelegate *dataSourceDelegate =
+    [[MGACountryListTableViewDataSourceDelegate alloc] initWithDataSource:dataSource delegate:delegate flagURLProvider:self.flagURLProvider];
+    dataSourceDelegate.sectionTitle = title;
+    return dataSourceDelegate;
 }
 
 @end

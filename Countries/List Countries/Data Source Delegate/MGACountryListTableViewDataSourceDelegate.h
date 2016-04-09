@@ -8,8 +8,8 @@
 
 @interface MGACountryListTableViewDataSourceDelegate : NSObject <UITableViewDataSource, UITableViewDelegate, MGATableViewCellRegister>
 
-- (instancetype)initWithDataSource:(id <MGADataSource>)dataSource
-                          delegate:(id <MGACountrySelectionDelegate>)delegate
-                   flagURLProvider:(id <MGAFlagURLProvider>)provider;
+@property (nonatomic, strong) NSString *sectionTitle;
+
+- (instancetype)initWithDataSource:(id <MGADataSource>)dataSource delegate:(id <MGACountrySelectionDelegate>)delegate flagURLProvider:(id <MGAFlagURLProvider>)provider;
 
 @end

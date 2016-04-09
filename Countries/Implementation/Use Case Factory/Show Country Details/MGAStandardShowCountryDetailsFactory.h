@@ -4,10 +4,10 @@
 
 #import "MGAShowCountryDetailsFactory.h"
 
-@protocol MGAFlagURLProvider;
+@protocol MGAFlagURLProvider, MGACountryGateway;
 
 @interface MGAStandardShowCountryDetailsFactory : NSObject <MGAShowCountryDetailsFactory>
 
-- (instancetype)initWithFlagURLProvider:(id <MGAFlagURLProvider>)flagURLProvider;
+- (instancetype)initWithFlagURLProvider:(id <MGAFlagURLProvider>)flagURLProvider gateway:(id <MGACountryGateway>)gateway;
 
 @end

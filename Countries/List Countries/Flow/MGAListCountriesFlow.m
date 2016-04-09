@@ -42,7 +42,7 @@
 
 - (void)didSelectCountry:(id <MGACountry>)country
 {
-    UIViewController *viewController = [self.countryDetailsFactory createCountryDetailsViewForCountry:country];
+    UIViewController *viewController = [self.countryDetailsFactory createCountryDetailsViewForCountry:country delegate:nil];
     [self.detailsPresenter present:viewController];
 }
 

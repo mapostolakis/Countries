@@ -61,7 +61,7 @@
 {
     id <MGACountry> country = mockProtocol(@protocol(MGACountry));
     UIViewController *viewController = [UIViewController new];
-    [given([countryDetailsFactory createCountryDetailsViewForCountry:country]) willReturn:viewController];
+    [given([countryDetailsFactory createCountryDetailsViewForCountry:country delegate:nil]) willReturn:viewController];
 
     [sut didSelectCountry:country];
     

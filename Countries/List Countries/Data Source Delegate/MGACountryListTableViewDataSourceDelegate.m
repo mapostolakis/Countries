@@ -69,4 +69,14 @@ static NSString *reuseIdentifier = @"MGACountryAndFlagCell";
     [self.delegate didSelectCountry:country];
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return self.sectionTitle;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return UITableViewAutomaticDimension;
+}
+
 @end

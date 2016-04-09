@@ -123,4 +123,21 @@
     [MKTVerify(delegate) didSelectCountry:country];
 }
 
+- (void)test_tableViewTitleForHeaderInSection
+{
+    assertThat([sut tableView:tableView titleForHeaderInSection:0], is(nilValue()));
+}
+
+- (void)test_tableViewTitleForHeaderInSection_returnsSectionTitle_whenSet
+{
+    sut.sectionTitle = @"a section title";
+
+    assertThat([sut tableView:tableView titleForHeaderInSection:0], is(equalTo(@"a section title")));
+}
+
+- (void)test_tableViewHeightForHeaderInSection
+{
+    assertThatFloat([sut tableView:tableView heightForHeaderInSection:0], is(equalToFloat(UITableViewAutomaticDimension)));
+}
+
 @end
