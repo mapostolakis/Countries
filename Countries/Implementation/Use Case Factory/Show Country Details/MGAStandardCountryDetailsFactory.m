@@ -16,10 +16,10 @@
 #import "MGAPartialToFullCountryListMapper.h"
 #import "MGAMutableCountryDetails.h"
 #import "MGACountryListTableViewDataSourceDelegate.h"
+#import "MGACountryDetailsViewModel.h"
 
 @interface MGAStandardCountryDetailsFactory ()
 
-@property (nonatomic, strong) NSNumberFormatter *numberFormatter;
 @property (nonatomic, readonly) id <MGAFlagURLProvider> flagURLProvider;
 @property (nonatomic, readonly) id <MGACountryGateway> gateway;
 
@@ -48,28 +48,20 @@
     return viewController;
 }
 
-- (NSNumberFormatter *)numberFormatter
-{
-    if (_numberFormatter == nil) {
-        _numberFormatter = [[NSNumberFormatter alloc] init];
-        _numberFormatter.numberStyle = NSNumberFormatterDecimalStyle;
-    }
-    return _numberFormatter;
-}
 
 - (NSArray *)dataSourceDelegatesForCountry:(id <MGACountry>)country delegate:(id <MGACountrySelectionDelegate>)delegate
 {
-    NSString *population = [self.numberFormatter stringFromNumber:country.population];
-    NSString *area = [NSString stringWithFormat:@"%@ Km\u00b2", [self.numberFormatter stringFromNumber:country.area]];
+    MGACountryDetailsViewModel *model = [[MGACountryDetailsViewModel alloc] initWithCountry:country];
     return @[
             [self createFlagHeaderForCountryCode:country.alpha2Code],
-            [self createDataSourceDelegateWithTitle:@"Native Name" countryDetailsValue:country.nativeName],
-            [self createDataSourceDelegateWithTitle:@"Capital" countryDetailsValue:country.capital],
-            [self createDataSourceDelegateWithTitle:@"Region" countryDetailsValue:country.region],
-            [self createDataSourceDelegateWithTitle:@"Subregion" countryDetailsValue:country.subregion],
-            [self createDataSourceDelegateWithTitle:@"Population" countryDetailsValue:population],
-            [self createDataSourceDelegateWithTitle:@"Area" countryDetailsValue:area],
-            [self createDataSourceDelegateWithTitle:@"Borders" partialCountries:country.borderCountries delegate:delegate]
+            [self createDataSourceDelegateWithTitle:[model nativeNameTitle] countryDetailsValue:country.nativeName],
+            [self createDataSourceDelegateWithTitle:[model capitalTitle] countryDetailsValue:country.capital],
+            [self createDataSourceDelegateWithTitle:[model regionTitle] countryDetailsValue:country.region],
+            [self createDataSourceDelegateWithTitle:[model subregionTitle] countryDetailsValue:country.subregion],
+            [self createDataSourceDelegateWithTitle:[model populationTitle] countryDetailsValue:[model population]],
+            [self createDataSourceDelegateWithTitle:[model areaTitle] countryDetailsValue:[model area]],
+            [self createDataSourceDelegateWithTitle:[model coordinatesTitle] countryDetailsValue:[model coordinates]],
+            [self createDataSourceDelegateWithTitle:[model bordersTitle] partialCountries:country.borderCountries delegate:delegate]
     ];
 }
 
