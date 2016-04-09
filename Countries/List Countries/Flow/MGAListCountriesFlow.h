@@ -4,14 +4,13 @@
 
 #import "MGACountrySelectionDelegate.h"
 
-@protocol MGAViewControllerPresenter, MGAShowCountryDetailsFactory, MGAListCountriesFactory;
+@protocol MGAViewControllerPresenter, MGAListCountriesFactory, MGACountryDetailsFlowFactory;
 
 @interface MGAListCountriesFlow : NSObject <MGACountrySelectionDelegate>
 
-- (instancetype)initWithListCountriesFactory:(id <MGAListCountriesFactory>)listCountriesFactory
-                       countryDetailsFactory:(id <MGAShowCountryDetailsFactory>)countryDetailsFactory
-                               listPresenter:(id <MGAViewControllerPresenter>)rootPresenter
-                            detailsPresenter:(id <MGAViewControllerPresenter>)presenter;
+- (instancetype)initWithFactory:(id <MGAListCountriesFactory>)factory
+                      presenter:(id <MGAViewControllerPresenter>)rootPresenter
+                    flowFactory:(id <MGACountryDetailsFlowFactory>)flowFactory;
 
 - (void)start;
 

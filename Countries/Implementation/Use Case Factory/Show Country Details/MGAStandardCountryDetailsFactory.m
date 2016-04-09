@@ -3,7 +3,7 @@
 //
 
 #import <ReactiveCocoa/ReactiveCocoa.h>
-#import "MGAStandardShowCountryDetailsFactory.h"
+#import "MGAStandardCountryDetailsFactory.h"
 #import "MGATableViewController.h"
 #import "MGATableViewDataSourceDelegateCluster.h"
 #import "MGACountryDetailsDataSourceDelegate.h"
@@ -17,7 +17,7 @@
 #import "MGAMutableCountryDetails.h"
 #import "MGACountryListTableViewDataSourceDelegate.h"
 
-@interface MGAStandardShowCountryDetailsFactory ()
+@interface MGAStandardCountryDetailsFactory ()
 
 @property (nonatomic, strong) NSNumberFormatter *numberFormatter;
 @property (nonatomic, readonly) id <MGAFlagURLProvider> flagURLProvider;
@@ -25,7 +25,7 @@
 
 @end
 
-@implementation MGAStandardShowCountryDetailsFactory
+@implementation MGAStandardCountryDetailsFactory
 
 - (instancetype)initWithFlagURLProvider:(id <MGAFlagURLProvider>)flagURLProvider gateway:(id <MGACountryGateway>)gateway
 {
@@ -101,6 +101,11 @@
     [[MGACountryListTableViewDataSourceDelegate alloc] initWithDataSource:dataSource delegate:delegate flagURLProvider:self.flagURLProvider];
     dataSourceDelegate.sectionTitle = title;
     return dataSourceDelegate;
+}
+
+- (void)dealloc
+{
+    NSLog(@"[%@: dealloc]", NSStringFromClass([self class]));
 }
 
 @end

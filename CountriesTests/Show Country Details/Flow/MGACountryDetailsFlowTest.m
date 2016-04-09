@@ -5,6 +5,7 @@
 #import "MGACountryDetailsFlow.h"
 #import "MGACountryDetailsFactory.h"
 #import "MGAViewControllerPresenter.h"
+#import "MGACountry.h"
 
 #import <XCTest/XCTest.h>
 

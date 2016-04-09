@@ -3,6 +3,10 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/Podfile" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Model/Country/MGAMutableCountryDetails.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Model/Country/MGAMutableCountryDetails.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Model/Country/MGAFlattenCountry.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Model/Country/MGAFlattenCountry.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Data Source/Single Object/MGASingleObjectDataSource.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Data Source/Single Object/MGASingleObjectDataSource.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Data Source/Single Section/MGASingleSectionDataSource.h" isTestSource="false" />
@@ -33,14 +37,12 @@
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Presenter/Navigation Controller/Root/MGANavigationControllerRootPresenter.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Use Case Factory/List Countries/MGAStandardListCountriesFactory.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Use Case Factory/List Countries/MGAStandardListCountriesFactory.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Use Case Factory/Show Country Details/MGAStandardShowCountryDetailsFactory.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Use Case Factory/Show Country Details/MGAStandardShowCountryDetailsFactory.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Use Case Factory/Show Country Details/MGAStandardCountryDetailsFactory.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Use Case Factory/Show Country Details/MGAStandardCountryDetailsFactory.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Store/MGAInMemoryStore.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Store/MGAInMemoryStore.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Model/Country/MGAMutableCountryDetails.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Model/Country/MGAMutableCountryDetails.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Model/Country/MGAFlattenCountry.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Model/Country/MGAFlattenCountry.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Flow Factory/MGAFlowFactory.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Flow Factory/MGAFlowFactory.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Service/MGAFetchCountryListAPIService.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Service/Command/MGAFetchCountryListServiceCommandBuilder.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Service/Command/MGAFetchCountryListServiceCommandBuilder.m" isTestSource="false" />
@@ -51,6 +53,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/URL Provider/MGAGeonamesFlagURLProvider.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Converter/MGADataToJSONConverter.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Converter/MGADataToJSONConverter.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/List Countries/Flow/Factory/MGAListCountriesFlowFactory.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/List Countries/Flow/MGAListCountriesFlow.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/List Countries/Flow/MGAListCountriesFlow.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/List Countries/Cell/MGACountryAndFlagCell.h" isTestSource="false" />
@@ -85,15 +88,18 @@
       <sourceFolder url="file://$MODULE_DIR$/Countries/App/Service/MGAServiceProvider.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/App/Converter/MGAConverter.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/AppDelegate.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/Show Country Details/Cell/MGAImageCell.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/Show Country Details/Cell/MGAImageCell.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Show Country Details/MGACountryDetails.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/Show Country Details/MGAShowCountryDetailsFactory.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/Show Country Details/Flow/Factory/MGACountryDetailsFlowFactory.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/Show Country Details/Flow/MGACountryDetailsFlow.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/Show Country Details/Flow/MGACountryDetailsFlow.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/Show Country Details/MGACountryDetailsSelectionDelegate.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/Show Country Details/MGACountryDetailsFactory.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Show Country Details/Data Source Delegate/MGAURLImageDataSourceDelegate.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Show Country Details/Data Source Delegate/MGACountryDetailsDataSourceDelegate.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Show Country Details/Data Source Delegate/MGAURLImageDataSourceDelegate.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Show Country Details/Data Source Delegate/MGACountryDetailsDataSourceDelegate.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/Show Country Details/Cell/MGAImageCell.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/Show Country Details/Cell/MGAImageCell.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/Show Country Details/MGACountryDetailsSelectionDelegate.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CountriesTests/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CountriesTests/Implementation/Data Source/MGASingleObjectDataSourceTest.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CountriesTests/Implementation/Data Source/MGASingleSectionDataSourceTest.m" isTestSource="false" />
@@ -116,6 +122,7 @@
       <sourceFolder url="file://$MODULE_DIR$/CountriesTests/AppDelegateTest.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CountriesTests/List Countries/Flow/MGAListCountriesFlowTest.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CountriesTests/List Countries/Data Source Delegate/MGACountryListTableViewDataSourceDelegateTest.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CountriesTests/Show Country Details/Flow/MGACountryDetailsFlowTest.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CountriesTests/Show Country Details/Data Source Delegate/MGAURLImageDataSourceDelegateTest.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CountriesTests/Show Country Details/Data Source Delegate/MGACountryDetailsDataSourceDelegateTest.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/NSUserDefaults+RACSupport.m" isTestSource="false" />

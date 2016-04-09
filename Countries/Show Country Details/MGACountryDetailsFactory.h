@@ -6,7 +6,7 @@
 
 @protocol MGACountry, MGACountrySelectionDelegate;
 
-@protocol MGAShowCountryDetailsFactory <NSObject>
+@protocol MGACountryDetailsFactory <NSObject>
 
 - (UIViewController *)createCountryDetailsViewForCountry:(id <MGACountry>)country delegate:(id <MGACountrySelectionDelegate>)delegate;
 

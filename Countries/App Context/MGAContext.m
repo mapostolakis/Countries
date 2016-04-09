@@ -9,12 +9,8 @@
 #import "MGAStandardDataSourceProvider.h"
 #import "MGAStandardServiceProvider.h"
 #import "MGAInMemoryStore.h"
-#import "MGAStandardListCountriesFactory.h"
-#import "MGANavigationControllerRootPresenter.h"
-#import "MGAStandardShowCountryDetailsFactory.h"
-#import "MGANavigationControllerPushPresenter.h"
-#import "MGAGeonamesFlagURLProvider.h"
 #import "MGAInMemoryStoreGateway.h"
+#import "MGAFlowFactory.h"
 
 @interface MGAContext ()
 
@@ -23,18 +19,15 @@
 @property (nonatomic, strong) id <MGAServiceProvider> serviceProvider;
 @property (nonatomic, strong) id <MGAStore> store;
 @property (nonatomic, strong) id <MGACountryGateway> inMemoryCountryGateway;
+@property (nonatomic, strong) MGAFlowFactory *flowFactory;
+
 @end
 
 @implementation MGAContext
 
 - (void)start
 {
-    MGANavigationControllerRootPresenter *rootPresenter = [[MGANavigationControllerRootPresenter alloc] initWithNavigationController:self.navigationController];
-    MGANavigationControllerPushPresenter *pushPresenter = [[MGANavigationControllerPushPresenter alloc] initWithNavigationController:self.navigationController];
-    MGAListCountriesFlow *flow = [[MGAListCountriesFlow alloc] initWithListCountriesFactory:[self createListCountriesFactory]
-                                                                      countryDetailsFactory:[self createCountryDetailsFactory]
-                                                                              listPresenter:rootPresenter detailsPresenter:pushPresenter];
-    [flow start];
+    [[self.flowFactory createCountryListFlow] start];
 }
 
 - (UIViewController *)rootViewController
@@ -74,12 +67,6 @@
     return _store;
 }
 
-- (id <MGAListCountriesFactory>)createListCountriesFactory
-{
-    return [[MGAStandardListCountriesFactory alloc] initWithDataSourceProvider:self.dataSourceProvider
-                                                               serviceProvider:self.serviceProvider];
-}
-
 - (id <MGACountryGateway>)inMemoryCountryGateway
 {
     if (_inMemoryCountryGateway == nil) {
@@ -88,11 +75,15 @@
     return _inMemoryCountryGateway;
 }
 
-- (id <MGAShowCountryDetailsFactory>)createCountryDetailsFactory
+- (MGAFlowFactory *)flowFactory
 {
-    id <MGAFlagURLProvider> provider = [MGAGeonamesFlagURLProvider new];
-    id <MGACountryGateway> gateway = [[MGAInMemoryStoreGateway alloc] initWithStore:self.store];
-    return [[MGAStandardShowCountryDetailsFactory alloc] initWithFlagURLProvider:provider gateway:gateway];
+    if (_flowFactory == nil) {
+        _flowFactory = [[MGAFlowFactory alloc] initWithInMemoryStore:self.store
+                                                navigationController:self.navigationController
+                                                  dataSourceProvider:self.dataSourceProvider
+                                                     serviceProvider:self.serviceProvider];
+    }
+    return _flowFactory;
 }
 
 @end

@@ -4,9 +4,10 @@
 
 #import "MGAListCountriesFlow.h"
 #import "MGAListCountriesFactory.h"
-#import "MGAShowCountryDetailsFactory.h"
 #import "MGAViewControllerPresenter.h"
 #import "MGACountry.h"
+#import "MGACountryDetailsFlowFactory.h"
+#import "MGACountryDetailsFlow.h"
 
 #import <XCTest/XCTest.h>
 
@@ -15,10 +16,9 @@
 
 @interface MGAListCountriesFlowTest : XCTestCase
 {
-    id <MGAListCountriesFactory> listCountriesFactory;
-    id <MGAShowCountryDetailsFactory> countryDetailsFactory;
-    id <MGAViewControllerPresenter> listPresenter;
-    id <MGAViewControllerPresenter> detailsPresenter;
+    id <MGAListCountriesFactory> factory;
+    id <MGAViewControllerPresenter> presenter;
+    id <MGACountryDetailsFlowFactory> flowFactory;
     MGAListCountriesFlow *sut;
 }
 @end
@@ -29,15 +29,11 @@
 {
     [super setUp];
 
-    listPresenter = mockProtocol(@protocol(MGAViewControllerPresenter));
-    detailsPresenter = mockProtocol(@protocol(MGAViewControllerPresenter));
-    listCountriesFactory = mockProtocol(@protocol(MGAListCountriesFactory));
-    countryDetailsFactory = mockProtocol(@protocol(MGAShowCountryDetailsFactory));
+    presenter = mockProtocol(@protocol(MGAViewControllerPresenter));
+    factory = mockProtocol(@protocol(MGAListCountriesFactory));
+    flowFactory = mockProtocol(@protocol(MGACountryDetailsFlowFactory));
 
-    sut = [[MGAListCountriesFlow alloc] initWithListCountriesFactory:listCountriesFactory
-                                               countryDetailsFactory:countryDetailsFactory
-                                                       listPresenter:listPresenter
-                                                    detailsPresenter:detailsPresenter];
+    sut = [[MGAListCountriesFlow alloc] initWithFactory:factory presenter:presenter flowFactory:flowFactory];
 }
 
 - (void)tearDown
@@ -50,22 +46,23 @@
 - (void)test_start_presentsCountryListViewAsRoot
 {
     UIViewController *viewController = [UIViewController new];
-    [given([listCountriesFactory createListCountriesWithDelegate:sut]) willReturn:viewController];
+    [given([factory createListCountriesWithDelegate:sut]) willReturn:viewController];
 
     [sut start];
 
-    [MKTVerify(listPresenter) present:viewController];
+    [MKTVerify(presenter) present:viewController];
 }
 
 - (void)test_didSelectCountry_presentsCountryDetailsView
 {
     id <MGACountry> country = mockProtocol(@protocol(MGACountry));
-    UIViewController *viewController = [UIViewController new];
-    [given([countryDetailsFactory createCountryDetailsViewForCountry:country delegate:nil]) willReturn:viewController];
+
+    MGACountryDetailsFlow *flow = mock([MGACountryDetailsFlow class]);
+    [given([flowFactory createFlowForCountry:country]) willReturn:flow];
 
     [sut didSelectCountry:country];
     
-    [MKTVerify(detailsPresenter) present:viewController];
+    [(MGACountryDetailsFlow *)MKTVerify(flow) start];
 }
 
 @end
