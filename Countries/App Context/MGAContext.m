@@ -18,7 +18,6 @@
 @property (nonatomic, strong) id <MGADataSourceProvider> dataSourceProvider;
 @property (nonatomic, strong) id <MGAServiceProvider> serviceProvider;
 @property (nonatomic, strong) id <MGAStore> store;
-@property (nonatomic, strong) id <MGACountryGateway> inMemoryCountryGateway;
 @property (nonatomic, strong) MGAFlowFactory *flowFactory;
 
 @end
@@ -65,14 +64,6 @@
         _store = [[MGAInMemoryStore alloc] init];
     }
     return _store;
-}
-
-- (id <MGACountryGateway>)inMemoryCountryGateway
-{
-    if (_inMemoryCountryGateway == nil) {
-        _inMemoryCountryGateway = [[MGAInMemoryStoreGateway alloc] initWithStore:self.store];
-    }
-    return _inMemoryCountryGateway;
 }
 
 - (MGAFlowFactory *)flowFactory
