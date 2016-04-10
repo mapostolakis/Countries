@@ -74,4 +74,9 @@
     [self.delegate didSelectCountryDetails:countryDetails];
 }
 
+- (void)dealloc
+{
+    NSLog(@"[%@: dealloc]", NSStringFromClass([self class]));
+}
+
 @end

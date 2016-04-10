@@ -79,4 +79,9 @@ static NSString *reuseIdentifier = @"MGACountryAndFlagCell";
     return UITableViewAutomaticDimension;
 }
 
+- (void)dealloc
+{
+    NSLog(@"[%@: dealloc]", NSStringFromClass([self class]));
+}
+
 @end

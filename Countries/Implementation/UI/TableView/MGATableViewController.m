@@ -68,4 +68,9 @@
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[tableView]|" options:0 metrics:nil views:views]];
 }
 
+- (void)dealloc
+{
+    NSLog(@"[%@: dealloc]", NSStringFromClass([self class]));
+}
+
 @end

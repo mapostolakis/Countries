@@ -21,4 +21,9 @@
     return self.value;
 }
 
+- (void)dealloc
+{
+    NSLog(@"[%@: dealloc]", NSStringFromClass([self class]));
+}
+
 @end

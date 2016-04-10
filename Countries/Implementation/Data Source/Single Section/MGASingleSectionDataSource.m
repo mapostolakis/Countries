@@ -22,4 +22,9 @@
     return self.items[indexPath.row];
 }
 
+- (void)dealloc
+{
+    NSLog(@"[%@: dealloc]", NSStringFromClass([self class]));
+}
+
 @end

@@ -10,6 +10,8 @@
 
 @property (nonatomic, strong) NSString *sectionTitle;
 
-- (instancetype)initWithDataSource:(id <MGADataSource>)dataSource delegate:(id <MGACountrySelectionDelegate>)delegate flagURLProvider:(id <MGAFlagURLProvider>)provider;
+- (instancetype)initWithDataSource:(id <MGADataSource>)dataSource
+                          delegate:(id <MGACountrySelectionDelegate>)delegate
+                   flagURLProvider:(id <MGAFlagURLProvider>)provider;
 
 @end

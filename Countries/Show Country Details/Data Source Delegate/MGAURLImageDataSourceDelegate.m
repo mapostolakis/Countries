@@ -53,4 +53,9 @@ static NSString * MGAFullImageCellIdentifier = @"MGAImageCell";
     return 120.f;
 }
 
+- (void)dealloc
+{
+    NSLog(@"[%@: dealloc]", NSStringFromClass([self class]));
+}
+
 @end

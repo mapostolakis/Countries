@@ -13,4 +13,9 @@
     return [NSURL URLWithString:urlString];
 }
 
+- (void)dealloc
+{
+    NSLog(@"[%@: dealloc]", NSStringFromClass([self class]));
+}
+
 @end
