@@ -51,4 +51,9 @@
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[mapView]|" options:0 metrics:nil views:views]];
 }
 
+- (void)dealloc
+{
+    NSLog(@"[%@: dealloc]", NSStringFromClass([self class]));
+}
+
 @end
