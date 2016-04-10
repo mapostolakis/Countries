@@ -108,12 +108,12 @@
       <sourceFolder url="file://$MODULE_DIR$/Countries/Show Country Details/Cell/MGAImageCell.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Show Country Details/MGACoordinateSelectionDelegate.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Show Country Details/MGACountryDetailsFactory.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/Show Country Details/Data Source Delegate/MGAURLImageDataSourceDelegate.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/Show Country Details/Data Source Delegate/MGACountryDetailsDataSourceDelegate.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/Show Country Details/Data Source Delegate/MGACountryCoordinateDetailsDataSourceDelegate.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/Show Country Details/Data Source Delegate/MGAURLImageDataSourceDelegate.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/Show Country Details/Data Source Delegate/MGACountryDetailsDataSourceDelegate.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/Show Country Details/Data Source Delegate/MGACountryCoordinateDetailsDataSourceDelegate.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/Show Country Details/Data Source Delegate/URL Image/MGAURLImageDataSourceDelegate.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/Show Country Details/Data Source Delegate/URL Image/MGAURLImageDataSourceDelegate.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/Show Country Details/Data Source Delegate/Country Coordinates/MGACountryCoordinateDetailsDataSourceDelegate.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/Show Country Details/Data Source Delegate/Country Coordinates/MGACountryCoordinateDetailsDataSourceDelegate.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/Show Country Details/Data Source Delegate/Country Details/MGACountryDetailsDataSourceDelegate.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/Show Country Details/Data Source Delegate/Country Details/MGACountryDetailsDataSourceDelegate.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CountriesTests/AppDelegateTest.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CountriesTests/Implementation/Gateway/MGAInMemoryStoreGatewayTest.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CountriesTests/Implementation/UI/TableView/Data Source Delegate/MGATableViewDataSourceDelegateClusterTest.m" isTestSource="false" />

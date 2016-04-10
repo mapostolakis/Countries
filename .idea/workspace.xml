@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2f6e2f58-2f02-4ada-a6f7-a91b80167f5c" name="Default" comment="">
+    <list default="true" id="2f6e2f58-2f02-4ada-a6f7-a91b80167f5c" name="Default" comment="Move files to folders">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/MGACountryCoordinateDetailsDataSourceDelegate.h" afterPath="$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/Country Coordinates/MGACountryCoordinateDetailsDataSourceDelegate.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/MGACountryCoordinateDetailsDataSourceDelegate.m" afterPath="$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/Country Coordinates/MGACountryCoordinateDetailsDataSourceDelegate.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/MGACountryDetailsDataSourceDelegate.h" afterPath="$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/Country Details/MGACountryDetailsDataSourceDelegate.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/MGACountryDetailsDataSourceDelegate.m" afterPath="$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/Country Details/MGACountryDetailsDataSourceDelegate.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/MGAURLImageDataSourceDelegate.h" afterPath="$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/URL Image/MGAURLImageDataSourceDelegate.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/MGAURLImageDataSourceDelegate.m" afterPath="$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/URL Image/MGAURLImageDataSourceDelegate.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Countries.iml" afterPath="$PROJECT_DIR$/.idea/Countries.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries.xcodeproj/xcshareddata/xcschemes/Dev.xcscheme" afterPath="$PROJECT_DIR$/Countries.xcodeproj/xcshareddata/xcschemes/Dev.xcscheme" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries/Implementation/Use Case Factory/Show Country Details/MGAStandardCountryDetailsFactory.m" afterPath="$PROJECT_DIR$/Countries/Implementation/Use Case Factory/Show Country Details/MGAStandardCountryDetailsFactory.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries/Show Country Details/View Model/MGACountryDetailsViewModel.h" afterPath="$PROJECT_DIR$/Countries/Show Country Details/View Model/MGACountryDetailsViewModel.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries/Show Country Details/View Model/MGACountryDetailsViewModel.m" afterPath="$PROJECT_DIR$/Countries/Show Country Details/View Model/MGACountryDetailsViewModel.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CountriesTests/Show Country Details/View Model/MGACountryDetailsViewModelTest.m" afterPath="$PROJECT_DIR$/CountriesTests/Show Country Details/View Model/MGACountryDetailsViewModelTest.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Countries.xcodeproj/project.pbxproj" />
     </list>
     <ignored path="Countries.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,72 +30,62 @@
     <favorites_list name="Countries" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="MGACountryDetailsViewModelTest.m" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/CountriesTests/Show Country Details/View Model/MGACountryDetailsViewModelTest.m">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="682">
-                  <caret line="113" column="46" selection-start-line="113" selection-start-column="46" selection-end-line="113" selection-end-column="46" />
-                  <folding>
-                    <element signature="e#69#107#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="MGACountryDetailsViewModel.m" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Countries/Show Country Details/View Model/MGACountryDetailsViewModel.m">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="395">
-                  <caret line="106" column="58" selection-start-line="106" selection-start-column="58" selection-end-line="106" selection-end-column="58" />
-                  <folding>
-                    <element signature="e#68#106#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MGACountryDetailsViewModel.h" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Countries/Show Country Details/View Model/MGACountryDetailsViewModel.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MGAStandardCountryDetailsFactory.m" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Countries/Implementation/Use Case Factory/Show Country Details/MGAStandardCountryDetailsFactory.m">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="517">
-                  <caret line="94" column="1" selection-start-line="94" selection-start-column="1" selection-end-line="94" selection-end-column="1" />
-                  <folding>
-                    <element signature="e#68#107#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MGACountry.h" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Countries/List Countries/MGACountry.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="13" column="38" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="MGACountryDetailsViewModelTest.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CountriesTests/Show Country Details/View Model/MGACountryDetailsViewModelTest.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1680">
+              <caret line="112" column="1" selection-start-line="112" selection-start-column="1" selection-end-line="112" selection-end-column="1" />
+              <folding>
+                <element signature="e#69#107#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MGACountryCoordinateDetailsDataSourceDelegate.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/Country Coordinates/MGACountryCoordinateDetailsDataSourceDelegate.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="397">
+              <caret line="53" column="1" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MGAURLImageDataSourceDelegate.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/URL Image/MGAURLImageDataSourceDelegate.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MGACountryDetailsDataSourceDelegate.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/Country Details/MGACountryDetailsDataSourceDelegate.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="13" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MGAURLImageDataSourceDelegate.m" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/URL Image/MGAURLImageDataSourceDelegate.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="412">
+              <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+              <folding>
+                <element signature="e#68#109#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -157,8 +150,8 @@
         <option value="$PROJECT_DIR$/Countries/Implementation/Model/Country/MGAMutableCountryDetails.h" />
         <option value="$PROJECT_DIR$/Countries/Show Country Details/View Model/MGACountryDetailsViewModel.m" />
         <option value="$PROJECT_DIR$/Countries/Show Country Details/View Model/MGACountryDetailsViewModel.h" />
-        <option value="$PROJECT_DIR$/CountriesTests/Show Country Details/View Model/MGACountryDetailsViewModelTest.m" />
         <option value="$PROJECT_DIR$/Countries/Implementation/Use Case Factory/Show Country Details/MGAStandardCountryDetailsFactory.m" />
+        <option value="$PROJECT_DIR$/CountriesTests/Show Country Details/View Model/MGACountryDetailsViewModelTest.m" />
       </list>
     </option>
   </component>
@@ -199,7 +192,118 @@
     </navigator>
     <panes>
       <pane id="ProjectPane">
-        <subPane />
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Countries" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Countries" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Countries" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Countries" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Countries" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Show Country Details" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Countries" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Countries" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Show Country Details" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View Model" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Countries" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Countries" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Show Country Details" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Data Source Delegate" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Countries" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Countries" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Implementation" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
       <pane id="Cidr.FilesView" />
     </panes>
@@ -210,7 +314,7 @@
     <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.Dev">
+  <component name="RunManager" selected="XCTest/Kiwi.Tests">
     <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Countries" TARGET_NAME="Countries" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Countries" RUN_TARGET_NAME="Countries" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
       <envs />
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
@@ -307,20 +411,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1458932096352</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Add fetch country list api service">
-      <created>1458935839292</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1458935839292</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Add data convertion and mapping to fetch country list api service">
-      <created>1458937402267</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1458937402267</updated>
     </task>
     <task id="LOCAL-00003" summary="Add country model">
       <created>1458938337785</created>
@@ -651,25 +741,24 @@
       <option name="project" value="LOCAL" />
       <updated>1460311618769</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Add alternative spellings to country details view">
+      <created>1460312127592</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1460312127593</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Add currencies to country details view">
+      <created>1460313089093</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1460313089093</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="-[MGACountryDetailsViewModelTest_test_timeZones] - 2016.04.10 at 18h 52m 54s.xml">
-      <configuration name="-[MGACountryDetailsViewModelTest test_timeZones]" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="Tests - 2016.04.10 at 19h 02m 49s.xml">
-      <configuration name="Tests" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="Tests - 2016.04.10 at 19h 03m 25s.xml">
-      <configuration name="Tests" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="Tests - 2016.04.10 at 19h 04m 07s.xml">
-      <configuration name="Tests" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="Tests - 2016.04.10 at 19h 04m 28s.xml">
-      <configuration name="Tests" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
     <history-entry file="Tests - 2016.04.10 at 19h 05m 03s.xml">
       <configuration name="Tests" configurationId="OCUnitRunConfiguration" />
     </history-entry>
@@ -685,6 +774,21 @@
     <history-entry file="Tests - 2016.04.10 at 19h 13m 20s.xml">
       <configuration name="Tests" configurationId="OCUnitRunConfiguration" />
     </history-entry>
+    <history-entry file="Tests - 2016.04.10 at 19h 26m 37s.xml">
+      <configuration name="Tests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="Tests - 2016.04.10 at 19h 27m 52s.xml">
+      <configuration name="Tests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="Tests - 2016.04.10 at 19h 28m 22s.xml">
+      <configuration name="Tests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="Tests - 2016.04.10 at 19h 31m 16s.xml">
+      <configuration name="Tests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="Tests - 2016.04.10 at 19h 38m 59s.xml">
+      <configuration name="Tests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-154" y="-1080" width="1920" height="1080" extended-state="0" />
@@ -698,11 +802,11 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25445545" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32277226" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25750396" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25750396" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871288" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35445544" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35445544" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -726,9 +830,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="Rename MGADependencies to MGAContext" />
-    <MESSAGE value="Add table view data source delegate cluster&#10;&#10;* Added push presenter" />
-    <MESSAGE value="Add single value country details" />
     <MESSAGE value="Add country details data source delegate" />
     <MESSAGE value="Pass code instead of country" />
     <MESSAGE value="Add flag header to country details view" />
@@ -751,7 +852,10 @@
     <MESSAGE value="Remove section for partial countries data source delegate when data source is empty" />
     <MESSAGE value="Add time zones to country details view" />
     <MESSAGE value="Make country mock protocol instead of flatten object" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make country mock protocol instead of flatten object" />
+    <MESSAGE value="Add alternative spellings to country details view" />
+    <MESSAGE value="Add currencies to country details view" />
+    <MESSAGE value="Move files to folders" />
+    <option name="LAST_COMMIT_MESSAGE" value="Move files to folders" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -791,17 +895,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/MGACountryCoordinateDetailsDataSourceDelegate.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="53" column="1" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
-          <folding>
-            <element signature="e#68#125#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/MGACountryCoordinateDetailsDataSourceDelegate.h">
+    <entry file="file://$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/Country Coordinates/MGACountryCoordinateDetailsDataSourceDelegate.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
@@ -936,7 +1030,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/MGACountryDetailsDataSourceDelegate.h">
+    <entry file="file://$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/Country Details/MGACountryDetailsDataSourceDelegate.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
@@ -1026,26 +1120,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/MGAURLImageDataSourceDelegate.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CountriesTests/Show Country Details/Data Source Delegate/MGACountryDetailsDataSourceDelegateTest.m">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/MGACountryDetailsDataSourceDelegate.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="13" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1078,14 +1156,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/MGAURLImageDataSourceDelegate.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -1140,16 +1210,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Countries/List Countries/MGACountry.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="38" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="345">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Countries/Implementation/Use Case Factory/Show Country Details/MGAStandardCountryDetailsFactory.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="99" column="1" selection-start-line="99" selection-start-column="1" selection-end-line="99" selection-end-column="1" />
+          <folding>
+            <element signature="e#68#107#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Countries/Show Country Details/View Model/MGACountryDetailsViewModel.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Countries/Show Country Details/View Model/MGACountryDetailsViewModel.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="106" column="58" selection-start-line="106" selection-start-column="58" selection-end-line="106" selection-end-column="58" />
+        <state relative-caret-position="281">
+          <caret line="122" column="43" selection-start-line="122" selection-start-column="43" selection-end-line="122" selection-end-column="43" />
           <folding>
             <element signature="e#68#106#0" expanded="true" />
           </folding>
@@ -1158,28 +1246,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CountriesTests/Show Country Details/View Model/MGACountryDetailsViewModelTest.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="113" column="46" selection-start-line="113" selection-start-column="46" selection-end-line="113" selection-end-column="46" />
+        <state relative-caret-position="1680">
+          <caret line="112" column="1" selection-start-line="112" selection-start-column="1" selection-end-line="112" selection-end-column="1" />
           <folding>
             <element signature="e#69#107#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Countries/Show Country Details/View Model/MGACountryDetailsViewModel.h">
+    <entry file="file://$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/Country Coordinates/MGACountryCoordinateDetailsDataSourceDelegate.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+        <state relative-caret-position="397">
+          <caret line="53" column="1" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Countries/Implementation/Use Case Factory/Show Country Details/MGAStandardCountryDetailsFactory.m">
+    <entry file="file://$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/URL Image/MGAURLImageDataSourceDelegate.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="94" column="1" selection-start-line="94" selection-start-column="1" selection-end-line="94" selection-end-column="1" />
+        <state relative-caret-position="120">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/Country Details/MGACountryDetailsDataSourceDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="13" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/URL Image/MGAURLImageDataSourceDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
           <folding>
-            <element signature="e#68#107#0" expanded="true" />
+            <element signature="e#68#109#0" expanded="true" />
           </folding>
         </state>
       </provider>
