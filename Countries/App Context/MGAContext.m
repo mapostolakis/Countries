@@ -9,7 +9,6 @@
 #import "MGAStandardDataSourceProvider.h"
 #import "MGAStandardServiceProvider.h"
 #import "MGAInMemoryStore.h"
-#import "MGAInMemoryStoreGateway.h"
 #import "MGAFlowFactory.h"
 
 @interface MGAContext ()
