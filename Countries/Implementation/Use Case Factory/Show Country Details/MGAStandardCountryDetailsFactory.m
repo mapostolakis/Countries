@@ -17,6 +17,8 @@
 #import "MGAMutableCountryDetails.h"
 #import "MGACountryListTableViewDataSourceDelegate.h"
 #import "MGACountryDetailsViewModel.h"
+#import "MGACoordinateSelectionDelegate.h"
+#import "MGACountryCoordinateDetailsDataSourceDelegate.h"
 
 @interface MGAStandardCountryDetailsFactory ()
 
@@ -37,9 +39,11 @@
     return self;
 }
 
-- (UIViewController *)createCountryDetailsViewForCountry:(id <MGACountry>)country delegate:(id <MGACountrySelectionDelegate>)delegate
+- (UIViewController *)createCountryDetailsViewForCountry:(id <MGACountry>)country
+                                                delegate:(id <MGACountrySelectionDelegate>)delegate
+                             coordinateSelectionDelegate:(id <MGACoordinateSelectionDelegate>)coordinateSelectionDelegate
 {
-    NSArray *items = [self dataSourceDelegatesForCountry:country delegate:delegate];
+    NSArray *items = [self dataSourceDelegatesForCountry:country delegate:delegate coordinateSelectionDelegate:coordinateSelectionDelegate];
     MGATableViewDataSourceDelegateCluster *cluster = [[MGATableViewDataSourceDelegateCluster alloc] initWithDataSourceDelegates:items];
     MGATableViewController *viewController = [[MGATableViewController alloc] initWithDataSource:cluster delegate:cluster style:UITableViewStylePlain];
     [viewController view];
@@ -49,7 +53,9 @@
 }
 
 
-- (NSArray *)dataSourceDelegatesForCountry:(id <MGACountry>)country delegate:(id <MGACountrySelectionDelegate>)delegate
+- (NSArray *)dataSourceDelegatesForCountry:(id <MGACountry>)country
+                                  delegate:(id <MGACountrySelectionDelegate>)delegate
+               coordinateSelectionDelegate:(id <MGACoordinateSelectionDelegate>)coordinateSelectionDelegate
 {
     MGACountryDetailsViewModel *model = [[MGACountryDetailsViewModel alloc] initWithCountry:country];
     return @[
@@ -60,7 +66,7 @@
             [self createDataSourceDelegateWithTitle:[model subregionTitle] countryDetailsValue:country.subregion],
             [self createDataSourceDelegateWithTitle:[model populationTitle] countryDetailsValue:[model population]],
             [self createDataSourceDelegateWithTitle:[model areaTitle] countryDetailsValue:[model area]],
-            [self createDataSourceDelegateWithTitle:[model coordinatesTitle] countryDetailsValue:[model coordinates]],
+            [self createDataSourceDelegateWithTitle:[model coordinatesTitle] coordinates:country.coordinates delegate:coordinateSelectionDelegate],
             [self createDataSourceDelegateWithTitle:[model bordersTitle] partialCountries:country.borderCountries delegate:delegate]
     ];
 }
@@ -80,6 +86,17 @@
     MGASingleSectionDataSource *dataSource = [[MGASingleSectionDataSource alloc] init];
     dataSource.items = @[countryDetails];
     return [[MGACountryDetailsDataSourceDelegate alloc] initWithSectionTitle:title dataSource:dataSource delegate:nil];
+}
+
+- (id <UITableViewDataSource, UITableViewDelegate>)createDataSourceDelegateWithTitle:(NSString *)title
+                                                                         coordinates:(CLLocationCoordinate2D)coordinates
+                                                                            delegate:(id <MGACoordinateSelectionDelegate>)delegate
+{
+    MGASingleObjectDataSource *dataSource = [[MGASingleObjectDataSource alloc] init];
+    return [[MGACountryCoordinateDetailsDataSourceDelegate alloc] initWithSectionTitle:title
+                                                                            dataSource:dataSource
+                                                                              delegate:delegate
+                                                                           coordinates:coordinates];
 }
 
 - (id <UITableViewDataSource, UITableViewDelegate>)createDataSourceDelegateWithTitle:(NSString *)title

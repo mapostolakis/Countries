@@ -15,6 +15,7 @@
 #import "MGADataSourceProvider.h"
 #import "MGAServiceProvider.h"
 #import "MGANavigationControllerLastItemReplacingPresenter.h"
+#import "MGAStandardMapFactory.h"
 
 @interface MGAFlowFactory ()
 
@@ -61,7 +62,12 @@
     [[MGANavigationControllerPushPresenter alloc] initWithNavigationController:self.navigationController];
     MGANavigationControllerLastItemReplacingPresenter *selectionPresenter =
     [[MGANavigationControllerLastItemReplacingPresenter alloc] initWithNavigationController:self.navigationController];
-    return [[MGACountryDetailsFlow alloc] initWithCountry:country factory:factory presenter:presenter selectionPresenter:selectionPresenter];
+    MGAStandardMapFactory *mapFactory = [[MGAStandardMapFactory alloc] init];
+    return [[MGACountryDetailsFlow alloc] initWithCountry:country
+                                                  factory:factory
+                                               mapFactory:mapFactory
+                                       selectionPresenter:selectionPresenter
+                                                presenter:presenter];
 }
 
 @end

@@ -6,6 +6,7 @@
 #import "MGACountryDetailsFactory.h"
 #import "MGAViewControllerPresenter.h"
 #import "MGACountry.h"
+#import "MGAMapFactory.h"
 
 #import <XCTest/XCTest.h>
 
@@ -21,6 +22,8 @@
     id <MGAViewControllerPresenter> presenter;
     id <MGAViewControllerPresenter> selectionPresenter;
     id <MGACountryDetailsFactory> factory;
+    id <MGAMapFactory> mapFactory;
+
     MGACountryDetailsFlow *sut;
 }
 @end
@@ -32,13 +35,16 @@
     [super setUp];
 
     factory = mockProtocol(@protocol(MGACountryDetailsFactory));
+    mapFactory = mockProtocol(@protocol(MGAMapFactory));
+
     presenter = mockProtocol(@protocol(MGAViewControllerPresenter));
     selectionPresenter = mockProtocol(@protocol(MGAViewControllerPresenter));
     country = mockProtocol(@protocol(MGACountry));
     sut  = [[MGACountryDetailsFlow alloc] initWithCountry:country
                                                   factory:factory
-                                                presenter:presenter
-                                       selectionPresenter:selectionPresenter];
+                                               mapFactory:mapFactory
+                                       selectionPresenter:selectionPresenter
+                                                presenter:presenter];
 }
 
 - (void)tearDown
@@ -55,10 +61,15 @@
     assertThat(sut, conformsTo(@protocol(MGACountrySelectionDelegate)));
 }
 
+- (void)test_conformsToMGACoordinateSelectionDelegate
+{
+    assertThat(sut, conformsTo(@protocol(MGACoordinateSelectionDelegate)));
+}
+
 - (void)test_start_presentsCountryDetailsView
 {
     UIViewController *viewController = [UIViewController new];
-    [given([factory createCountryDetailsViewForCountry:country delegate:anything()]) willReturn:viewController];
+    [given([factory createCountryDetailsViewForCountry:country delegate:sut coordinateSelectionDelegate:sut]) willReturn:viewController];
     
     [sut start];
 
@@ -69,11 +80,23 @@
 {
     id <MGACountry> detailCountry = mockProtocol(@protocol(MGACountry));
     UIViewController *viewController = [UIViewController new];
-    [given([factory createCountryDetailsViewForCountry:detailCountry delegate:anything()]) willReturn:viewController];
+    [given([factory createCountryDetailsViewForCountry:detailCountry delegate:sut coordinateSelectionDelegate:sut]) willReturn:viewController];
 
     [sut didSelectCountry:detailCountry];
 
     [MKTVerify(selectionPresenter) present:viewController];
+}
+
+- (void)test_didSelectCoordinates_presentsMapView
+{
+    CLLocationCoordinate2D coordinates = CLLocationCoordinate2DMake(123, 456);
+    UIViewController *viewController = [UIViewController new];
+
+    [given([mapFactory createMapViewForCoordinates:coordinates]) willReturn:viewController];
+
+    [sut didSelectCoordinates:coordinates];
+
+    [MKTVerify(presenter) present:viewController];
 }
 
 @end

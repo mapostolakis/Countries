@@ -3,15 +3,13 @@
 //
 
 #import "MGACountrySelectionDelegate.h"
+#import "MGACoordinateSelectionDelegate.h"
 
-@protocol MGACountry, MGACountryDetailsFactory, MGAViewControllerPresenter;
+@protocol MGACountry, MGACountryDetailsFactory, MGAMapFactory, MGAViewControllerPresenter;
 
-@interface MGACountryDetailsFlow : NSObject <MGACountrySelectionDelegate>
+@interface MGACountryDetailsFlow : NSObject <MGACountrySelectionDelegate, MGACoordinateSelectionDelegate>
 
-- (instancetype)initWithCountry:(id <MGACountry>)country
-                        factory:(id <MGACountryDetailsFactory>)factory
-                      presenter:(id <MGAViewControllerPresenter>)presenter
-             selectionPresenter:(id <MGAViewControllerPresenter>)selectionPresenter;
+- (instancetype)initWithCountry:(id <MGACountry>)country factory:(id <MGACountryDetailsFactory>)factory mapFactory:(id <MGAMapFactory>)mapFactory selectionPresenter:(id <MGAViewControllerPresenter>)selectionPresenter presenter:(id <MGAViewControllerPresenter>)presenter;
 
 - (void)start;
 
