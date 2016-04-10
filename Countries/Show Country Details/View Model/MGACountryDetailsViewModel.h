@@ -22,5 +22,7 @@
 - (NSString *)coordinatesTitle;
 - (NSArray <id <MGACountryDetails>> *)timeZones;
 - (NSString *)timeZonesTitle;
+- (NSArray <id <MGACountryDetails>> *)alternativeSpellings;
+- (NSString *)alternativeSpellingsTitle;
 
 @end

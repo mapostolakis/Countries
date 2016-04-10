@@ -99,6 +99,22 @@
     return @"Time Zones";
 }
 
+- (NSString *)alternativeSpellingsTitle
+{
+    return @"Alternative Spellings";
+}
+
+- (NSArray <id <MGACountryDetails>> *)alternativeSpellings
+{
+    NSMutableArray *details = [NSMutableArray array];
+    for (NSString *spelling in self.country.alternativeSpellings) {
+        id <MGACountryDetails> countryDetail = [[MGAMutableCountryDetails alloc] init];
+        countryDetail.value = spelling;
+        [details addObject:countryDetail];
+    }
+    return [details copy];
+}
+
 - (void)dealloc
 {
     NSLog(@"[%@: dealloc]", NSStringFromClass([self class]));

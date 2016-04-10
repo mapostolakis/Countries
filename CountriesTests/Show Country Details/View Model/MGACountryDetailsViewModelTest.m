@@ -109,4 +109,19 @@
     assertThat([sut timeZones], is(equalTo(@[countryDetails])));
 }
 
+- (void)test_alternativeSpellingsTitle
+{
+    assertThat([sut alternativeSpellingsTitle], is(equalTo(@"Alternative Spellings")));
+}
+
+- (void)test_alternativeSpellings
+{
+    MGAMutableCountryDetails *countryDetails = [[MGAMutableCountryDetails alloc] init];
+    countryDetails.value = @"a spelling";
+
+    [given(country.alternativeSpellings) willReturn:@[@"a spelling"]];
+
+    assertThat([sut alternativeSpellings], is(equalTo(@[countryDetails])));
+}
+
 @end
