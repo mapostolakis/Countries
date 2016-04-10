@@ -3,7 +3,6 @@
 //
 
 #import "MGACountryDetailsViewModel.h"
-#import "MGACountry.h"
 #import "MGAFlattenCountry.h"
 
 #import <XCTest/XCTest.h>
@@ -84,13 +83,6 @@
 - (void)test_nativeNameTitle
 {
     assertThat([sut nativeNameTitle], is(equalTo(@"Native Name")));
-}
-
-- (void)test_coordinates
-{
-    country.coordinates = CLLocationCoordinate2DMake(123, 456);;
-
-    assertThat([sut coordinates], is(equalTo(@"Latitude: 123 Longitude: 456")));
 }
 
 - (void)test_coordinatesTitle

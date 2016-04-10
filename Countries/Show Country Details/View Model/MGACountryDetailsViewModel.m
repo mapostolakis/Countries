@@ -77,12 +77,6 @@
     return @"Native Name";
 }
 
-- (NSString *)coordinates
-{
-    return [NSString stringWithFormat:@"Latitude: %g Longitude: %g",
-                    self.country.coordinates.latitude, self.country.coordinates.longitude];
-}
-
 - (NSString *)coordinatesTitle
 {
     return @"Coordinates";

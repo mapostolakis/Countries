@@ -19,7 +19,6 @@
 - (NSString *)subregionTitle;
 - (NSString *)capitalTitle;
 - (NSString *)nativeNameTitle;
-- (NSString *)coordinates;
 - (NSString *)coordinatesTitle;
 
 @end
