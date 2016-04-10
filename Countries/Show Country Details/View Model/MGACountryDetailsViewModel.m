@@ -115,6 +115,25 @@
     return [details copy];
 }
 
+- (NSString *)currenciesTitle
+{
+    return @"Currencies";
+}
+
+- (NSArray <id <MGACountryDetails>> *)currencies
+{
+    NSMutableArray *details = [NSMutableArray array];
+    for (NSString *currencyIdentifier in self.country.currencies) {
+        id <MGACountryDetails> countryDetail = [[MGAMutableCountryDetails alloc] init];
+        NSString *currencyValue = [NSString stringWithFormat:@"%@ (%@)",
+            [[NSLocale currentLocale] displayNameForKey:NSLocaleCurrencySymbol value:currencyIdentifier],
+            currencyIdentifier];
+        countryDetail.value = currencyValue;
+        [details addObject:countryDetail];
+    }
+    return [details copy];
+}
+
 - (void)dealloc
 {
     NSLog(@"[%@: dealloc]", NSStringFromClass([self class]));

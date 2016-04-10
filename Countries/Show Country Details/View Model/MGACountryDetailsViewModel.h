@@ -24,5 +24,7 @@
 - (NSString *)timeZonesTitle;
 - (NSArray <id <MGACountryDetails>> *)alternativeSpellings;
 - (NSString *)alternativeSpellingsTitle;
+- (NSArray <id <MGACountryDetails>> *)currencies;
+- (NSString *)currenciesTitle;
 
 @end

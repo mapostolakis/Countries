@@ -63,6 +63,7 @@
             [self createDataSourceDelegateWithTitle:[model nativeNameTitle] countryDetailsValue:country.nativeName],
             [self createDataSourceDelegateWithTitle:[model alternativeSpellingsTitle] countryDetailsList:[model alternativeSpellings]],
             [self createDataSourceDelegateWithTitle:[model capitalTitle] countryDetailsValue:country.capital],
+            [self createDataSourceDelegateWithTitle:[model currenciesTitle] countryDetailsList:[model currencies]],
             [self createDataSourceDelegateWithTitle:[model timeZonesTitle] countryDetailsList:[model timeZones]],
             [self createDataSourceDelegateWithTitle:[model regionTitle] countryDetailsValue:country.region],
             [self createDataSourceDelegateWithTitle:[model subregionTitle] countryDetailsValue:country.subregion],

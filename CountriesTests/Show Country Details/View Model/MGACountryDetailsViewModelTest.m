@@ -16,6 +16,7 @@
 
 @interface MGACountryDetailsViewModelTest : XCTestCase
 {
+    MGAMutableCountryDetails *countryDetails;
     id <MGACountry> country;
     MGACountryDetailsViewModel *sut;
 }
@@ -28,6 +29,7 @@
     [super setUp];
 
     country = mockProtocol(@protocol(MGACountry));
+    countryDetails = [[MGAMutableCountryDetails alloc] init];
     sut = [[MGACountryDetailsViewModel alloc] initWithCountry:country];
 }
 
@@ -101,9 +103,7 @@
 
 - (void)test_timeZones
 {
-    MGAMutableCountryDetails *countryDetails = [[MGAMutableCountryDetails alloc] init];
     countryDetails.value = @"a timezone";
-
     [given(country.timeZones) willReturn:@[@"a timezone"]];
 
     assertThat([sut timeZones], is(equalTo(@[countryDetails])));
@@ -116,12 +116,23 @@
 
 - (void)test_alternativeSpellings
 {
-    MGAMutableCountryDetails *countryDetails = [[MGAMutableCountryDetails alloc] init];
     countryDetails.value = @"a spelling";
-
     [given(country.alternativeSpellings) willReturn:@[@"a spelling"]];
 
     assertThat([sut alternativeSpellings], is(equalTo(@[countryDetails])));
+}
+
+- (void)test_currenciesTitle
+{
+    assertThat([sut currenciesTitle], is(equalTo(@"Currencies")));
+}
+
+- (void)test_currencies
+{
+    countryDetails.value = @"€ (EUR)";
+    [given(country.currencies) willReturn:@[@"EUR"]];
+
+    assertThat([sut currencies], is(equalTo(@[countryDetails])));
 }
 
 @end
