@@ -1,25 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2f6e2f58-2f02-4ada-a6f7-a91b80167f5c" name="Default" comment="Add dealloc method">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Countries/Implementation/Map Factory/MGAStandardMapFactory.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Countries/Implementation/Map Factory/MGAStandardMapFactory.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Countries/Show Country Details/Cell/MGACountryCoordinateDetailsCell.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Countries/Show Country Details/Cell/MGACountryCoordinateDetailsCell.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/MGACountryCoordinateDetailsDataSourceDelegate.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/MGACountryCoordinateDetailsDataSourceDelegate.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Countries/Show Country Details/MGACoordinateSelectionDelegate.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Countries/Show Country Details/MGAMapFactory.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CountriesTests/Show Country Details/Data Source Delegate/MGACountryCoordinateDetailsDataSourceDelegateTest.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Countries.iml" afterPath="$PROJECT_DIR$/.idea/Countries.iml" />
+    <list default="true" id="2f6e2f58-2f02-4ada-a6f7-a91b80167f5c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Countries.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries/Implementation/Flow Factory/MGAFlowFactory.m" afterPath="$PROJECT_DIR$/Countries/Implementation/Flow Factory/MGAFlowFactory.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries/Implementation/Use Case Factory/Show Country Details/MGAStandardCountryDetailsFactory.m" afterPath="$PROJECT_DIR$/Countries/Implementation/Use Case Factory/Show Country Details/MGAStandardCountryDetailsFactory.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries/Show Country Details/Flow/MGACountryDetailsFlow.h" afterPath="$PROJECT_DIR$/Countries/Show Country Details/Flow/MGACountryDetailsFlow.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries/Show Country Details/Flow/MGACountryDetailsFlow.m" afterPath="$PROJECT_DIR$/Countries/Show Country Details/Flow/MGACountryDetailsFlow.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries/Show Country Details/MGACountryDetailsFactory.h" afterPath="$PROJECT_DIR$/Countries/Show Country Details/MGACountryDetailsFactory.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CountriesTests/Show Country Details/Flow/MGACountryDetailsFlowTest.m" afterPath="$PROJECT_DIR$/CountriesTests/Show Country Details/Flow/MGACountryDetailsFlowTest.m" />
     </list>
     <ignored path="Countries.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -790,7 +773,14 @@
       <option name="project" value="LOCAL" />
       <updated>1460286272198</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Add coordinate selection and map view for coordinates">
+      <created>1460294352537</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1460294352537</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -836,9 +826,9 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25445545" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25445545" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3241107" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3237624" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35445544" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -865,7 +855,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="Add standard service provider&#10;&#10;* Added partial country mapper&#10;* Renamed resource:hasValueForKey: in country mapper" />
     <MESSAGE value="Add refresh button" />
     <MESSAGE value="Add country and flag cells&#10;&#10;* Fetch and display flags along with country names" />
     <MESSAGE value="Remove unreferenced MGABinder protocol" />
@@ -890,7 +879,8 @@
     <MESSAGE value="Add country details view model" />
     <MESSAGE value="Add map view" />
     <MESSAGE value="Add dealloc method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add dealloc method" />
+    <MESSAGE value="Add coordinate selection and map view for coordinates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add coordinate selection and map view for coordinates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
