@@ -3,10 +3,13 @@
 //
 
 #import "MGACountryDetailsViewModel.h"
-#import "MGAFlattenCountry.h"
 #import "MGAMutableCountryDetails.h"
+#import "MGACountry.h"
 
 #import <XCTest/XCTest.h>
+
+#define MOCKITO_SHORTHAND
+#import <OCMockito/OCMockito.h>
 
 #define HC_SHORTHAND
 #import <OCHamcrest/OCHamcrest.h>
@@ -24,7 +27,7 @@
 {
     [super setUp];
 
-    country = [[MGAFlattenCountry alloc] init];
+    country = mockProtocol(@protocol(MGACountry));
     sut = [[MGACountryDetailsViewModel alloc] initWithCountry:country];
 }
 
@@ -39,14 +42,14 @@
 
 - (void)test_area
 {
-    country.area = @1234567;
+    [given(country.area) willReturn:@1234567];
 
     assertThat([sut area], is(equalTo(@"1,234,567 Km\u00b2")));
 }
 
 - (void)test_population
 {
-    country.population = @1234567;
+    [given(country.population) willReturn:@1234567];
 
     assertThat([sut population], is(equalTo(@"1,234,567")));
 }
@@ -101,7 +104,7 @@
     MGAMutableCountryDetails *countryDetails = [[MGAMutableCountryDetails alloc] init];
     countryDetails.value = @"a timezone";
 
-    country.timeZones = @[@"a timezone"];
+    [given(country.timeZones) willReturn:@[@"a timezone"]];
 
     assertThat([sut timeZones], is(equalTo(@[countryDetails])));
 }

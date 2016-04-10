@@ -4,7 +4,6 @@
 
 #import "MGACountryDetailsViewModel.h"
 #import "MGACountry.h"
-#import "MGACountryDetails.h"
 #import "MGAMutableCountryDetails.h"
 
 @interface MGACountryDetailsViewModel ()

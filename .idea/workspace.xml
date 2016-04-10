@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2f6e2f58-2f02-4ada-a6f7-a91b80167f5c" name="Default" comment="Remove section for partial countries data source delegate when data source is empty">
+    <list default="true" id="2f6e2f58-2f02-4ada-a6f7-a91b80167f5c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries/Implementation/Model/Country/MGAMutableCountryDetails.h" afterPath="$PROJECT_DIR$/Countries/Implementation/Model/Country/MGAMutableCountryDetails.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries/Implementation/Model/Country/MGAMutableCountryDetails.m" afterPath="$PROJECT_DIR$/Countries/Implementation/Model/Country/MGAMutableCountryDetails.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries/Implementation/Use Case Factory/Show Country Details/MGAStandardCountryDetailsFactory.m" afterPath="$PROJECT_DIR$/Countries/Implementation/Use Case Factory/Show Country Details/MGAStandardCountryDetailsFactory.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries/Show Country Details/MGACountryDetails.h" afterPath="$PROJECT_DIR$/Countries/Show Country Details/MGACountryDetails.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries/Show Country Details/View Model/MGACountryDetailsViewModel.h" afterPath="$PROJECT_DIR$/Countries/Show Country Details/View Model/MGACountryDetailsViewModel.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries/Show Country Details/View Model/MGACountryDetailsViewModel.m" afterPath="$PROJECT_DIR$/Countries/Show Country Details/View Model/MGACountryDetailsViewModel.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CountriesTests/Show Country Details/View Model/MGACountryDetailsViewModelTest.m" afterPath="$PROJECT_DIR$/CountriesTests/Show Country Details/View Model/MGACountryDetailsViewModelTest.m" />
     </list>
@@ -35,8 +30,8 @@
           <file leaf-file-name="MGACountryDetailsViewModelTest.m" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/CountriesTests/Show Country Details/View Model/MGACountryDetailsViewModelTest.m">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+                <state relative-caret-position="500">
+                  <caret line="103" column="47" selection-start-line="103" selection-start-column="47" selection-end-line="103" selection-end-column="47" />
                   <folding>
                     <element signature="e#69#107#0" expanded="true" />
                   </folding>
@@ -48,24 +43,14 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="MGACountryDetailsViewModel.m" pinned="false" current-in-tab="false">
+          <file leaf-file-name="MGACountryDetailsViewModel.m" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Countries/Show Country Details/View Model/MGACountryDetailsViewModel.m">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="380">
-                  <caret line="90" column="21" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
+                <state relative-caret-position="365">
+                  <caret line="88" column="46" selection-start-line="88" selection-start-column="46" selection-end-line="88" selection-end-column="46" />
                   <folding>
                     <element signature="e#68#106#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MGAMutableCountryDetails.m" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Countries/Implementation/Model/Country/MGAMutableCountryDetails.m">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-                  <folding />
                 </state>
               </provider>
             </entry>
@@ -132,12 +117,12 @@
         <option value="$PROJECT_DIR$/Countries/Show Country Details/Data Source Delegate/MGACountryDetailsListDataSourceDelegate.m" />
         <option value="$PROJECT_DIR$/Countries/Implementation/Model/Country/MGACountryDetails.m" />
         <option value="$PROJECT_DIR$/Countries/Implementation/Model/Country/MGACountryDetails.h" />
-        <option value="$PROJECT_DIR$/Countries/Show Country Details/View Model/MGACountryDetailsViewModel.m" />
         <option value="$PROJECT_DIR$/Countries/Show Country Details/View Model/MGACountryDetailsViewModel.h" />
         <option value="$PROJECT_DIR$/Countries/Implementation/Use Case Factory/Show Country Details/MGAStandardCountryDetailsFactory.m" />
         <option value="$PROJECT_DIR$/Countries/Show Country Details/MGACountryDetails.h" />
         <option value="$PROJECT_DIR$/Countries/Implementation/Model/Country/MGAMutableCountryDetails.m" />
         <option value="$PROJECT_DIR$/Countries/Implementation/Model/Country/MGAMutableCountryDetails.h" />
+        <option value="$PROJECT_DIR$/Countries/Show Country Details/View Model/MGACountryDetailsViewModel.m" />
         <option value="$PROJECT_DIR$/CountriesTests/Show Country Details/View Model/MGACountryDetailsViewModelTest.m" />
       </list>
     </option>
@@ -461,7 +446,7 @@
     <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="XCTest/Kiwi.-[MGACountryDetailsViewModelTest test_timeZones]">
+  <component name="RunManager" selected="XCTest/Kiwi.Tests">
     <configuration default="false" name="-[MGACountryDetailsViewModelTest test_timeZones]" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Countries" TARGET_NAME="CountriesTests" CONFIG_NAME="Debug" SCHEME_NAME="-[MGACountryDetailsViewModelTest test_timeZones]" TEST_CLASS="MGACountryDetailsViewModelTest" TEST_METHOD="test_timeZones" TEST_MODE="SUITE_TEST" XCODE_SKIPPED_TESTS_HASH_CODE="1226128978">
       <envs />
       <method />
@@ -898,31 +883,17 @@
       <option name="project" value="LOCAL" />
       <updated>1460307554350</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Add time zones to country details view">
+      <created>1460311263298</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1460311263298</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="-[MGACountryDetailsViewModelTest_test_timeZones] - 2016.04.10 at 18h 45m 54s.xml">
-      <configuration name="-[MGACountryDetailsViewModelTest test_timeZones]" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="-[MGACountryDetailsViewModelTest_test_timeZones] - 2016.04.10 at 18h 47m 01s.xml">
-      <configuration name="-[MGACountryDetailsViewModelTest test_timeZones]" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="-[MGACountryDetailsViewModelTest_test_timeZones] - 2016.04.10 at 18h 47m 28s.xml">
-      <configuration name="-[MGACountryDetailsViewModelTest test_timeZones]" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="-[MGACountryDetailsViewModelTest_test_timeZones] - 2016.04.10 at 18h 47m 58s.xml">
-      <configuration name="-[MGACountryDetailsViewModelTest test_timeZones]" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="-[MGACountryDetailsViewModelTest_test_timeZones] - 2016.04.10 at 18h 49m 14s.xml">
-      <configuration name="-[MGACountryDetailsViewModelTest test_timeZones]" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="-[MGACountryDetailsViewModelTest_test_timeZones] - 2016.04.10 at 18h 50m 19s.xml">
-      <configuration name="-[MGACountryDetailsViewModelTest test_timeZones]" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="-[MGACountryDetailsViewModelTest_test_timeZones] - 2016.04.10 at 18h 50m 50s.xml">
-      <configuration name="-[MGACountryDetailsViewModelTest test_timeZones]" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
     <history-entry file="-[MGACountryDetailsViewModelTest_test_timeZones] - 2016.04.10 at 18h 52m 04s.xml">
       <configuration name="-[MGACountryDetailsViewModelTest test_timeZones]" configurationId="OCUnitRunConfiguration" />
     </history-entry>
@@ -931,6 +902,27 @@
     </history-entry>
     <history-entry file="-[MGACountryDetailsViewModelTest_test_timeZones] - 2016.04.10 at 18h 52m 54s.xml">
       <configuration name="-[MGACountryDetailsViewModelTest test_timeZones]" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="Tests - 2016.04.10 at 19h 02m 49s.xml">
+      <configuration name="Tests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="Tests - 2016.04.10 at 19h 03m 25s.xml">
+      <configuration name="Tests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="Tests - 2016.04.10 at 19h 04m 07s.xml">
+      <configuration name="Tests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="Tests - 2016.04.10 at 19h 04m 28s.xml">
+      <configuration name="Tests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="Tests - 2016.04.10 at 19h 05m 03s.xml">
+      <configuration name="Tests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="Tests - 2016.04.10 at 19h 05m 19s.xml">
+      <configuration name="Tests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="Tests - 2016.04.10 at 19h 05m 56s.xml">
+      <configuration name="Tests" configurationId="OCUnitRunConfiguration" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -973,7 +965,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="Remove signal parameter from MGACountryListDataSourceProvider" />
     <MESSAGE value="Add MGAViewControllerPresenter protocol&#10;&#10;* Renamed MGARootUIFlow to MGAListCountriesFlow.&#10;* Removed creation process of flow and left only presentation of country list and country details views." />
     <MESSAGE value="Rename MGADependencies to MGAContext" />
     <MESSAGE value="Add table view data source delegate cluster&#10;&#10;* Added push presenter" />
@@ -998,7 +989,8 @@
     <MESSAGE value="Add dealloc messages" />
     <MESSAGE value="Remove coordinates" />
     <MESSAGE value="Remove section for partial countries data source delegate when data source is empty" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove section for partial countries data source delegate when data source is empty" />
+    <MESSAGE value="Add time zones to country details view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add time zones to country details view" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1386,16 +1378,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Countries/Show Country Details/View Model/MGACountryDetailsViewModel.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="90" column="21" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
-          <folding>
-            <element signature="e#68#106#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Countries/Show Country Details/MGACountryDetails.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1422,10 +1404,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CountriesTests/Show Country Details/View Model/MGACountryDetailsViewModelTest.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="500">
+          <caret line="103" column="47" selection-start-line="103" selection-start-column="47" selection-end-line="103" selection-end-column="47" />
           <folding>
             <element signature="e#69#107#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Countries/Show Country Details/View Model/MGACountryDetailsViewModel.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="88" column="46" selection-start-line="88" selection-start-column="46" selection-end-line="88" selection-end-column="46" />
+          <folding>
+            <element signature="e#68#106#0" expanded="true" />
           </folding>
         </state>
       </provider>
