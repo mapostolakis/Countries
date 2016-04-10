@@ -4,6 +4,8 @@
 
 #import "MGACountryDetailsViewModel.h"
 #import "MGACountry.h"
+#import "MGACountryDetails.h"
+#import "MGAMutableCountryDetails.h"
 
 @interface MGACountryDetailsViewModel ()
 
@@ -80,6 +82,22 @@
 - (NSString *)coordinatesTitle
 {
     return @"Coordinates";
+}
+
+- (NSArray <id <MGACountryDetails>> *)timeZones
+{
+    NSMutableArray *details = [NSMutableArray array];
+    for (NSString *timeZone in self.country.timeZones) {
+        id <MGACountryDetails> countryDetail = [[MGAMutableCountryDetails alloc] init];
+        countryDetail.value = timeZone;
+        [details addObject:countryDetail];
+    }
+    return [details copy];
+}
+
+- (NSString *)timeZonesTitle
+{
+    return @"Time Zones";
 }
 
 - (void)dealloc

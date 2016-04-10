@@ -4,6 +4,7 @@
 
 #import "MGACountryDetailsViewModel.h"
 #import "MGAFlattenCountry.h"
+#import "MGAMutableCountryDetails.h"
 
 #import <XCTest/XCTest.h>
 
@@ -88,6 +89,21 @@
 - (void)test_coordinatesTitle
 {
     assertThat([sut coordinatesTitle], is(equalTo(@"Coordinates")));
+}
+
+- (void)test_timeZonesTitle
+{
+    assertThat([sut timeZonesTitle], is(equalTo(@"Time Zones")));
+}
+
+- (void)test_timeZones
+{
+    MGAMutableCountryDetails *countryDetails = [[MGAMutableCountryDetails alloc] init];
+    countryDetails.value = @"a timezone";
+
+    country.timeZones = @[@"a timezone"];
+
+    assertThat([sut timeZones], is(equalTo(@[countryDetails])));
 }
 
 @end

@@ -7,6 +7,6 @@
 @protocol MGACountryDetails <NSObject>
 
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) id value;
+@property (nonatomic, strong) NSString *value;
 
 @end

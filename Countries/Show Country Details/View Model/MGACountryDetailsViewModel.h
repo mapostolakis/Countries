@@ -4,7 +4,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol MGACountry;
+@protocol MGACountry, MGACountryDetails;
 
 @interface MGACountryDetailsViewModel : NSObject
 
@@ -20,5 +20,7 @@
 - (NSString *)capitalTitle;
 - (NSString *)nativeNameTitle;
 - (NSString *)coordinatesTitle;
+- (NSArray <id <MGACountryDetails>> *)timeZones;
+- (NSString *)timeZonesTitle;
 
 @end

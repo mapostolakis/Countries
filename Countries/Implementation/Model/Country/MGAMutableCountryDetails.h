@@ -5,4 +5,7 @@
 #import "MGACountryDetails.h"
 
 @interface MGAMutableCountryDetails : NSObject <MGACountryDetails>
+
+- (BOOL)isEqualToCountryDetails:(MGAMutableCountryDetails *)details;
+
 @end

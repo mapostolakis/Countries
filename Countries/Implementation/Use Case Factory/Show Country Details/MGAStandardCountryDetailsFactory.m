@@ -62,6 +62,7 @@
             [self createFlagHeaderForCountryCode:country.alpha2Code],
             [self createDataSourceDelegateWithTitle:[model nativeNameTitle] countryDetailsValue:country.nativeName],
             [self createDataSourceDelegateWithTitle:[model capitalTitle] countryDetailsValue:country.capital],
+            [self createDataSourceDelegateWithTitle:[model timeZonesTitle] countryDetailsList:[model timeZones]],
             [self createDataSourceDelegateWithTitle:[model regionTitle] countryDetailsValue:country.region],
             [self createDataSourceDelegateWithTitle:[model subregionTitle] countryDetailsValue:country.subregion],
             [self createDataSourceDelegateWithTitle:[model populationTitle] countryDetailsValue:[model population]],
@@ -85,6 +86,14 @@
     countryDetails.value = value;
     MGASingleSectionDataSource *dataSource = [[MGASingleSectionDataSource alloc] init];
     dataSource.items = @[countryDetails];
+    return [[MGACountryDetailsDataSourceDelegate alloc] initWithSectionTitle:title dataSource:dataSource delegate:nil];
+}
+
+- (id <UITableViewDataSource, UITableViewDelegate>)createDataSourceDelegateWithTitle:(NSString *)title
+                                                                  countryDetailsList:(NSArray <id <MGACountryDetails>> *)values
+{
+    MGASingleSectionDataSource *dataSource = [[MGASingleSectionDataSource alloc] init];
+    dataSource.items = values;
     return [[MGACountryDetailsDataSourceDelegate alloc] initWithSectionTitle:title dataSource:dataSource delegate:nil];
 }
 
