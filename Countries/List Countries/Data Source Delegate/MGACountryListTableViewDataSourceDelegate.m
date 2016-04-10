@@ -71,7 +71,7 @@ static NSString *reuseIdentifier = @"MGACountryAndFlagCell";
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return self.sectionTitle;
+    return [self.dataSource numberOfObjectsInSection:section] > 0 ? self.sectionTitle : nil;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section

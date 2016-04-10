@@ -123,13 +123,17 @@
     [MKTVerify(delegate) didSelectCountry:country];
 }
 
-- (void)test_tableViewTitleForHeaderInSection
+- (void)test_tableViewTitleForHeaderInSection_returnsNil_whenDataSourceIsEmpty
 {
+    [given([dataSource numberOfObjectsInSection:0]) willReturnInteger:0];
+
     assertThat([sut tableView:tableView titleForHeaderInSection:0], is(nilValue()));
 }
 
 - (void)test_tableViewTitleForHeaderInSection_returnsSectionTitle_whenSet
 {
+    [given([dataSource numberOfObjectsInSection:0]) willReturnInteger:3];
+
     sut.sectionTitle = @"a section title";
 
     assertThat([sut tableView:tableView titleForHeaderInSection:0], is(equalTo(@"a section title")));
