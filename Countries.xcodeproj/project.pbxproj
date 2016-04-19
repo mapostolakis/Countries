@@ -22,8 +22,10 @@
 		3323F1883D94349DC4FBF5F8 /* MGAContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323FE84186FD590652F0AD2 /* MGAContext.m */; };
 		3323F2BBC3312015424E1F8F /* MGASingleSectionDataSourceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323F704C2A39153A2331BA4 /* MGASingleSectionDataSourceTest.m */; };
 		3323F2C8EDFC4177EE9AA76F /* MGATableViewDataSourceDelegateClusterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323FCF9545DF79BF62C6FA2 /* MGATableViewDataSourceDelegateClusterTest.m */; };
+		3323F2C910C82B699EE1FA7F /* MGACountryPinListMapViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323FCB4292DA8B56EAA04B0 /* MGACountryPinListMapViewDelegate.m */; };
 		3323F2E690C30023CC16F144 /* MGAStandardMapFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323FEC492F1381BAEF70C0A /* MGAStandardMapFactory.m */; };
 		3323F360C0EDFDD214EFF603 /* MGATableViewDataSourceDelegateCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323F790B66E9A48E2B6E7D9 /* MGATableViewDataSourceDelegateCluster.m */; };
+		3323F36288286CBA5DC4D24E /* MGACountryPinListMapViewDelegateTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323F8A4244489DB46CC0C9D /* MGACountryPinListMapViewDelegateTest.m */; };
 		3323F36520C081C0D32E140A /* MGACountryAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323F329D5FB158C1622F3A6 /* MGACountryAnnotation.m */; };
 		3323F37844C75C01A2D96F1C /* MGAStandardServiceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323FBF0A51DA6FAB304D4C7 /* MGAStandardServiceProvider.m */; };
 		3323F3888A91EF03A1BE69D8 /* MGAStandardListCountriesFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323F60A991283FF52DECB18 /* MGAStandardListCountriesFactory.m */; };
@@ -133,6 +135,7 @@
 		3323F2BDD14457947C91670B /* MGAStandardServiceProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAStandardServiceProvider.h; sourceTree = "<group>"; };
 		3323F2FCCE961F6DF9A83DAF /* MGAListCountriesFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAListCountriesFactory.h; sourceTree = "<group>"; };
 		3323F2FD603AB45F9F623E56 /* MGACountryListTableViewDataSourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGACountryListTableViewDataSourceDelegate.h; sourceTree = "<group>"; };
+		3323F30616835E7C0B509E40 /* MGACountryPinListMapViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGACountryPinListMapViewDelegate.h; sourceTree = "<group>"; };
 		3323F317F63C7BC475ACC9CC /* MGACountryCoordinateDetailsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGACountryCoordinateDetailsCell.m; sourceTree = "<group>"; };
 		3323F31EDA789E3DC2D32264 /* MGAFlattenCountry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGAFlattenCountry.m; sourceTree = "<group>"; };
 		3323F329D5FB158C1622F3A6 /* MGACountryAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGACountryAnnotation.m; sourceTree = "<group>"; };
@@ -178,6 +181,7 @@
 		3323F86B90BA0AC0E52714A1 /* MGAInMemoryStoreGateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAInMemoryStoreGateway.h; sourceTree = "<group>"; };
 		3323F87EADBC8AF7946C320E /* MGADataToJSONConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGADataToJSONConverter.m; sourceTree = "<group>"; };
 		3323F89CB239F991C007D5B0 /* MGAGeonamesFlagURLProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAGeonamesFlagURLProvider.h; sourceTree = "<group>"; };
+		3323F8A4244489DB46CC0C9D /* MGACountryPinListMapViewDelegateTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGACountryPinListMapViewDelegateTest.m; sourceTree = "<group>"; };
 		3323F8B06EDBEB74268F5006 /* MGACountryAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGACountryAnnotation.h; sourceTree = "<group>"; };
 		3323F8D20411CC739306F136 /* MGACountryCoordinateDetailsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGACountryCoordinateDetailsCell.h; sourceTree = "<group>"; };
 		3323F8F0EB55EC3452DF591A /* MGACountryDetailsFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGACountryDetailsFlow.m; sourceTree = "<group>"; };
@@ -211,6 +215,7 @@
 		3323FC6F06DDD521880C6821 /* MGAFetchCountryListService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAFetchCountryListService.h; sourceTree = "<group>"; };
 		3323FC7AA429EFEEAFDD7F21 /* MGAMapFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAMapFactory.h; sourceTree = "<group>"; };
 		3323FC8053E4B07779268CF7 /* MGAMutableCountryDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAMutableCountryDetails.h; sourceTree = "<group>"; };
+		3323FCB4292DA8B56EAA04B0 /* MGACountryPinListMapViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGACountryPinListMapViewDelegate.m; sourceTree = "<group>"; };
 		3323FCB448AB43CE3CC94FD9 /* MGANavigationControllerLastItemReplacingPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGANavigationControllerLastItemReplacingPresenter.h; sourceTree = "<group>"; };
 		3323FCCCE1E9AA3F7FC02480 /* MGANavigationControllerRootPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGANavigationControllerRootPresenter.h; sourceTree = "<group>"; };
 		3323FCF15117D950D09EFBA6 /* MGAStandardDataSourceProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGAStandardDataSourceProvider.m; sourceTree = "<group>"; };
@@ -626,6 +631,15 @@
 			path = Implementation;
 			sourceTree = "<group>";
 		};
+		3323F4ABA5B08795A5AFC15B /* Map Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				3323FCB4292DA8B56EAA04B0 /* MGACountryPinListMapViewDelegate.m */,
+				3323F30616835E7C0B509E40 /* MGACountryPinListMapViewDelegate.h */,
+			);
+			path = "Map Delegate";
+			sourceTree = "<group>";
+		};
 		3323F4AFBB4F6EC203D60916 /* Data Source Delegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -810,6 +824,7 @@
 			children = (
 				3323F4AFBB4F6EC203D60916 /* Data Source Delegate */,
 				3323FDAD9AB8AE1C6076BA64 /* Flow */,
+				3323F9E03F807FB30B9B4A0D /* Map Delegate */,
 			);
 			path = "List Countries";
 			sourceTree = "<group>";
@@ -820,6 +835,14 @@
 				3323F2BD9CD1275FBA0E1BEA /* MGAListCountriesFlowFactory.h */,
 			);
 			path = Factory;
+			sourceTree = "<group>";
+		};
+		3323F9E03F807FB30B9B4A0D /* Map Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				3323F8A4244489DB46CC0C9D /* MGACountryPinListMapViewDelegateTest.m */,
+			);
+			path = "Map Delegate";
 			sourceTree = "<group>";
 		};
 		3323FA0B6E10AB7645DDBE3D /* Flow */ = {
@@ -1056,6 +1079,7 @@
 				3323FD5B23792915A8E53FCF /* Cell */,
 				3323F763C6D26CA27CE8AA4D /* MGAFlagURLProvider.h */,
 				3323FA0B6E10AB7645DDBE3D /* Flow */,
+				3323F4ABA5B08795A5AFC15B /* Map Delegate */,
 			);
 			path = "List Countries";
 			sourceTree = "<group>";
@@ -1368,6 +1392,7 @@
 				3323F36520C081C0D32E140A /* MGACountryAnnotation.m in Sources */,
 				3323FA0FBC82E89BFE61FB02 /* MGAFlattenCountry.m in Sources */,
 				3323F64E65EBEFFDF1F48FC7 /* MGAMutableCountryDetails.m in Sources */,
+				3323F2C910C82B699EE1FA7F /* MGACountryPinListMapViewDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1403,6 +1428,7 @@
 				3323FD4B66FD0D94536652C5 /* MGACountryDetailsViewModelTest.m in Sources */,
 				3323F4D1507FBE26016995C1 /* MGACountryCoordinateDetailsDataSourceDelegateTest.m in Sources */,
 				3323F0424C008BE76CB031EB /* MGACountryAnnotationTest.m in Sources */,
+				3323F36288286CBA5DC4D24E /* MGACountryPinListMapViewDelegateTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
