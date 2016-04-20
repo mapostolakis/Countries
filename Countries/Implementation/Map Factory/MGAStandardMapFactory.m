@@ -10,7 +10,7 @@
 - (UIViewController *)createMapViewForCoordinates:(CLLocationCoordinate2D)coordinates
 {
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coordinates, 500000, 500000);
-    return [[MGAMapViewController alloc] initWithRegion:region];
+    return [[MGAMapViewController alloc] initWithRegion:region annotations:nil delegate:nil];
 }
 
 - (void)dealloc
