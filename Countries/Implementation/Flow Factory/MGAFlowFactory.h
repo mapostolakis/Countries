@@ -12,7 +12,7 @@
 @interface MGAFlowFactory : NSObject <MGACountryDetailsFlowFactory, MGAListCountriesFlowFactory>
 
 - (instancetype)initWithInMemoryStore:(MGAInMemoryStore *)store
-                 navigationController:(UINavigationController *)navigationController
+                     tabBarController:(UITabBarController *)tabBarController
                    dataSourceProvider:(id <MGADataSourceProvider>)dataSourceProvider
                       serviceProvider:(id <MGAServiceProvider>)serviceProvider;
 

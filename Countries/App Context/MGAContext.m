@@ -13,7 +13,7 @@
 
 @interface MGAContext ()
 
-@property (nonatomic, strong) UINavigationController *navigationController;
+@property (nonatomic, strong) UITabBarController *tabBarController;
 @property (nonatomic, strong) id <MGADataSourceProvider> dataSourceProvider;
 @property (nonatomic, strong) id <MGAServiceProvider> serviceProvider;
 @property (nonatomic, strong) id <MGAStore> store;
@@ -26,19 +26,20 @@
 - (void)start
 {
     [[self.flowFactory createCountryListFlow] start];
+    [[self.flowFactory createMappedCountryListFlow] start];
 }
 
 - (UIViewController *)rootViewController
 {
-    return self.navigationController;
+    return self.tabBarController;
 }
 
-- (UINavigationController *)navigationController
+- (UITabBarController *)tabBarController
 {
-    if (_navigationController == nil) {
-        _navigationController = [[UINavigationController alloc] init];
+    if (_tabBarController == nil) {
+        _tabBarController = [[UITabBarController alloc] init];
     }
-    return _navigationController;
+    return _tabBarController;
 }
 
 - (id <MGADataSourceProvider>)dataSourceProvider
@@ -69,7 +70,7 @@
 {
     if (_flowFactory == nil) {
         _flowFactory = [[MGAFlowFactory alloc] initWithInMemoryStore:self.store
-                                                navigationController:self.navigationController
+                                                    tabBarController:self.tabBarController
                                                   dataSourceProvider:self.dataSourceProvider
                                                      serviceProvider:self.serviceProvider];
     }

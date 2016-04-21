@@ -9,5 +9,6 @@
 @protocol MGAListCountriesFlowFactory <NSObject>
 
 - (MGAListCountriesFlow *)createCountryListFlow;
+- (MGAListCountriesFlow *)createMappedCountryListFlow;
 
 @end

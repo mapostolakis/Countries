@@ -16,10 +16,14 @@
 #import "MGAServiceProvider.h"
 #import "MGANavigationControllerLastItemReplacingPresenter.h"
 #import "MGAStandardMapFactory.h"
+#import "MGAMappedCountryListFactory.h"
+#import "MGAStandardAnnotationProvider.h"
+#import "UITabBarController+MGAAdditions.h"
 
 @interface MGAFlowFactory ()
 
-@property (nonatomic, readonly) UINavigationController *navigationController;
+@property (nonatomic, readonly) UITabBarController *tabBarController;
+@property (nonatomic, strong) UINavigationController *navigationController;
 @property (nonatomic, readonly) MGAInMemoryStore *store;
 @property (nonatomic, readonly) id <MGADataSourceProvider> dataSourceProvider;
 @property (nonatomic, readonly) id <MGAServiceProvider> serviceProvider;
@@ -28,27 +32,51 @@
 
 @implementation MGAFlowFactory
 
-- (instancetype)initWithInMemoryStore:(MGAInMemoryStore *)store 
-                 navigationController:(UINavigationController *)navigationController
-                   dataSourceProvider:(id <MGADataSourceProvider>)dataSourceProvider 
+- (instancetype)initWithInMemoryStore:(MGAInMemoryStore *)store
+                     tabBarController:(UITabBarController *)tabBarController
+                   dataSourceProvider:(id <MGADataSourceProvider>)dataSourceProvider
                       serviceProvider:(id <MGAServiceProvider>)serviceProvider
 {
     self = [super init];
     if (self) {
         _store = store;
-        _navigationController = navigationController;
+        _tabBarController = tabBarController;
         _dataSourceProvider = dataSourceProvider;
         _serviceProvider = serviceProvider;
     }
     return self;
 }
 
+- (UINavigationController *)navigationController
+{
+    if (_navigationController == nil) {
+        _navigationController = [[UINavigationController alloc] init];
+    }
+    return _navigationController;
+}
+
 - (MGAListCountriesFlow *)createCountryListFlow
 {
+    self.navigationController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"List" image:nil selectedImage:nil];;
+    [self.tabBarController mga_addViewController:self.navigationController];
     id <MGAViewControllerPresenter> rootPresenter =
     [[MGANavigationControllerRootPresenter alloc] initWithNavigationController:self.navigationController];
     id <MGAListCountriesFactory> factory =
     [[MGAStandardListCountriesFactory alloc] initWithDataSourceProvider:self.dataSourceProvider serviceProvider:self.serviceProvider];
+    return [[MGAListCountriesFlow alloc] initWithFactory:factory presenter:rootPresenter flowFactory:self];
+}
+
+- (MGAListCountriesFlow *)createMappedCountryListFlow
+{
+    UINavigationController *navigationController = [[UINavigationController alloc] init];
+    navigationController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Map" image:nil selectedImage:nil];
+    [self.tabBarController mga_addViewController:navigationController];
+    id <MGAViewControllerPresenter> rootPresenter =
+    [[MGANavigationControllerRootPresenter alloc] initWithNavigationController:navigationController];
+    id <MGAAnnotationProvider> provider =
+    [[MGAStandardAnnotationProvider alloc] initWithDataSourceProvider:self.dataSourceProvider];
+    id <MGAListCountriesFactory> factory =
+    [[MGAMappedCountryListFactory alloc] initWithAnnotationProvider:provider];
     return [[MGAListCountriesFlow alloc] initWithFactory:factory presenter:rootPresenter flowFactory:self];
 }
 
