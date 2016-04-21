@@ -73,8 +73,8 @@
     [self.tabBarController mga_addViewController:navigationController];
     id <MGAViewControllerPresenter> rootPresenter =
     [[MGANavigationControllerRootPresenter alloc] initWithNavigationController:navigationController];
-    id <MGAAnnotationProvider> provider =
-    [[MGAStandardAnnotationProvider alloc] initWithDataSourceProvider:self.dataSourceProvider];
+    id <MGADataSource> dataSource = [self.dataSourceProvider createCountryListDataSource];
+    id <MGAAnnotationProvider> provider = [[MGAStandardAnnotationProvider alloc] initWithDataSource:dataSource];
     id <MGAListCountriesFactory> factory =
     [[MGAMappedCountryListFactory alloc] initWithAnnotationProvider:provider];
     return [[MGAListCountriesFlow alloc] initWithFactory:factory presenter:rootPresenter flowFactory:self];

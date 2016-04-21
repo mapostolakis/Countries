@@ -3,24 +3,23 @@
 //
 
 #import "MGAStandardAnnotationProvider.h"
-#import "MGADataSourceProvider.h"
 #import "MGASingleSectionDataSource.h"
 #import "MGACountry.h"
 #import "MGACountryAnnotationBuilder.h"
 
 @interface MGAStandardAnnotationProvider ()
 
-@property (nonatomic, readonly) id <MGADataSourceProvider> dataSourceProvider;
+@property (nonatomic, readonly) id <MGADataSource> dataSource;
 
 @end
 
 @implementation MGAStandardAnnotationProvider
 
-- (instancetype)initWithDataSourceProvider:(id <MGADataSourceProvider>)dataSourceProvider
+- (instancetype)initWithDataSource:(id <MGADataSource>)dataSource
 {
     self = [super init];
     if (self) {
-        _dataSourceProvider = dataSourceProvider;
+        _dataSource = dataSource;
     }
     return self;
 }
@@ -28,8 +27,8 @@
 - (NSArray <id <MKAnnotation>> *)createCountryListAnnotations
 {
     NSMutableArray *annotations = [NSMutableArray array];
-    MGASingleSectionDataSource *dataSource = [self.dataSourceProvider createCountryListDataSource];
-    for (id <MGACountry> country in dataSource.items) {
+    for (NSInteger index=0; index<[self.dataSource numberOfObjectsInSection:0]; index++) {
+        id <MGACountry> country = [self.dataSource objectAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]];
         MGACountryAnnotation *annotation = [[[MGACountryAnnotationBuilder alloc] initWithCountry:country] build];
         [annotations addObject:annotation];
     }

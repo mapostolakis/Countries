@@ -4,10 +4,10 @@
 
 #import "MGAAnnotationProvider.h"
 
-@protocol MGADataSourceProvider;
+@protocol MGADataSource;
 
 @interface MGAStandardAnnotationProvider : NSObject <MGAAnnotationProvider>
 
-- (instancetype)initWithDataSourceProvider:(id <MGADataSourceProvider>)dataSourceProvider;
+- (instancetype)initWithDataSource:(id <MGADataSource>)dataSource;
 
 @end
