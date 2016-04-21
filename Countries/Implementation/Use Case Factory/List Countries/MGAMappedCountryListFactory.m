@@ -32,6 +32,7 @@
     CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(36, 65);
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coordinate, 5000000, 5000000);
     MGAMapViewController *viewController = [[MGAMapViewController alloc] initWithRegion:region delegate:mapViewDelegate];
+    [viewController view];
     MGAStandardCountryAnnotationsBuilder *annotationsBuilder = [[MGAStandardCountryAnnotationsBuilder alloc] init];
     [[[MGACommandExecutionMapViewCountryAnnotationsPlacementBinder alloc] initWithCommand:self.command
                                                                        annotationsBuilder:annotationsBuilder

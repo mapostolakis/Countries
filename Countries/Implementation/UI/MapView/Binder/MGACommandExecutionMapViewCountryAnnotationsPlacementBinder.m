@@ -31,9 +31,11 @@
 
 - (void)bind
 {
+    id <MGACountryAnnotationsBuilder> builder = self.annotationsBuilder;
+    MKMapView *mapView = self.mapView;
     [[[self.command executionSignals] switchToLatest] subscribeNext:^(NSArray *countries) {
-        NSArray *annotations = [self.annotationsBuilder createCountryAnnotationsFromCountries:countries];
-        [self.mapView addAnnotations:annotations];
+        NSArray *annotations = [builder createCountryAnnotationsFromCountries:countries];
+        [mapView addAnnotations:annotations];
     }];
 }
 

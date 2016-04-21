@@ -2,26 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f6e2f58-2f02-4ada-a6f7-a91b80167f5c" name="Default" comment="Add binder for executing fetch command and adding annotations on map view">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Countries/Implementation/Annotations/Country/MGAStandardCountryAnnotationsBuilder.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Countries/Implementation/UI/MapView/Binder/MGACommandExecutionMapViewCountryAnnotationsPlacementBinder.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Countries/Implementation/UI/MapView/Binder/MGACommandExecutionMapViewCountryAnnotationsPlacementBinder.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Countries/List Countries/MGACountryAnnotationsBuilder.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CountriesTests/Implementation/UI/MapView/MGACommandExecutionMapViewCountryAnnotationsPlacementBinderTest.m" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Countries/App/Annotation/MGAAnnotationProvider.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Countries/Implementation/Annotation Provider/Country/MGACountryAnnotationBuilder.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Countries/Implementation/Annotation Provider/MGAStandardAnnotationProvider.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Countries/Implementation/Annotation Provider/MGAStandardAnnotationProvider.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Countries/List Countries/MGACountryListAnnotationProvider.h" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Countries/Implementation/Annotation Provider/Country/MGACountryAnnotationBuilder.m" afterPath="$PROJECT_DIR$/Countries/Implementation/Annotations/Country/MGAStandardCountryAnnotationsBuilder.m" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/CountriesTests/Implementation/Annotation Provider/MGACountryAnnotationBuilderTest.m" afterPath="$PROJECT_DIR$/CountriesTests/Implementation/Annotations/MGAStandardCountryAnnotationBuilderTest.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Countries.iml" afterPath="$PROJECT_DIR$/.idea/Countries.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Countries.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries/Implementation/Flow Factory/MGAFlowFactory.m" afterPath="$PROJECT_DIR$/Countries/Implementation/Flow Factory/MGAFlowFactory.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries/Implementation/Use Case Factory/List Countries/MGAMappedCountryListFactory.h" afterPath="$PROJECT_DIR$/Countries/Implementation/Use Case Factory/List Countries/MGAMappedCountryListFactory.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries/Implementation/UI/MapView/Binder/MGACommandExecutionMapViewCountryAnnotationsPlacementBinder.m" afterPath="$PROJECT_DIR$/Countries/Implementation/UI/MapView/Binder/MGACommandExecutionMapViewCountryAnnotationsPlacementBinder.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries/Implementation/Use Case Factory/List Countries/MGAMappedCountryListFactory.m" afterPath="$PROJECT_DIR$/Countries/Implementation/Use Case Factory/List Countries/MGAMappedCountryListFactory.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries/Implementation/Use Case Factory/List Countries/MGAStandardListCountriesFactory.h" afterPath="$PROJECT_DIR$/Countries/Implementation/Use Case Factory/List Countries/MGAStandardListCountriesFactory.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries/Implementation/Use Case Factory/List Countries/MGAStandardListCountriesFactory.m" afterPath="$PROJECT_DIR$/Countries/Implementation/Use Case Factory/List Countries/MGAStandardListCountriesFactory.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries/List Countries/Map Delegate/MGACountryPinListMapViewDelegate.m" afterPath="$PROJECT_DIR$/Countries/List Countries/Map Delegate/MGACountryPinListMapViewDelegate.m" />
     </list>
     <ignored path="Countries.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,74 +27,52 @@
     <favorites_list name="Countries" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="MGACountryAnnotationsBuilder.h" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Countries/List Countries/MGACountryAnnotationsBuilder.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MGAFlowFactory.m" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Countries/Implementation/Flow Factory/MGAFlowFactory.m">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="222">
-                  <caret line="86" column="33" selection-start-line="86" selection-start-column="33" selection-end-line="86" selection-end-column="33" />
-                  <folding>
-                    <element signature="e#68#94#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MGACommandExecutionMapViewCountryAnnotationsPlacementBinderTest.m" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/CountriesTests/Implementation/UI/MapView/MGACommandExecutionMapViewCountryAnnotationsPlacementBinderTest.m">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
-                  <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#69#140#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="MGAMappedCountryListFactory.m" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Countries/Implementation/Use Case Factory/List Countries/MGAMappedCountryListFactory.m">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="525">
-                  <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
-                  <folding>
-                    <element signature="e#68#114#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MGACommandExecutionMapViewCountryAnnotationsPlacementBinder.m" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Countries/Implementation/UI/MapView/Binder/MGACommandExecutionMapViewCountryAnnotationsPlacementBinder.m">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="525">
-                  <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#68#139#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="MGAMappedCountryListFactory.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Countries/Implementation/Use Case Factory/List Countries/MGAMappedCountryListFactory.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="38" column="116" selection-start-line="38" selection-start-column="116" selection-end-line="38" selection-end-column="116" />
+              <folding>
+                <element signature="e#68#114#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MGACommandExecutionMapViewCountryAnnotationsPlacementBinder.m" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Countries/Implementation/UI/MapView/Binder/MGACommandExecutionMapViewCountryAnnotationsPlacementBinder.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="36" column="54" selection-start-line="36" selection-start-column="54" selection-end-line="36" selection-end-column="54" />
+              <folding>
+                <element signature="e#68#139#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MGACommandExecutionMapViewCountryAnnotationsPlacementBinder.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Countries/Implementation/UI/MapView/Binder/MGACommandExecutionMapViewCountryAnnotationsPlacementBinder.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MGACountryPinListMapViewDelegate.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Countries/List Countries/Map Delegate/MGACountryPinListMapViewDelegate.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -131,7 +95,6 @@
         <option value="$PROJECT_DIR$/Countries/List Countries/Map Delegate/MGAPinnedCountryListMapViewDelegate.m" />
         <option value="$PROJECT_DIR$/CountriesTests/List Countries/Map Delegate/MGACountryListMapViewDelegateTest.m" />
         <option value="$PROJECT_DIR$/CountriesTests/List Countries/Map Delegate/MGACountryPinListMapViewDelegateTest.m" />
-        <option value="$PROJECT_DIR$/Countries/List Countries/Map Delegate/MGACountryPinListMapViewDelegate.m" />
         <option value="$PROJECT_DIR$/Countries/App/Annotation/MGAAnnotationBuilder.h" />
         <option value="$PROJECT_DIR$/Countries/Implementation/Annotation Builder/MGAStandardAnnotationBuilder.m" />
         <option value="$PROJECT_DIR$/Countries/Implementation/Resource Mapper/Country/MGACountryAnnotationMapper.h" />
@@ -155,7 +118,6 @@
         <option value="$PROJECT_DIR$/CountriesTests/Implementation/Data Source/MGASingleSectionDataSourceTest.m" />
         <option value="$PROJECT_DIR$/Countries/Implementation/Data Source/Single Section/MGASingleSectionDataSource.m" />
         <option value="$PROJECT_DIR$/Countries/Implementation/Annotation Provider/MGAStandardAnnotationProvider.m" />
-        <option value="$PROJECT_DIR$/Countries/Implementation/UI/MapView/MGAMapViewController.m" />
         <option value="$PROJECT_DIR$/Countries/Implementation/UI/MapView/MGAMapViewController.h" />
         <option value="$PROJECT_DIR$/CountriesTests/Implementation/UI/MapView/MGAMapViewControllerTest.m" />
         <option value="$PROJECT_DIR$/Countries/Implementation/Service/Binder/MGACommandExecutionSingleSectionDataSourceBinder.m" />
@@ -174,10 +136,12 @@
         <option value="$PROJECT_DIR$/Countries/Implementation/Annotations/Country/MGAStandardCountryAnnotationsBuilder.h" />
         <option value="$PROJECT_DIR$/Countries/Implementation/Annotations/Country/MGAStandardCountryAnnotationsBuilder.m" />
         <option value="$PROJECT_DIR$/CountriesTests/Implementation/Annotations/MGAStandardCountryAnnotationBuilderTest.m" />
-        <option value="$PROJECT_DIR$/Countries/Implementation/UI/MapView/Binder/MGACommandExecutionMapViewCountryAnnotationsPlacementBinder.m" />
         <option value="$PROJECT_DIR$/Countries/List Countries/MGACountryAnnotationsBuilder.h" />
         <option value="$PROJECT_DIR$/CountriesTests/Implementation/UI/MapView/MGACommandExecutionMapViewCountryAnnotationsPlacementBinderTest.m" />
+        <option value="$PROJECT_DIR$/Countries/List Countries/Map Delegate/MGACountryPinListMapViewDelegate.m" />
+        <option value="$PROJECT_DIR$/Countries/Implementation/UI/MapView/MGAMapViewController.m" />
         <option value="$PROJECT_DIR$/Countries/Implementation/Use Case Factory/List Countries/MGAMappedCountryListFactory.m" />
+        <option value="$PROJECT_DIR$/Countries/Implementation/UI/MapView/Binder/MGACommandExecutionMapViewCountryAnnotationsPlacementBinder.m" />
       </list>
     </option>
   </component>
@@ -245,73 +209,7 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="CountriesTests" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Countries" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CountriesTests" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implementation" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UI" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Countries" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CountriesTests" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implementation" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UI" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MapView" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Countries" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CountriesTests" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implementation" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -326,6 +224,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Countries" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="List Countries" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Countries" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Countries" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="List Countries" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Map Delegate" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -473,28 +397,6 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Countries" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Countries" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implementation" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Flow Factory" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Cidr.FilesView" />
@@ -603,13 +505,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1458932096352</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Add command execution tableview reload binder&#10;&#10;* Remove unused events from event data source">
-      <created>1459028130229</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1459028130229</updated>
     </task>
     <task id="LOCAL-00015" summary="Add missing tear down">
       <created>1459028155389</created>
@@ -947,7 +842,14 @@
       <option name="project" value="LOCAL" />
       <updated>1461246191220</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Add binder for executing fetch command and adding annotations on map view">
+      <created>1461251176034</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1461251176034</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -986,17 +888,16 @@
     <frame x="-240" y="-1080" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25750396" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32178217" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32178217" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25445545" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31916997" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25750396" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871288" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25445545" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3188119" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35346535" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1005,6 +906,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Reviews" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871288" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="News Feed" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1053,37 +955,31 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Countries/Implementation/UI/MapView/Binder/MGACommandExecutionMapViewCountryAnnotationsPlacementBinder.m</url>
-          <line>35</line>
-          <option name="timeStamp" value="83" />
+          <url>file://$PROJECT_DIR$/Countries/List Countries/Map Delegate/MGACountryPinListMapViewDelegate.m</url>
+          <line>26</line>
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Countries/List Countries/Map Delegate/MGACountryPinListMapViewDelegate.m</url>
+          <line>20</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Countries/List Countries/Map Delegate/MGACountryPinListMapViewDelegate.m</url>
+          <line>10</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Countries/List Countries/Map Delegate/MGACountryPinListMapViewDelegate.m</url>
+          <line>15</line>
+          <option name="timeStamp" value="90" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="84" />
+      <option name="time" value="94" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Countries/List Countries/Map Delegate/MGACountryPinListMapViewDelegate.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Countries/Implementation/Map Factory/MGAStandardMapFactory.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Countries/Implementation/Model/Country/Annotation/MGACountryAnnotation.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="56" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Countries/List Countries/MGACountry.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -1095,7 +991,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
           <caret line="20" column="20" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1154,7 +1049,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="53" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1162,9 +1056,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="28" column="59" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
-          <folding>
-            <element signature="e#68#90#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1172,7 +1063,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1180,7 +1070,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1188,7 +1077,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="65">
           <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1196,7 +1084,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1222,14 +1109,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Countries/Implementation/UI/MapView/MGAMapViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Countries/Implementation/UI/MapView/MGAMapViewController.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1242,7 +1121,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1250,7 +1128,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1258,7 +1135,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="64" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="64" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1266,7 +1142,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="63" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1274,7 +1149,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1283,7 +1157,7 @@
         <state relative-caret-position="450">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
-            <element signature="e#68#128#0" expanded="true" />
+            <element signature="e#68#128#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1296,19 +1170,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Countries/Implementation/Use Case Factory/List Countries/MGAStandardListCountriesFactory.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Countries/Implementation/Flow Factory/MGAFlowFactory.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="11" column="95" selection-start-line="11" selection-start-column="95" selection-end-line="11" selection-end-column="95" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1332,7 +1197,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1340,7 +1204,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1352,78 +1215,114 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Countries/Implementation/Annotation Provider/MGAStandardAnnotationProvider.h">
+    <entry file="file://$PROJECT_DIR$/Countries/Implementation/Annotation Provider/MGAStandardAnnotationProvider.h" />
+    <entry file="file://$PROJECT_DIR$/Countries/Implementation/Annotation Provider/MGAStandardAnnotationProvider.m" />
+    <entry file="file://$PROJECT_DIR$/Countries/App/Annotations/MGAAnnotationProvider.h" />
+    <entry file="file://$PROJECT_DIR$/CountriesTests/Implementation/Annotations/MGAStandardCountryAnnotationBuilderTest.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="64" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Countries/Implementation/Annotation Provider/MGAStandardAnnotationProvider.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Countries/App/Annotations/MGAAnnotationProvider.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="51" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Countries/Implementation/UI/MapView/Binder/MGACommandExecutionMapViewCountryAnnotationsPlacementBinder.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-          <folding />
+        <state relative-caret-position="440">
+          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Countries/Implementation/Annotations/Country/MGAStandardCountryAnnotationsBuilder.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="89" selection-start-line="6" selection-start-column="89" selection-end-line="6" selection-end-column="89" />
+        <state relative-caret-position="105">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CountriesTests/Implementation/Annotations/MGAStandardCountryAnnotationBuilderTest.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-          <folding>
-            <element signature="e#69#117#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Countries/Implementation/Annotations/Country/MGAStandardCountryAnnotationsBuilder.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="150">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
           <folding>
-            <element signature="e#68#116#0" expanded="true" />
+            <element signature="e#68#116#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Countries/Implementation/Flow Factory/MGAFlowFactory.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="88" column="62" selection-start-line="88" selection-start-column="62" selection-end-line="88" selection-end-column="62" />
+          <folding>
+            <element signature="e#68#94#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CountriesTests/Implementation/UI/MapView/MGACommandExecutionMapViewCountryAnnotationsPlacementBinderTest.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="e#69#140#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Countries/Implementation/Use Case Factory/List Countries/MGAStandardListCountriesFactory.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-305">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Countries/Implementation/UI/MapView/MGAMapViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="31" column="53" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKMapView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="197" column="10" selection-start-line="197" selection-start-column="10" selection-end-line="197" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Countries/List Countries/Map Delegate/MGACountryPinListMapViewDelegate.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="62" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Countries/List Countries/MGACountryAnnotationsBuilder.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+          <caret line="10" column="70" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Countries/List Countries/Map Delegate/MGACountryPinListMapViewDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Countries/Implementation/UI/MapView/Binder/MGACommandExecutionMapViewCountryAnnotationsPlacementBinder.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Countries/Implementation/Use Case Factory/List Countries/MGAMappedCountryListFactory.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+        <state relative-caret-position="570">
+          <caret line="38" column="116" selection-start-line="38" selection-start-column="116" selection-end-line="38" selection-end-column="116" />
           <folding>
             <element signature="e#68#114#0" expanded="true" />
           </folding>
@@ -1433,29 +1332,9 @@
     <entry file="file://$PROJECT_DIR$/Countries/Implementation/UI/MapView/Binder/MGACommandExecutionMapViewCountryAnnotationsPlacementBinder.m">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <caret line="36" column="54" selection-start-line="36" selection-start-column="54" selection-end-line="36" selection-end-column="54" />
           <folding>
             <element signature="e#68#139#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CountriesTests/Implementation/UI/MapView/MGACommandExecutionMapViewCountryAnnotationsPlacementBinderTest.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="e#69#140#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Countries/Implementation/Flow Factory/MGAFlowFactory.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="86" column="33" selection-start-line="86" selection-start-column="33" selection-end-line="86" selection-end-column="33" />
-          <folding>
-            <element signature="e#68#94#0" expanded="true" />
           </folding>
         </state>
       </provider>

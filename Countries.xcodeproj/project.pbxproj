@@ -520,8 +520,8 @@
 			children = (
 				3323F06C576F6254FD5F7E7E /* MGAStandardListCountriesFactory.h */,
 				3323F60A991283FF52DECB18 /* MGAStandardListCountriesFactory.m */,
-				3323F7550CB05EFF1DB3ABA0 /* MGAMappedCountryListFactory.m */,
 				3323FF168F1D78DBA5D3393D /* MGAMappedCountryListFactory.h */,
+				3323F7550CB05EFF1DB3ABA0 /* MGAMappedCountryListFactory.m */,
 			);
 			path = "List Countries";
 			sourceTree = "<group>";
