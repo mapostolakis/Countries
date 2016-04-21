@@ -38,6 +38,11 @@
     assertThat(sut, conformsTo(@protocol(MGADataSource)));
 }
 
+- (void)test_numberOfAllObjects_returns1
+{
+    assertThatInteger([sut numberOfAllObjects], is(equalToInteger(1)));
+}
+
 - (void)test_numberOfSections_returns1
 {
     assertThatInteger([sut numberOfSections], is(equalToInteger(1)));

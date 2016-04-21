@@ -6,6 +6,11 @@
 
 @implementation MGASingleObjectDataSource
 
+- (NSUInteger)numberOfAllObjects
+{
+    return 1;
+}
+
 - (NSUInteger)numberOfSections
 {
     return 1;

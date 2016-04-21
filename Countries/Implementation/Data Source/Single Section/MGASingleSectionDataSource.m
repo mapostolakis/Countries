@@ -7,6 +7,11 @@
 
 @implementation MGASingleSectionDataSource
 
+- (NSUInteger)numberOfAllObjects
+{
+    return self.items.count;
+}
+
 - (NSUInteger)numberOfSections
 {
     return 1;
@@ -14,7 +19,7 @@
 
 - (NSUInteger)numberOfObjectsInSection:(NSUInteger)section
 {
-    return self.items.count;
+    return [self numberOfAllObjects];
 }
 
 - (id)objectAtIndexPath:(NSIndexPath *)indexPath
