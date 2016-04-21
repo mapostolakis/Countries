@@ -17,8 +17,9 @@
 #import "MGANavigationControllerLastItemReplacingPresenter.h"
 #import "MGAStandardMapFactory.h"
 #import "MGAMappedCountryListFactory.h"
-#import "MGAStandardAnnotationProvider.h"
 #import "UITabBarController+MGAAdditions.h"
+#import "MGAFetchCountryListServiceCommandBuilder.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface MGAFlowFactory ()
 
@@ -55,6 +56,16 @@
     return _navigationController;
 }
 
+- (id <MGAFetchCountryListService>)service
+{
+    return [self.serviceProvider createFetchCountryListService];
+}
+
+- (RACCommand *)serviceCommand
+{
+    return [[[MGAFetchCountryListServiceCommandBuilder alloc] initWithService:self.service] build];
+}
+
 - (MGAListCountriesFlow *)createCountryListFlow
 {
     self.navigationController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"List" image:nil selectedImage:nil];;
@@ -62,7 +73,7 @@
     id <MGAViewControllerPresenter> rootPresenter =
     [[MGANavigationControllerRootPresenter alloc] initWithNavigationController:self.navigationController];
     id <MGAListCountriesFactory> factory =
-    [[MGAStandardListCountriesFactory alloc] initWithDataSourceProvider:self.dataSourceProvider serviceProvider:self.serviceProvider];
+    [[MGAStandardListCountriesFactory alloc] initWithDataSourceProvider:self.dataSourceProvider serviceCommand:[self serviceCommand]];
     return [[MGAListCountriesFlow alloc] initWithFactory:factory presenter:rootPresenter flowFactory:self];
 }
 
@@ -73,10 +84,8 @@
     [self.tabBarController mga_addViewController:navigationController];
     id <MGAViewControllerPresenter> rootPresenter =
     [[MGANavigationControllerRootPresenter alloc] initWithNavigationController:navigationController];
-    id <MGADataSource> dataSource = [self.dataSourceProvider createCountryListDataSource];
-    id <MGAAnnotationProvider> provider = [[MGAStandardAnnotationProvider alloc] initWithDataSource:dataSource];
     id <MGAListCountriesFactory> factory =
-    [[MGAMappedCountryListFactory alloc] initWithAnnotationProvider:provider];
+    [[MGAMappedCountryListFactory alloc] initWithServiceCommand:[self serviceCommand]];
     return [[MGAListCountriesFlow alloc] initWithFactory:factory presenter:rootPresenter flowFactory:self];
 }
 

@@ -8,9 +8,7 @@
 #import "MGATableViewController.h"
 #import "UINavigationItem+MGARefresh.h"
 #import "MGADataSourceProvider.h"
-#import "MGAServiceProvider.h"
 #import "MGACountryListTableViewDataSourceDelegate.h"
-#import "MGAFetchCountryListServiceCommandBuilder.h"
 #import "MGAGeonamesFlagURLProvider.h"
 #import "MGACommandExecutionSingleSectionDataSourceBinder.h"
 #import "MGASingleSectionDataSource.h"
@@ -18,33 +16,31 @@
 @interface MGAStandardListCountriesFactory ()
 
 @property (nonatomic, readonly) id <MGADataSourceProvider> dataSourceProvider;
-@property (nonatomic, readonly) id <MGAServiceProvider> serviceProvider;
+@property (nonatomic, readonly) RACCommand *command;
 
 @end
 
 @implementation MGAStandardListCountriesFactory
 
 - (instancetype)initWithDataSourceProvider:(id <MGADataSourceProvider>)dataSourceProvider
-                           serviceProvider:(id <MGAServiceProvider>)serviceProvider
+                            serviceCommand:(RACCommand *)command
 {
     self = [super init];
     if (self) {
         _dataSourceProvider = dataSourceProvider;
-        _serviceProvider = serviceProvider;
+        _command = command;
     }
     return self;
 }
 
 - (UIViewController *)createListCountriesWithDelegate:(id <MGACountrySelectionDelegate>)delegate
 {
-    id <MGAFetchCountryListService> service = [self.serviceProvider createFetchCountryListService];
-    RACCommand *command = [[[MGAFetchCountryListServiceCommandBuilder alloc] initWithService:service] build];
     MGASingleSectionDataSource *dataSource = [self.dataSourceProvider createCountryListDataSource];
-    [[[MGACommandExecutionSingleSectionDataSourceBinder alloc] initWithCommand:command dataSource:dataSource] bind];
+    [[[MGACommandExecutionSingleSectionDataSourceBinder alloc] initWithCommand:self.command dataSource:dataSource] bind];
     MGACountryListTableViewDataSourceDelegate *dataSourceDelegate = [self createDataSourceDelegateForDataSource:dataSource delegate:delegate];
-    MGATableViewController *viewController = [self createViewControllerWithDataSourceDelegate:dataSourceDelegate command:command];
-    [[[MGACommandExecutionTableViewReloadBinder alloc] initWithCommand:command tableView:viewController.tableView] bind];
-    [command execute:nil];
+    MGATableViewController *viewController = [self createViewControllerWithDataSourceDelegate:dataSourceDelegate command:self.command];
+    [[[MGACommandExecutionTableViewReloadBinder alloc] initWithCommand:self.command tableView:viewController.tableView] bind];
+    [self.command execute:nil];
     return viewController;
 }
 

@@ -2,36 +2,42 @@
 // Copyright (c) 2016 Mike Apostolakis. All rights reserved.
 //
 
+#import <ReactiveCocoa/RACSignal+Operations.h>
+#import <ReactiveCocoa/RACCommand.h>
 #import "MGAMappedCountryListFactory.h"
-#import "MGAAnnotationProvider.h"
 #import "MGACountryPinListMapViewDelegate.h"
 #import "MGAMapViewController.h"
+#import "MGACommandExecutionMapViewCountryAnnotationsPlacementBinder.h"
+#import "MGAStandardCountryAnnotationsBuilder.h"
 
 @interface MGAMappedCountryListFactory ()
 
-@property (nonatomic, readonly) id <MGAAnnotationProvider> annotationBuilder;
-
+@property (nonatomic, readonly) RACCommand *command;
 @end
 
 @implementation MGAMappedCountryListFactory
 
-- (instancetype)initWithAnnotationProvider:(id <MGAAnnotationProvider>)builder
+- (instancetype)initWithServiceCommand:(RACCommand *)command
 {
     self = [super init];
     if (self) {
-        _annotationBuilder = builder;
+        _command = command;
     }
     return self;
 }
 
 - (UIViewController *)createListCountriesWithDelegate:(id <MGACountrySelectionDelegate>)delegate
 {
-    NSArray *annotations = [self.annotationBuilder createCountryListAnnotations];
     MGACountryPinListMapViewDelegate *mapViewDelegate = [[MGACountryPinListMapViewDelegate alloc] init];
     CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(36, 65);
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coordinate, 5000000, 5000000);
-    MGAMapViewController *viewController = [[MGAMapViewController alloc] initWithRegion:region annotations:annotations delegate:mapViewDelegate];
+    MGAMapViewController *viewController = [[MGAMapViewController alloc] initWithRegion:region delegate:mapViewDelegate];
+    MGAStandardCountryAnnotationsBuilder *annotationsBuilder = [[MGAStandardCountryAnnotationsBuilder alloc] init];
+    [[[MGACommandExecutionMapViewCountryAnnotationsPlacementBinder alloc] initWithCommand:self.command
+                                                                       annotationsBuilder:annotationsBuilder
+                                                                                  mapView:viewController.mapView] bind];
     viewController.title = @"Countries";
+    [self.command execute:nil];
     return viewController;
 }
 

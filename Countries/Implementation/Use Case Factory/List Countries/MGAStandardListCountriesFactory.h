@@ -4,10 +4,11 @@
 
 #import "MGAListCountriesFactory.h"
 
-@protocol MGAServiceProvider, MGADataSourceProvider;
+@class RACCommand;
+@protocol MGADataSourceProvider;
 
 @interface MGAStandardListCountriesFactory : NSObject <MGAListCountriesFactory>
 
 - (instancetype)initWithDataSourceProvider:(id <MGADataSourceProvider>)dataSourceProvider
-                           serviceProvider:(id <MGAServiceProvider>)serviceProvider;
+                            serviceCommand:(RACCommand *)command;
 @end

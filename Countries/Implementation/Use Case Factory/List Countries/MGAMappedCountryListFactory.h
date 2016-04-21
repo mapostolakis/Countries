@@ -4,10 +4,10 @@
 
 #import "MGAListCountriesFactory.h"
 
-@protocol MGAAnnotationProvider;
+@class RACCommand;
 
 @interface MGAMappedCountryListFactory : NSObject <MGAListCountriesFactory>
 
-- (instancetype)initWithAnnotationProvider:(id <MGAAnnotationProvider>)builder;
+- (instancetype)initWithServiceCommand:(RACCommand *)command;
 
 @end
