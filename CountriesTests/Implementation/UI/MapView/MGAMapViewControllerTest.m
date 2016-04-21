@@ -14,7 +14,6 @@
 
 @interface MGAMapViewControllerTest : XCTestCase
 {
-    NSArray *annotations;
     id <MKMapViewDelegate> delegate;
     MGAMapViewController *sut;
 }
@@ -26,11 +25,10 @@
 {
     [super setUp];
 
-    annotations = @[];
     delegate = mockProtocol(@protocol(MKMapViewDelegate));
     CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(123, 456);
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coordinate, 123, 456);
-    sut = [[MGAMapViewController alloc] initWithRegion:region annotations:annotations delegate:delegate];
+    sut = [[MGAMapViewController alloc] initWithRegion:region delegate:delegate];
 }
 
 - (void)tearDown
@@ -41,11 +39,6 @@
 }
 
 #pragma mark - Tests
-
-- (void)test_mapViewAnnotations_areSet
-{
-    assertThat(sut.mapView.annotations, is(equalTo(annotations)));
-}
 
 - (void)test_mapViewDelegate_isSet
 {

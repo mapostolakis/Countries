@@ -8,21 +8,17 @@
 
 @property (nonatomic, weak, readwrite) MKMapView *mapView;
 @property (nonatomic, readonly) MKCoordinateRegion region;
-@property (nonatomic, readonly) NSArray <id <MKAnnotation>> *annotations;
 @property (nonatomic, readonly) id <MKMapViewDelegate> delegate;
 
 @end
 
 @implementation MGAMapViewController
 
-- (instancetype)initWithRegion:(MKCoordinateRegion)region
-                   annotations:(NSArray <id <MKAnnotation>> *)annotations
-                      delegate:(id <MKMapViewDelegate>)delegate
+- (instancetype)initWithRegion:(MKCoordinateRegion)region delegate:(id <MKMapViewDelegate>)delegate
 {
     self = [super init];
     if (self) {
         _region = region;
-        _annotations = annotations;
         _delegate = delegate;
     }
     return self;
@@ -35,7 +31,6 @@
         mapView.translatesAutoresizingMaskIntoConstraints = NO;
         [mapView setRegion:self.region animated:YES];
         mapView.delegate = self.delegate;
-        [mapView addAnnotations:self.annotations];
         [self.view addSubview:mapView];
         _mapView = mapView;
     }
