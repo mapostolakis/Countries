@@ -13,6 +13,7 @@
 		273AEB541CA5BE84007E2F2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 273AEB531CA5BE84007E2F2C /* Assets.xcassets */; };
 		3323F0424C008BE76CB031EB /* MGACountryAnnotationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323F516A828A7262EDE9D5C /* MGACountryAnnotationTest.m */; };
 		3323F05880E118602CA0B427 /* MGAPartialToFullCountryListMapperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323F153D5FD81D70084CC47 /* MGAPartialToFullCountryListMapperTest.m */; };
+		3323F06700AB6E26B8CBEB32 /* UITabBarController+MGAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323F57FF1A7018445BB2B5B /* UITabBarController+MGAAdditions.m */; };
 		3323F084259D64B6C12FB50A /* MGACommandExecutionSingleSectionDataSourceBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323FB961ABF14537ECF269A /* MGACommandExecutionSingleSectionDataSourceBinder.m */; };
 		3323F0A1794BC01090AC5F1D /* UIImageView+MGAImageFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323FC24358FFB96F9BF46F0 /* UIImageView+MGAImageFetcher.m */; };
 		3323F0DD9AC3500E6A070A3C /* MGACountryListTableViewDataSourceDelegateTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323F74AD53F27596BBFB042 /* MGACountryListTableViewDataSourceDelegateTest.m */; };
@@ -41,6 +42,7 @@
 		3323F5A338754E053028FCA9 /* MGAInMemoryStoreGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323F693515C0AA6579BA40F /* MGAInMemoryStoreGateway.m */; };
 		3323F5EB66018E6155904E49 /* MGANavigationControllerRootPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323F02D97EF796BDB127219 /* MGANavigationControllerRootPresenter.m */; };
 		3323F604C03BABFFC6AF9E94 /* AppDelegateTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323FF4CDAC1CA803253D00B /* AppDelegateTest.m */; };
+		3323F61082ED5005827EEBB9 /* UITabBarController_MGAAdditionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323F0CF9C9C1E7F99A41790 /* UITabBarController_MGAAdditionsTest.m */; };
 		3323F64E65EBEFFDF1F48FC7 /* MGAMutableCountryDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323F42954057B205EA9A785 /* MGAMutableCountryDetails.m */; };
 		3323F64F0AB0919E2C5C7844 /* MGACountryDetailsFlowTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323F6C444277DC84BB0205F /* MGACountryDetailsFlowTest.m */; };
 		3323F7A425C682BBDABB5893 /* MGANavigationControllerPushPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323F82970919F5604DDD3D1 /* MGANavigationControllerPushPresenter.m */; };
@@ -117,6 +119,7 @@
 		3323F04EA811858CD9019597 /* MGAListCountriesFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGAListCountriesFlow.m; sourceTree = "<group>"; };
 		3323F067F6AD4DC81814AAD1 /* MGACountryDetailsFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGACountryDetailsFlow.h; sourceTree = "<group>"; };
 		3323F06C576F6254FD5F7E7E /* MGAStandardListCountriesFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAStandardListCountriesFactory.h; sourceTree = "<group>"; };
+		3323F0CF9C9C1E7F99A41790 /* UITabBarController_MGAAdditionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITabBarController_MGAAdditionsTest.m; sourceTree = "<group>"; };
 		3323F0D0529A226E98470596 /* MGAInMemoryStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAInMemoryStore.h; sourceTree = "<group>"; };
 		3323F10CB99884BCA9C6AEA1 /* MGACommandExecutionSingleSectionDataSourceBinderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGACommandExecutionSingleSectionDataSourceBinderTest.m; sourceTree = "<group>"; };
 		3323F1222600A373DFF35B8A /* MGAViewControllerPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAViewControllerPresenter.h; sourceTree = "<group>"; };
@@ -168,6 +171,7 @@
 		3323F5388516C2C6C29EEDEF /* MGAPartialToFullCountryListMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAPartialToFullCountryListMapper.h; sourceTree = "<group>"; };
 		3323F5650AA8DE9BE7207DE7 /* MGAPartialToFullCountryListMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGAPartialToFullCountryListMapper.m; sourceTree = "<group>"; };
 		3323F57728ADA7A92B82E438 /* MGAFetchCountryListServiceProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAFetchCountryListServiceProvider.h; sourceTree = "<group>"; };
+		3323F57FF1A7018445BB2B5B /* UITabBarController+MGAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+MGAAdditions.m"; sourceTree = "<group>"; };
 		3323F5A8CEED80835CDD8E33 /* MGAAnnotationProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAAnnotationProvider.h; sourceTree = "<group>"; };
 		3323F5F325BFD07FB1681648 /* MGACountryGateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGACountryGateway.h; sourceTree = "<group>"; };
 		3323F6047DF3FB40F6270044 /* MGACountryDetailsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGACountryDetailsViewModel.h; sourceTree = "<group>"; };
@@ -202,6 +206,7 @@
 		3323F927416C699D250C6AF9 /* MGACommandExecutionTableViewReloadBinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGACommandExecutionTableViewReloadBinder.h; sourceTree = "<group>"; };
 		3323F92A7AFDCDBCFC2CB633 /* MGACountryMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGACountryMapper.m; sourceTree = "<group>"; };
 		3323F946DD6E99276914D3C6 /* MGAMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGAMapViewController.m; sourceTree = "<group>"; };
+		3323F9860E7E79BE134AD557 /* UITabBarController+MGAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+MGAAdditions.h"; sourceTree = "<group>"; };
 		3323F9CB963E819ED84A56EF /* MGACountryDetailsDataSourceDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGACountryDetailsDataSourceDelegate.m; sourceTree = "<group>"; };
 		3323F9CEC0BB18D3748C660D /* MGAFetchCountryListServiceCommandBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAFetchCountryListServiceCommandBuilder.h; sourceTree = "<group>"; };
 		3323F9D40A5E620D17AD103F /* MGATableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGATableViewController.h; sourceTree = "<group>"; };
@@ -413,6 +418,14 @@
 				3323F82012A480F61531F41E /* Show Country Details */,
 			);
 			path = "Use Case Factory";
+			sourceTree = "<group>";
+		};
+		3323F0B6A526D35D52D11A44 /* Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				3323F0CF9C9C1E7F99A41790 /* UITabBarController_MGAAdditionsTest.m */,
+			);
+			path = "Tab Bar";
 			sourceTree = "<group>";
 		};
 		3323F0C917ECA9893E798C67 /* Gateway */ = {
@@ -673,6 +686,15 @@
 				3323F74AD53F27596BBFB042 /* MGACountryListTableViewDataSourceDelegateTest.m */,
 			);
 			path = "Data Source Delegate";
+			sourceTree = "<group>";
+		};
+		3323F4D44AF9C1E0A4A813F0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3323F57FF1A7018445BB2B5B /* UITabBarController+MGAAdditions.m */,
+				3323F9860E7E79BE134AD557 /* UITabBarController+MGAAdditions.h */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		3323F4E6ACD6E45BB17AD32F /* Binder */ = {
@@ -940,6 +962,7 @@
 			children = (
 				3323FC6E0E11CDF234FA376F /* TableView */,
 				3323F9E73C9570DD15096650 /* MapView */,
+				3323F0B6A526D35D52D11A44 /* Tab Bar */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -1156,6 +1179,7 @@
 				3323FA4F4C312DBB226F0A12 /* Navigation Item */,
 				3323F0F5504F124561D87E6E /* ImageView */,
 				3323F3C7CB292B5398161C30 /* MapView */,
+				3323FEFFA234C35FA115C13A /* Tab Bar */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -1176,6 +1200,14 @@
 				3323FAF94F7B04EE680B7959 /* MGACountryCoordinateDetailsDataSourceDelegate.m */,
 			);
 			path = "Country Coordinates";
+			sourceTree = "<group>";
+		};
+		3323FEFFA234C35FA115C13A /* Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				3323F4D44AF9C1E0A4A813F0 /* Helpers */,
+			);
+			path = "Tab Bar";
 			sourceTree = "<group>";
 		};
 		3323FF3677C6543A7F185F78 /* Model */ = {
@@ -1461,6 +1493,7 @@
 				3323F9055CCB737C7BBBDFEA /* MGAMappedCountryListFactory.m in Sources */,
 				3323FC450717F7E4B8EC2E43 /* MGAStandardAnnotationProvider.m in Sources */,
 				3323FC3516DCC302A9886864 /* MGACountryAnnotationBuilder.m in Sources */,
+				3323F06700AB6E26B8CBEB32 /* UITabBarController+MGAAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1499,6 +1532,7 @@
 				3323F36288286CBA5DC4D24E /* MGACountryPinListMapViewDelegateTest.m in Sources */,
 				3323F3F56183A3370EA636C1 /* MGAMapViewControllerTest.m in Sources */,
 				3323F874C4C518742727538D /* MGACountryAnnotationBuilderTest.m in Sources */,
+				3323F61082ED5005827EEBB9 /* UITabBarController_MGAAdditionsTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
