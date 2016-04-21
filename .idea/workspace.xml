@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2f6e2f58-2f02-4ada-a6f7-a91b80167f5c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries/App/Data Source/MGADataSource.h" afterPath="$PROJECT_DIR$/Countries/App/Data Source/MGADataSource.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries/Implementation/Data Source/Single Object/MGASingleObjectDataSource.m" afterPath="$PROJECT_DIR$/Countries/Implementation/Data Source/Single Object/MGASingleObjectDataSource.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries/Implementation/Data Source/Single Section/MGASingleSectionDataSource.m" afterPath="$PROJECT_DIR$/Countries/Implementation/Data Source/Single Section/MGASingleSectionDataSource.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CountriesTests/Implementation/Data Source/MGASingleObjectDataSourceTest.m" afterPath="$PROJECT_DIR$/CountriesTests/Implementation/Data Source/MGASingleObjectDataSourceTest.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CountriesTests/Implementation/Data Source/MGASingleSectionDataSourceTest.m" afterPath="$PROJECT_DIR$/CountriesTests/Implementation/Data Source/MGASingleSectionDataSourceTest.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries/Implementation/Annotation Provider/MGAStandardAnnotationProvider.m" afterPath="$PROJECT_DIR$/Countries/Implementation/Annotation Provider/MGAStandardAnnotationProvider.m" />
     </list>
     <ignored path="Countries.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,19 +27,21 @@
       <file leaf-file-name="MGAMappedCountryListFactory.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Countries/Implementation/Use Case Factory/List Countries/MGAMappedCountryListFactory.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="285">
+              <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MGADataSource.h" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Countries/App/Data Source/MGADataSource.h">
+      <file leaf-file-name="MGAStandardAnnotationProvider.m" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Countries/Implementation/Annotation Provider/MGAStandardAnnotationProvider.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-              <folding />
+            <state relative-caret-position="450">
+              <caret line="30" column="70" selection-start-line="30" selection-start-column="70" selection-end-line="30" selection-end-column="70" />
+              <folding>
+                <element signature="e#68#109#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -112,12 +110,12 @@
         <option value="$PROJECT_DIR$/Countries/Implementation/Use Case Factory/List Countries/MGAMappedCountryListFactory.m" />
         <option value="$PROJECT_DIR$/Countries/Implementation/Annotation Provider/MGAStandardAnnotationProvider.h" />
         <option value="$PROJECT_DIR$/Countries/Implementation/Flow Factory/MGAFlowFactory.m" />
-        <option value="$PROJECT_DIR$/Countries/Implementation/Annotation Provider/MGAStandardAnnotationProvider.m" />
         <option value="$PROJECT_DIR$/Countries/App/Data Source/MGADataSource.h" />
         <option value="$PROJECT_DIR$/CountriesTests/Implementation/Data Source/MGASingleObjectDataSourceTest.m" />
         <option value="$PROJECT_DIR$/Countries/Implementation/Data Source/Single Object/MGASingleObjectDataSource.m" />
         <option value="$PROJECT_DIR$/CountriesTests/Implementation/Data Source/MGASingleSectionDataSourceTest.m" />
         <option value="$PROJECT_DIR$/Countries/Implementation/Data Source/Single Section/MGASingleSectionDataSource.m" />
+        <option value="$PROJECT_DIR$/Countries/Implementation/Annotation Provider/MGAStandardAnnotationProvider.m" />
       </list>
     </option>
   </component>
@@ -752,13 +750,6 @@
       <option name="presentableId" value="Default" />
       <updated>1458932096352</updated>
     </task>
-    <task id="LOCAL-00011" summary="Add in memory store and gateway">
-      <created>1459015023756</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1459015023756</updated>
-    </task>
     <task id="LOCAL-00012" summary="Add single section data source">
       <created>1459016753256</created>
       <option name="number" value="00012" />
@@ -1095,7 +1086,14 @@
       <option name="project" value="LOCAL" />
       <updated>1461234825414</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Add numberOfAllObjects method to data source protocol&#10;&#10;* Implement method in data source classes.">
+      <created>1461235322802</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1461235322802</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1170,7 +1168,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="Add flow factory&#10;&#10;* Renamed MGAShowCountryDetailsFactory to MGACountryDetailsFactory." />
     <MESSAGE value="Add presentation option for selection in country details" />
     <MESSAGE value="Add check for selecting rows&#10;&#10;* This fixed the bug where the selection of the country cell in country details would crash the app." />
     <MESSAGE value="Add country details view model" />
@@ -1195,7 +1192,8 @@
     <MESSAGE value="Add tab bar controller for root view controller&#10;&#10;* Added mapped country list flow" />
     <MESSAGE value="Add title to map view tab" />
     <MESSAGE value="Inject the data source instead of the data source provider to the annotation provider" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inject the data source instead of the data source provider to the annotation provider" />
+    <MESSAGE value="Add numberOfAllObjects method to data source protocol&#10;&#10;* Implement method in data source classes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add numberOfAllObjects method to data source protocol&#10;&#10;* Implement method in data source classes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1449,7 +1447,7 @@
         <state relative-caret-position="560">
           <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding>
-            <element signature="e#69#112#0" expanded="true" />
+            <element signature="e#69#112#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1496,14 +1494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Countries/Implementation/Use Case Factory/List Countries/MGAMappedCountryListFactory.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Countries/Implementation/Data Source/Single Object/MGASingleObjectDataSource.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1517,16 +1507,6 @@
         <state relative-caret-position="270">
           <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Countries/Implementation/Annotation Provider/MGAStandardAnnotationProvider.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#68#109#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1579,6 +1559,24 @@
         <state relative-caret-position="120">
           <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Countries/Implementation/Use Case Factory/List Countries/MGAMappedCountryListFactory.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Countries/Implementation/Annotation Provider/MGAStandardAnnotationProvider.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="70" selection-start-line="30" selection-start-column="70" selection-end-line="30" selection-end-column="70" />
+          <folding>
+            <element signature="e#68#109#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
