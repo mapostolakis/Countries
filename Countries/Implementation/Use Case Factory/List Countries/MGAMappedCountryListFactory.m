@@ -30,7 +30,9 @@
     MGACountryPinListMapViewDelegate *mapViewDelegate = [[MGACountryPinListMapViewDelegate alloc] init];
     CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(36, 65);
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coordinate, 5000000, 5000000);
-    return [[MGAMapViewController alloc] initWithRegion:region annotations:annotations delegate:mapViewDelegate];
+    MGAMapViewController *viewController = [[MGAMapViewController alloc] initWithRegion:region annotations:annotations delegate:mapViewDelegate];
+    viewController.title = @"Countries";
+    return viewController;
 }
 
 @end
