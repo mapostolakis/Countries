@@ -3,6 +3,10 @@
 //
 
 #import "MGACountryPinListMapViewDelegate.h"
+#import "MGACountryAnnotation.h"
+#import "MGACountrySelectionDelegate.h"
+#import "MGAFlagURLProvider.h"
+#import "MGACountry.h"
 
 #import <XCTest/XCTest.h>
 
@@ -14,7 +18,9 @@
 
 @interface MGACountryPinListMapViewDelegateTest : XCTestCase
 {
-    id <MKAnnotation> annotation;
+    id <MGAFlagURLProvider> flagProvider;
+    id <MGACountrySelectionDelegate> delegate;
+    MGACountryAnnotation *annotation;
     MKMapView *mapView;
     MGACountryPinListMapViewDelegate *sut;
 }
@@ -26,9 +32,11 @@
 {
     [super setUp];
 
-    annotation = mockProtocol(@protocol(MKAnnotation));
+    annotation = mock([MGACountryAnnotation class]);
     mapView = mock([MKMapView class]);
-    sut = [[MGACountryPinListMapViewDelegate alloc] init];
+    delegate = mockProtocol(@protocol(MGACountrySelectionDelegate));
+    flagProvider = mockProtocol(@protocol(MGAFlagURLProvider));
+    sut = [[MGACountryPinListMapViewDelegate alloc] initWithFlagProvider:flagProvider delegate:delegate];
 }
 
 - (void)tearDown
@@ -72,6 +80,28 @@
     assertThat(view, is(equalTo(pinView)));
     assertThat(view.annotation, is(equalTo(annotation)));
     assertThatBool(view.canShowCallout, isTrue());
+}
+
+- (void)test_mapViewDidSelectAnnotationView_addsLeftAndRightCalloutAccessoryViews
+{
+    MKAnnotationView *view = [MKAnnotationView new];
+
+    [sut mapView:mapView didSelectAnnotationView:view];
+
+    assertThat(view.leftCalloutAccessoryView, is(instanceOf([UIImageView class])));
+    assertThat(view.rightCalloutAccessoryView, is(instanceOf([UIButton class])));
+}
+
+- (void)test_delegate_selectsCountry_whenCalloutAccessoryControllerTapped
+{
+    id <MGACountry> country = mockProtocol(@protocol(MGACountry));
+    [given(annotation.country) willReturn:country];
+    MKAnnotationView *view = mock([MKAnnotationView class]);
+    [given(view.annotation) willReturn:annotation];
+
+    [sut mapView:mapView annotationView:view calloutAccessoryControlTapped:anything()];
+
+    [MKTVerify(delegate) didSelectCountry:country];
 }
 
 @end

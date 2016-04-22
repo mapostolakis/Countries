@@ -1,10 +1,13 @@
-//
+#import "MGACountry.h"//
 //  Copyright (c) 2016 Mike Apostolakis. All rights reserved.
 //
 
 #import "MGACountryAnnotation.h"
 
 #import <XCTest/XCTest.h>
+
+#define MOCKITO_SHORTHAND
+#import <OCMockito/OCMockito.h>
 
 #define HC_SHORTHAND
 #import <OCHamcrest/OCHamcrest.h>
@@ -22,7 +25,12 @@
     [super setUp];
 
     CLLocationCoordinate2D coordinates = CLLocationCoordinate2DMake(123, 456);
-    sut = [[MGACountryAnnotation alloc] initWithCoordinates:coordinates title:@"a title" subtitle:@"a subtitle"];
+    NSValue *value = [NSValue valueWithMKCoordinate:coordinates];
+    id <MGACountry> country = mockProtocol(@protocol(MGACountry));
+    [given(country.name) willReturn:@"a name"];
+    [given(country.subregion) willReturn:@"a subregion"];
+    [given(country.coordinates) willReturn:value];
+    sut = [[MGACountryAnnotation alloc] initWithCountry:country];
 }
 
 - (void)tearDown
@@ -47,12 +55,12 @@
 
 - (void)test_title
 {
-    assertThat(sut.title, is(equalTo(@"a title")));
+    assertThat(sut.title, is(equalTo(@"a name")));
 }
 
 - (void)test_subtitle
 {
-    assertThat(sut.subtitle, is(equalTo(@"a subtitle")));
+    assertThat(sut.subtitle, is(equalTo(@"a subregion")));
 }
 
 @end

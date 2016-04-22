@@ -4,6 +4,7 @@
 
 #import "MGAStandardCountryAnnotationsBuilder.h"
 #import "MGACountry.h"
+#import "MGACountryAnnotation.h"
 
 #import <XCTest/XCTest.h>
 
@@ -13,15 +14,15 @@
 #define HC_SHORTHAND
 #import <OCHamcrest/OCHamcrest.h>
 
-@interface MGAStandardCountryAnnotationBuilderTest : XCTestCase
+@interface MGAStandardCountryAnnotationsBuilderTest : XCTestCase
 {
-    NSArray <id <MKAnnotation>> *annotations;
+    NSArray *annotations;
     NSArray *countries;
     MGAStandardCountryAnnotationsBuilder *sut;
 }
 @end
 
-@implementation MGAStandardCountryAnnotationBuilderTest
+@implementation MGAStandardCountryAnnotationsBuilderTest
 
 - (void)setUp
 {
@@ -29,8 +30,8 @@
 
     NSValue *coordinate0 = [NSValue valueWithMKCoordinate:CLLocationCoordinate2DMake(123, 456)];
     NSValue *coordinate1 = [NSValue valueWithMKCoordinate:CLLocationCoordinate2DMake(234, 567)];
-    id <MGACountry> country0 = [self stubCountryWithCoordinatesValue:coordinate0 name:@"a name" subregion:@"a subregion"];
-    id <MGACountry> country1 = [self stubCountryWithCoordinatesValue:coordinate1 name:@"another name" subregion:@"another subregion"];
+    id <MGACountry> country0 = [self stubCountryWithCoordinatesValue:coordinate0 name:@"a name" subregion:@"a subregion" alpha2Code:@"a code"];
+    id <MGACountry> country1 = [self stubCountryWithCoordinatesValue:coordinate1 name:@"another name" subregion:@"another subregion" alpha2Code:@"another code"];
     countries = @[country0, country1];
 
     sut = [[MGAStandardCountryAnnotationsBuilder alloc] init];
@@ -49,11 +50,13 @@
 - (id <MGACountry>)stubCountryWithCoordinatesValue:(NSValue *)value
                                               name:(NSString *)name
                                          subregion:(NSString *)subregion
+                                        alpha2Code:(NSString *)code
 {
     id <MGACountry> country = mockProtocol(@protocol(MGACountry));
     [given(country.coordinates) willReturn:value];
     [given(country.name) willReturn:name];
     [given(country.subregion) willReturn:subregion];
+    [given(country.alpha2Code) willReturn:code];
     return country;
 }
 

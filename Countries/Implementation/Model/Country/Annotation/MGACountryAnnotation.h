@@ -4,10 +4,12 @@
 
 @import MapKit;
 
+@protocol MGACountry;
+
 @interface MGACountryAnnotation : NSObject <MKAnnotation>
 
-- (instancetype)initWithCoordinates:(CLLocationCoordinate2D)coordinates
-                              title:(NSString *)title
-                           subtitle:(NSString *)subtitle;
+@property (nonatomic, readonly) id <MGACountry> country;
+
+- (instancetype)initWithCountry:(id <MGACountry>)country;
 
 @end
