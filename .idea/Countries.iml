@@ -26,14 +26,12 @@
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Presenter/Navigation Controller/Root/MGANavigationControllerRootPresenter.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Presenter/Navigation Controller/Push/MGANavigationControllerPushPresenter.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Presenter/Navigation Controller/Push/MGANavigationControllerPushPresenter.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Model/Country/MGACountryPinListMapViewDelegate.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Model/Country/Annotation/MGACountryAnnotation.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Model/Country/Annotation/MGACountryAnnotation.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Model/Country/Flatten/MGAFlattenCountry.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Model/Country/Flatten/MGAFlattenCountry.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Model/Country/Details/MGAMutableCountryDetails.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Model/Country/Details/MGAMutableCountryDetails.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Model/Country/MGACountryPinListMapViewDelegate.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Gateway/MGAInMemoryStoreGateway.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Gateway/MGAInMemoryStoreGateway.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/Implementation/Converter/MGADataToJSONConverter.h" isTestSource="false" />
@@ -88,6 +86,8 @@
       <sourceFolder url="file://$MODULE_DIR$/Countries/List Countries/MGAFetchCountryListServiceProvider.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/List Countries/Data Source Delegate/MGACountryListTableViewDataSourceDelegate.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/List Countries/Data Source Delegate/MGACountryListTableViewDataSourceDelegate.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/List Countries/Map Delegate/MGACountryPinListMapViewDelegate.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Countries/List Countries/Map Delegate/MGACountryPinListMapViewDelegate.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/App Context/Service Provider/MGAStandardServiceProvider.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/App Context/Service Provider/MGAStandardServiceProvider.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Countries/App Context/MGAContext.m" isTestSource="false" />

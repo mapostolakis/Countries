@@ -30,7 +30,7 @@
 - (UIViewController *)createListCountriesWithDelegate:(id <MGACountrySelectionDelegate>)delegate
 {
     id <MGAFlagURLProvider> flagProvider = [MGAGeonamesFlagURLProvider new];
-    MGACountryPinListMapViewDelegate *mapViewDelegate = [[MGACountryPinListMapViewDelegate alloc] initWithFlagProvider:flagProvider delegate:nil];
+    MGACountryPinListMapViewDelegate *mapViewDelegate = [[MGACountryPinListMapViewDelegate alloc] initWithFlagProvider:flagProvider delegate:delegate];
     CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(36, 65);
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coordinate, 5000000, 5000000);
     MGAMapViewController *viewController = [[MGAMapViewController alloc] initWithRegion:region delegate:mapViewDelegate];

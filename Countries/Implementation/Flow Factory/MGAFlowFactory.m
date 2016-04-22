@@ -24,7 +24,6 @@
 @interface MGAFlowFactory ()
 
 @property (nonatomic, readonly) UITabBarController *tabBarController;
-@property (nonatomic, strong) UINavigationController *navigationController;
 @property (nonatomic, readonly) MGAInMemoryStore *store;
 @property (nonatomic, readonly) id <MGADataSourceProvider> dataSourceProvider;
 @property (nonatomic, readonly) id <MGAServiceProvider> serviceProvider;
@@ -48,14 +47,6 @@
     return self;
 }
 
-- (UINavigationController *)navigationController
-{
-    if (_navigationController == nil) {
-        _navigationController = [[UINavigationController alloc] init];
-    }
-    return _navigationController;
-}
-
 - (id <MGAFetchCountryListService>)service
 {
     return [self.serviceProvider createFetchCountryListService];
@@ -68,10 +59,11 @@
 
 - (MGAListCountriesFlow *)createCountryListFlow
 {
-    self.navigationController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"List" image:nil selectedImage:nil];;
-    [self.tabBarController mga_addViewController:self.navigationController];
+    UINavigationController *navigationController = [[UINavigationController alloc] init];
+    navigationController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"List" image:nil selectedImage:nil];;
+    [self.tabBarController mga_addViewController:navigationController];
     id <MGAViewControllerPresenter> rootPresenter =
-    [[MGANavigationControllerRootPresenter alloc] initWithNavigationController:self.navigationController];
+    [[MGANavigationControllerRootPresenter alloc] initWithNavigationController:navigationController];
     id <MGAListCountriesFactory> factory =
     [[MGAStandardListCountriesFactory alloc] initWithDataSourceProvider:self.dataSourceProvider serviceCommand:[self serviceCommand]];
     return [[MGAListCountriesFlow alloc] initWithFactory:factory presenter:rootPresenter flowFactory:self];
@@ -91,14 +83,15 @@
 
 - (MGACountryDetailsFlow *)createFlowForCountry:(id <MGACountry>)country
 {
+    UINavigationController *navigationController = self.tabBarController.selectedViewController;
     id <MGAFlagURLProvider> provider = [MGAGeonamesFlagURLProvider new];
     id <MGACountryGateway> gateway = [[MGAInMemoryStoreGateway alloc] initWithStore:self.store];
     id <MGACountryDetailsFactory> factory =
     [[MGAStandardCountryDetailsFactory alloc] initWithFlagURLProvider:provider gateway:gateway];
     MGANavigationControllerPushPresenter *presenter =
-    [[MGANavigationControllerPushPresenter alloc] initWithNavigationController:self.navigationController];
+    [[MGANavigationControllerPushPresenter alloc] initWithNavigationController:navigationController];
     MGANavigationControllerLastItemReplacingPresenter *selectionPresenter =
-    [[MGANavigationControllerLastItemReplacingPresenter alloc] initWithNavigationController:self.navigationController];
+    [[MGANavigationControllerLastItemReplacingPresenter alloc] initWithNavigationController:navigationController];
     MGAStandardMapFactory *mapFactory = [[MGAStandardMapFactory alloc] init];
     return [[MGACountryDetailsFlow alloc] initWithCountry:country
                                                   factory:factory
