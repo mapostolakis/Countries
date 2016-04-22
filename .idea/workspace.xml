@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2f6e2f58-2f02-4ada-a6f7-a91b80167f5c" name="Default" comment="Implement delegate methods for country pin list map view delegate">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Countries/Implementation/Model/Country/MGACountryPinListMapViewDelegate.h" afterPath="$PROJECT_DIR$/Countries/List Countries/Map Delegate/MGACountryPinListMapViewDelegate.h" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Countries/Implementation/Model/Country/MGACountryPinListMapViewDelegate.m" afterPath="$PROJECT_DIR$/Countries/List Countries/Map Delegate/MGACountryPinListMapViewDelegate.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Countries.iml" afterPath="$PROJECT_DIR$/.idea/Countries.iml" />
+    <list default="true" id="2f6e2f58-2f02-4ada-a6f7-a91b80167f5c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Countries.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries/Implementation/Flow Factory/MGAFlowFactory.m" afterPath="$PROJECT_DIR$/Countries/Implementation/Flow Factory/MGAFlowFactory.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries/Implementation/Use Case Factory/List Countries/MGAMappedCountryListFactory.m" afterPath="$PROJECT_DIR$/Countries/Implementation/Use Case Factory/List Countries/MGAMappedCountryListFactory.m" />
     </list>
     <ignored path="Countries.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +22,18 @@
     <favorites_list name="Countries" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="MGAFlowFactory.h" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Countries/Implementation/Flow Factory/MGAFlowFactory.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="11" column="95" selection-start-line="11" selection-start-column="95" selection-end-line="11" selection-end-column="95" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -545,13 +550,6 @@
       <option name="presentableId" value="Default" />
       <updated>1458932096352</updated>
     </task>
-    <task id="LOCAL-00017" summary="Add standard data source provider">
-      <created>1459030830204</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1459030830204</updated>
-    </task>
     <task id="LOCAL-00018" summary="Add standard service provider&#10;&#10;* Added partial country mapper&#10;* Renamed resource:hasValueForKey: in country mapper">
       <created>1459033110101</created>
       <option name="number" value="00018" />
@@ -888,7 +886,14 @@
       <option name="project" value="LOCAL" />
       <updated>1461321692622</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="Add country selection to map view">
+      <created>1461324232967</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1461324232967</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -963,7 +968,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="Add coordinate selection and map view for coordinates" />
     <MESSAGE value="Remove unused in memory gateway&#10;&#10;*" />
     <MESSAGE value="Remove unused import" />
     <MESSAGE value="Add dealloc messages" />
@@ -988,7 +992,8 @@
     <MESSAGE value="Add binder for executing fetch command and adding annotations on map view" />
     <MESSAGE value="Avoid memory leak" />
     <MESSAGE value="Implement delegate methods for country pin list map view delegate" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement delegate methods for country pin list map view delegate" />
+    <MESSAGE value="Add country selection to map view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add country selection to map view" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
