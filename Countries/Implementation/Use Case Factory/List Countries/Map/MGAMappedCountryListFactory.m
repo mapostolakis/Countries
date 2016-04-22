@@ -2,9 +2,8 @@
 // Copyright (c) 2016 Mike Apostolakis. All rights reserved.
 //
 
-#import <ReactiveCocoa/RACSignal+Operations.h>
-#import <ReactiveCocoa/RACCommand.h>
 #import "MGAMappedCountryListFactory.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 #import "MGACountryPinListMapViewDelegate.h"
 #import "MGAMapViewController.h"
 #import "MGACommandExecutionMapViewCountryAnnotationsPlacementBinder.h"
