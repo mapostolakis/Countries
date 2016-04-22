@@ -19,6 +19,7 @@
 #import "MGAMappedCountryListFactory.h"
 #import "UITabBarController+MGAAdditions.h"
 #import "MGAFetchCountryListServiceCommandBuilder.h"
+#import "UITabBarItem+MGAFactory.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface MGAFlowFactory ()
@@ -60,7 +61,7 @@
 - (MGAListCountriesFlow *)createCountryListFlow
 {
     UINavigationController *navigationController = [[UINavigationController alloc] init];
-    navigationController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"List" image:nil selectedImage:nil];;
+    navigationController.tabBarItem = [UITabBarItem countryList];
     [self.tabBarController mga_addViewController:navigationController];
     id <MGAViewControllerPresenter> rootPresenter =
     [[MGANavigationControllerRootPresenter alloc] initWithNavigationController:navigationController];
@@ -72,7 +73,7 @@
 - (MGAListCountriesFlow *)createMappedCountryListFlow
 {
     UINavigationController *navigationController = [[UINavigationController alloc] init];
-    navigationController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Map" image:nil selectedImage:nil];
+    navigationController.tabBarItem = [UITabBarItem map];
     [self.tabBarController mga_addViewController:navigationController];
     id <MGAViewControllerPresenter> rootPresenter =
     [[MGANavigationControllerRootPresenter alloc] initWithNavigationController:navigationController];
